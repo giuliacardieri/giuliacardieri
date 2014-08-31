@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'GrandHotel';
+    src: url('../assets/fonts/GrandHotel-Regular.otf');
+}
+
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('../assets/fonts/MyriadPro-Regular.otf');
+
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url('../assets/fonts/MyriadPro-Bold.otf');
+    font-weight: bold;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+body #container main{
+    margin: 50px 150px;
+    margin-top: 0;
+    padding: 0;
+}
+
+body main #about #hi{
+    width: 20%;
+}
+    
+body h2, body p, body h3, body h4, body nav ul li a{
+    font-family: arial;
+}
+
+body #about, body #resume, body #projects{
+    padding: 25px 100px;
+}
+    
+#projects .projects h3, #projects .projects h4{
+    font-family: arial;
+    font-weight: bold;
+}
+}
+
+body{
+    background-color: #ffffff;
+    color: #ffffff;
+    font-family: MyriadPro;
+    font-weight: normal;
+    margin: 0;
+    position: relative;
+}
+
+header{
+    display: block;
+    margin: 0;
+    min-height: 100px;
+    padding: 50px;
+    padding-bottom: 25px;
+}
+
+img{
+    border: 0;
+    border-radius: 5px 5px 0 0;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav */
+nav{
+    display: table-cell;
+    float: right;
+    font-family: MyriadPro;
+    margin-right: 100px;
+    padding: 0;
+    position: relative;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 50px;
+    padding-top: 25px;
+}
+
+nav ul li{
+    color: #696969;
+    display: inline;
+    font-size: 15pt;
+}
+
+nav ul li a{
+    color: #696969;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{ 
+    border-bottom: 2px solid #cd4040;
+    color: #282828;
+}
+
+
+#container{
+    background-color: #cd4040;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Main */
+main{
+    background-color: #cd4040;
+    padding: 50px 150px;
+}
+
+main a{
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+main a:hover{
+    color: #4b4b4b;
+}
+
+/* Headings and Tags*/
+h1 {
+    color: #cd4040;
+    display: table-cell;
+    float: left;
+    font-family: GrandHotel;
+    font-size: 42pt;
+    margin: 0;
+    margin-left: 100px;
+    padding-right: 5px;  
+    position: relative;
+}
+
+h2{
+    color: #ffffff;
+    font-family: MyriadProBold;
+    font-size: 28pt;
+    margin: 0;
+    padding: 15px 0;
+    padding-bottom: 5px;
+}
+
+h3{
+    font-size: 21pt;
+    line-height: 25pt;
+    margin: 0;
+    padding-top: 10px;
+}
+
+h4{
+    font-size: 15pt;
+    line-height: 19pt;
+    margin: 0;
+    padding-top: 10px;
+}
+
+p{
+    font-size: 14pt;
+    line-height: 18pt;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #cd4040;
+    text-decoration: none;
+}
+
+/* About */
+/* Photo */
+#hi{
+    border-radius: 500px;
+    display: inline-block;
+    max-width: 400px;
+    padding: 0;
+    width: 25%;
+}
+
+#hey{
+    display: inline-block;
+    min-height: 200px;
+    padding: 0 25px;
+    width: 65%;
+}
+
+/* Resume */
+.skill{
+    float: right;
+    margin: 0;
+}
+
+#skills{
+    display: table-cell;
+    margin: 0;
+    min-width: 225px;
+    padding: 0;
+}
+
+#softlang{
+    display: table-cell;
+    margin: 0;
+    min-width: 250px;
+    padding: 0;
+    padding-left: 50px;
+}
+
+#skills p, #softwares p, #languages p{
+    padding: 5px;
+    padding-left: 0;
+}
+
+#button{
+    display: table-cell;
+    max-height: 200px;
+    padding-left: 50px;
+    text-align: center;
+    vertical-align: top;
+    width: 200px;
+}
+
+#button a{
+    font-size: 25pt;
+    color: #ffffff;
+    line-height: 26pt;
+    opacity: 1;
+}
+
+#button p{
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 25pt;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#button img{
+    margin: auto;
+    padding: 10px;
+    padding-left: 55px;
+}
+
+#education{
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+/* Projects */
+.proj{
+    border: 0;
+    display: block;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+/* Each project rectangle */
+.projects{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    display: inline-block;
+    height: 575px;
+    margin: 15px;
+    margin-left: 0;
+    padding: 0;
+    vertical-align: top;
+    width: 325px;
+}
+
+/* The text content of the project rectangles */
+.ProjCont{
+    padding: 15px;
+}
+
+.projects p{
+    padding: 5px;
+}
+
+.projects h3{
+    font-family: MyriadProBold;
+    padding: 5px;
+}
+
+.projects h4{
+    font-family: MyriadProBold;
+    font-size: 16pt;
+    line-height: 20pt;
+    padding: 5px;
+}
+
+/* The image of each project rectangle */
+.ProjImg{
+    border-radius: 4px 4px 0 0;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* The content that only shows when you hover over a image on the project rectangles */
+.hover{
+    background-color: #282828;
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+    display: none;
+    height: 200px;
+    width: 325px;
+}
+
+.hover h3{
+    padding: 20px;
+}
+
+.hover p{
+    font-size: 10pt;
+    padding: 5px;
+    padding-top: 105px;
+}
+
+/* Ids */
+#about{
+    display: block;
+}
+
+#resume{
+    display: none;
+}
+
+#projects{
+    display: none;
+}
+
+#contact{
+    display: none;
+}
+
+
+/* Footer */
+footer{
+    color: #696969;
+    display: block;
+    font-size: 10pt;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.icons{
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+.icons p{
+    margin: auto;
+    line-height: 25pt;
+    padding: 8px 50px;
+}
+.icon{
+    display: inline-block;
+    margin: 0;
+    margin-right:  10px;
+    padding: 5px;
+    padding-left: 0;
+}
+
+.copyright{
+    display: block;
+    font-size: 10pt;
+    margin: auto;
+}

@@ -1,0 +1,39 @@
+function changeID (_ele) {
+	    var alpha = parseFloat(window.getComputedStyle(_ele).opacity);
+	    
+	    if ( alpha == 1) {
+	      fadeOut(_ele);
+	    }
+	    else if ( alpha == 0) {
+	      fadeIn(_ele);
+	    }
+	    
+	  }
+	  
+	  function fadeOut(_ele) {
+	    var alpha = parseFloat(window.getComputedStyle(_ele).opacity);
+	    if (alpha >= 0.05) {
+	      _ele.style.opacity = alpha - 0.05;
+	      
+	      setTimeout( function(){ //anonymous function
+	      fadeOut(_ele) 
+	      }, 50 );
+	    }
+	    else {
+	      _ele.style.opacity = 0;
+	    }  
+	  }
+	  
+	  function fadeIn(_ele) {
+	    var alpha = parseFloat(window.getComputedStyle(_ele).opacity);
+	    if (alpha <= 0.95) {
+	      _ele.style.opacity = alpha + 0.05;
+	      
+	      setTimeout( function(){ //anonymous function
+	      fadeIn(_ele) 
+	      }, 50 );
+	    }
+	    else {
+	      _ele.style.opacity = 1;
+	    }  
+	  }

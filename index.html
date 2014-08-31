@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Giulia Cardieri</title>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="shortcut icon" href="assets/favicon.ico">
+<script src="js/script.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49632572-1', 'giuliacardieri.com');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<!-- Header with Name and Nav items !-->
+    <header>
+        <h1><a href="#" onclick="changeID('about'), FadeOut()">Giulia Cardieri</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="changeID('about'), FadeOut()">About</a></li>
+                <li><a href="#" onclick="changeID('resume'), FadeOut()">Resume</a></li>
+                <li><a href="#" onclick="changeID('projects'), FadeOut()">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- END Header with Name and Nav items !-->
+<!-- Container ID with all content !-->
+    <div id="container">
+        <main>
+            <!-- About !-->
+            <div id="about">
+                <h2>ABOUT</h2>
+                <img id="hi" src="assets/images/giulia1.jpg" alt="Giulia Cardieri" />
+                <div id="hey">
+                    <h3>Hi!</h3>
+                    <p>My name is Giulia Cardieri, and I'm currently a third year computer science student at UNESP. I was an exchange at Rochester Institute of Technology during the 2013-2014 school year.</p>
+                    <p>At RIT I had the opportunity of learning new technologies in different approaches, that helped me to realize what I'm really passionate about, web and software development!</p>
+                    <p>I'm always trying to improve myself somehow. I enjoy creating projects with fun ideas, it is a nice way to learn more and have fun at the same time.</p>
+                    <p>My goals are helping people somehow. I hope to achieve that creating useful software or web applications.</p>
+                  <br/>
+                    <p>Fun Fact:<a href="https://www.flickr.com/photos/giulia93/sets/"> I'm a postcard collector!</a></p>
+                </div>
+            </div>
+            
+            <!-- Resume !-->
+            <div id="resume">
+                <h2>RESUME</h2>
+                <div id="education">
+                    <h3>Education</h3>
+                    <h4>UNDERGRADUATE - BACHELOR OF SCIENCE</h4>
+                    <p>Universidade Estadual Paulista - UNESP - Bauru, SP Brazil</p>
+                    <p>Computer Science - February 2012-December 2015(expected)</p>
+
+                    <h4>COMPLEMENTARY STUDIES</h4>
+                    <p>Rochester Institute of Technology -  Rochester, NY USA</p>
+                    <p>Computer Science - August 2013-May 2014</p>
+                    <p>Non-degree International Student from Brazil Scientific Mobility Program (fully funded scholarship recipient)</p>
+                </div>
+                
+                <h3>Skills</h3>
+                <div id="skills">
+                    <p>Java<img class="skill" src="assets/images/skills4.png" alt="80% of java" /></p>
+                    <p>C<img class="skill" src="assets/images/skills4.png" alt="80% of c" /></p>
+                    <p>HTML/XHTML<img class="skill" src="assets/images/skills4.png" alt="80% of html" /></p>
+                    <p>CSS<img class="skill" src="assets/images/skills4.png" alt="80% of css" /></p>
+                    <p>JavaScript<img class="skill" src="assets/images/skills3.png" alt="60% of javascript" /></p>
+                    <p>SQL<img class="skill" src="assets/images/skills3.png" alt="60% of sql" /></p>
+                    <p>Pascal<img class="skill" src="assets/images/skills3.png" alt="60% of pascal" /></p>
+                    <p>C#<img class="skill" src="assets/images/skills3.png" alt="60% of c#" /></p>
+                    <p>jQuery<img class="skill" src="assets/images/skills2.png" alt="40% of jQuery" /></p>
+                    <p>PHP<img class="skill" src="assets/images/skills2.png" alt="40% of php" /></p>
+                    <p>MySQL<img class="skill" src="assets/images/skills3.png" alt="60% of MySQL" /></p>
+                </div>
+                <div id="softlang">
+                    <p>Photoshop<img class="skill" src="assets/images/skills3.png" alt="60% of photoshop" /></p>
+                    <p>Illustrator<img class="skill" src="assets/images/skills2.png" alt="40% of illustrator" /></p>
+                    <p>Excel<img class="skill" src="assets/images/skills4.png" alt="80% of excel" /></p>
+                    <p>Visual Studio<img class="skill" src="assets/images/skills3.png" alt="60% of Visual Studio" /></p>
+                <br/>
+                    <p>Portuguese<img class="skill" src="assets/images/skills5.png" alt="100% of portuguese" /></p>
+                    <p>English<img class="skill" src="assets/images/skills5.png" alt="100% of english" /></p>
+                </div>
+                
+                <div id="button">
+                    <p><a href="assets/resume.pdf"><img src="assets/images/resume2.png" alt="resume icon" /></a><a href="assets/resume.pdf">DOWNLOAD MY RESUME!</a></p>
+                </div>
+            </div>
+                        
+            <!-- Projects !-->
+            <div id="projects">
+                <h2>PROJECTS</h2>
+                <div onmouseover="ProjImg(0)" onmouseout="ProjImgOut(0)" class="projects">
+                    <div class="hover">
+                        <h3>Portfolio</h3>
+                        <p>Technologies: HTML5, CSS3 and JavaScript.</p>
+                    </div>
+                    <img class="ProjImg"  src="assets/images/port.jpg" alt="Portfolio Screenshot" />
+                    <div class="ProjCont">
+                        <h4>Personal Project</h4> 
+                        <p>March-April 2014</p>
+                        <p>My portfolio was designed and developed by me.</p>
+                        <p>Instead of using many different pages I decided to create only one and add JavaScript functions to change the css display property.</p>
+                    </div>
+                </div>
+                
+                <div onmouseover="ProjImg(1)" onmouseout="ProjImgOut(1)" onclick="window.open('http://dinokiki.com')" class="projects">
+                    <div class="hover">
+                        <h3>Dinokiki</h3>
+                        <p>Technologies: HTML5, CSS, JavaScript and jQuery.</p>
+                    </div>
+                    <img class="ProjImg" src="assets/images/dinokiki.jpg" alt="Dinokiki Screenshot" />
+                    <div class="ProjCont">
+                        <h4>Personal Project</h4>
+                        <p>February 2014</p>
+                        <p>I developed this website and designed this character as a way to learn more about JavaScript and jQuery and also to make people laugh.</p>
+                        <p>It is an interactive website that when you click over the Dinosaur his image changes and he says "Kiki". Every time you click on him a random Kiki is selected from an audio array.</p>
+                    </div>
+                </div>
+                
+                <div onmouseover="ProjImg(2)" onmouseout="ProjImgOut(2)" onclick="window.open('http://people.rit.edu/gxd5961/240/projects/midterm/')" class="projects">
+                    <div class="hover">
+                         <h3>Why São Paulo?</h3>
+                         <p>Technologies: HTML5, CSS and Server Side Includes.</p>
+                    </div>
+                   
+                    <img class="ProjImg" src="assets/images/whysp.jpg" alt="Why São Paulo Screenshot" />
+                    <div class="ProjCont">
+                        <h4>Web II</h4>
+                        <p>March-April 2014</p>
+                        <p>A website dedicated to my favorite place, São Paulo. Usability and design principles were important factors on this project development.</p>
+                        <p>This website was designed and developed by me.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="projects">
+                    <div class="ProjCont">
+                        <h3>Tool Share Web Application</h3>
+                        <h4>Introduction to Software Engineering</h4>
+                        <p>August-December 2013 - Group of five</p>
+                        <p>The goal of this team project was to create a complete web application in a team environment following all stages of software engineering concepts.</p>
+                        <p>Tool Share is an application that allows a neighborhood with the same zipcode to share tools with each other.</p>
+                        <p>Technologies: Django, Python, HTML and CSS.</p>
+                    </div>
+                </div>
+                
+                <div class="projects">
+                    <div class="ProjCont">
+                        <h3>Client-Server Pacman Game</h3>
+                        <h4>Technical Programming</h4>
+                        <p>April-July 2013  - Group of two</p>
+                        <p>A Pac-Man game created in Java using GUI, Threads, Swing and Server-Client socket.</p>
+                        <p>This Pac-Man game is different than the traditional because it is played simultaneously by two players, both are pacman.</p>
+                        <p>Technologies: Java</p>
+                    </div>
+                </div>
+                
+                <div class="projects">
+                    <div class="ProjCont">
+                        <h3>Numerical Methods Projects</h3>
+                        <h4>Computational Numerical Methods</h4>
+                        <p>March-July 2013 - Group of three</p>
+                        <p>The goal of this project was to implement all Numerical Methods learned in class such as interpolation, non-linear and linear systems solutions.</p>
+                        <p>Technologies: C, Numerical Methods Formulas</p>
+                    </div>
+                </div>
+                
+                <div class="projects">
+                    <div class="ProjCont">
+                        <h3>Database Project</h3>
+                        <h4>Principles of Data Management</h4>
+                        <p>October 2013 - Group of four</p>
+                        <p>The goal of this project was to develop a small database for a fictional Photography Company, starting on the database design, including E-R models, and finishing developing a real database.</p>
+                        <p>Technologies: SQL, PostgreSQL</p>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<!-- END of container !-->
+<!-- Footer !-->
+    <footer>
+        <div class="icons">
+            <a href="http://www.facebook.com/giulia.cardieri" target="_blank"><img class="icon" src="assets/images/fb.png" alt="facebook"/></a>
+            <a href="http://twitter.com/ggiulia" target="_blank"><img class="icon" src="assets/images/tw.png" alt="twitter"/></a>
+            <a href="https://github.com/giuliacardieri" target="_blank"><img class="icon" src="assets/images/gh.png" alt="git hub"/></a> 
+            <a href="http://instagram.com/giuliacardieri" target="_blank"><img class="icon" src="assets/images/in.png" alt="instagram"/></a>
+            <a href="https://www.linkedin.com/pub/giulia-de-andrade-cardieri/85/a78/66a" target="_blank"><img class="icon" src="assets/images/lk.png" alt="linkedin"/></a>
+            <a href="malito:giulia.cardieri@gmail.com" target="_blank"><img class="icon" src="assets/images/mail.png" alt="mail"/></a>
+            <p class="icon">Thank you for stopping by! - Find me on social medias</p> 
+        </div>
+        <p class="copyright">© 2014 by Giulia Cardieri</p>
+    </footer>
+</body>
+</html>
