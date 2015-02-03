@@ -433,7 +433,7 @@ footer p{
 /* project pages */
 .projects{
     display: block;
-    padding: 25px 0;
+    padding: 45px 0 25px 0;
     text-align: center;
 }
 
@@ -809,14 +809,6 @@ h4.giulia-proj, .btn.giulia-proj{
         z-index: 1;
     }
     
-    .answers{
-        font-size: 12pt;
-    }
-    
-    .questions div{
-        width: 82px;
-    }
-    
     #menu{
         font-size: 14pt;
     }
@@ -850,8 +842,7 @@ h4.giulia-proj, .btn.giulia-proj{
     }
 }
 
-
-@media (max-width: 767px){
+@media (max-width: 768px){
     h1{
         font-size: 20pt;
     }
@@ -887,7 +878,7 @@ h4.giulia-proj, .btn.giulia-proj{
     }
     
     section p{
-        padding: 0 40px;
+        padding: 0 5%;
     }
     
     .sections-projects .btn{
@@ -954,5 +945,17 @@ h4.giulia-proj, .btn.giulia-proj{
     
     .projects.marina-proj img{
         width: 40%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 767px){
+
+    .answers.small p{
+        font-size: 9pt;
+        margin: 15px 0;
+    }
+    
+    section p, h3{
+        padding: 0 8%;
     }
 }
