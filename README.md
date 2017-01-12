@@ -1,5 +1,5 @@
 #Giulia Cardieri
-My portfolio. Developed with HTML5, CSS3 (including animations) and jQuery. All pages are responsive.
-Don't forget to check out the project pages!
+This is my portfolio.
+It was developed using HTML5, Sass (Scss) and jQuery.
 
-available at giuliacardieri.com
+Available at http://giuliacardieri.com
