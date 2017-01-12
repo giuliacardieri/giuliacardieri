@@ -1,266 +1,339 @@
-var ele = 0;
-var previous = "home";
-var unfill = true;
-var slowFill = false;
-var scrollPortfolio;
-var open = true;
+var currentProject = null
+	, listOfProjects = ['keepmeposted', 'codepen', 'dinokiki', 'reed', 'whysp', 'marina', 'qualprofessor', 'pao', 'sanduiche', 'bauru', 'dinovr']
+	, lang = 'en-us';
 
-function slowScroll(element){
-    var distance =  $(element).offset().top;
-    if (element == "#portfolio")
-        distance = scrollPortfolio;
+
+var menu = function menu() {
+    if ($('.menu-btn').hasClass('menu-showing'))
+        hideMenu();
+    else
+        showMenu();
+}
+
+var showMenu = function showMenu() {
+    $('.menu-row').removeClass('hidden');
+    $('.menu-row nav').animate({
+        'right': '0vw'
+    });
+    $('.menu-btn').addClass('menu-showing');
+}
+
+var hideMenu = function hideMenu() {
+    $('.menu-btn').removeClass('menu-showing');
+    setTimeout(function(){
+        $('.menu-row').removeClass('hidden');
+    }, 500);
+    $('.menu-row nav').animate({
+        'right': '-150vw'
+    })
+}
+
+// makes the slow scroll effect when clicked on the menu
+var slowScroll = function slowScroll(element) {
     $('html, body').animate({
-        scrollTop: distance
+        scrollTop: $(element).offset().top
     }, 1000);
     window.location.hash = element;
-    slowFill = true;
+};
+
+// change the active color on the menu to the current element
+var colorActive = function colorActive(element) {
+	$('nav ul li a').removeClass('active');
+	$("a[href^='" + element + "']").addClass('active');
+};
+
+var showResume = function showResume() {
+	var size = checkSize();	
+
+	// animations to show the resume
+	$('.about-content').animate({
+		'width': size,
+	}, 500);
+
+	setTimeout(function(){
+		$('.about-content').removeClass('col-4').addClass('col-6');
+	}, 500);
+
+	if ($(window).width() > 1023)
+		$('.about').animate({
+			'width': '25%'
+		}, 500).removeClass('col-4').addClass('col-2');
+
+	setTimeout(function(){
+		$('.about-close-btn').removeClass('hidden');
+	}, 500);
+};
+
+var hideResume = function hideResume() {
+	var size = checkSize(1);
+
+	// animations to hide the resume
+	$('.about-content').animate({
+		'width': size,
+	}, 500);
+
+	setTimeout(function(){
+		$('.about-content').removeClass('col-6').addClass('col-4');
+	}, 500);
+
+	if ($(window).width() > 1023)
+		$('.about').animate({
+			'width': '50%'
+		}, 500).removeClass('col-2').addClass('col-4');
+	
+	$('.about-close-btn').addClass('hidden');
+};
+
+var checkSize = function checkSize(hide) {
+	if ($(window).width() > 1023) 
+		if (hide) 
+			return '50%';
+		else return '75%';
+	else
+		return '100%';
 }
 
-function percentageFill(){
-    if ($("div").hasClass("html"))
-        fill("html", "75%");
-    if ($("div").hasClass("css"))
-        fill("css", "75%");
-    if ($("div").hasClass("js"))
-        fill("js", "62%");
-    if ($("div").hasClass("java"))
-        fill("java", "50%");
-    if ($("div").hasClass("sql"))
-        fill("sql", "50%");
-    if ($("div").hasClass("photoshop"))
-        fill("photoshop", "45%");
-    if ($("div").hasClass("python"))
-        fill("python", "40%");
-    if ($("div").hasClass("php"))
-        fill("php", "40%");
-    slowFill = false;
-}
+var showProject = function showProject() {
+	var size = checkSize();
 
-function percentageUnfill(){
-    if (!unfill){
-        $(".fill.html").css("height", "0");
-        $(".fill.css").css("height", "0");
-        $(".fill.js").css("height", "0");
-        $(".fill.java").css("height", "0");
-        $(".fill.sql").css("height", "0");
-        $(".fill.photoshop").css("height", "0");
-        $(".fill.python").css("height", "0");
-        $(".fill.php").css("height", "0");
-        unfill = true;
-    }
-}
+	// animations to show the project content and hide the others
+	$('.work-content').animate({
+		'width': size,
+	}, 500);
 
-function fill(_ele,percentage){
-    var time;
-    if (slowFill)
-        time = 2500; 
-    else 
-        time = 1000;
-    $(".fill."+_ele).animate({ height: percentage }, time);
-    unfill = false;
-}
+	setTimeout(function(){
+		$('.work-content').removeClass('col-4').addClass('col-6');
+	}, 500);
 
-// the font color of the menu changes to the parameter
-function menuColor(color){
-        $("#menu").css("color", color);
-}
+	if ($(window).width() > 1023)
+		$('.work').animate({
+			'width': '25%'
+		}, 500).removeClass('col-4').addClass('col-2');
 
-function showMenu() {
-    $(".menu").animate({width: 'toggle'}); 
-    if ($("#menu").hasClass("hidden")) {
-        $("#menu").animate({"right": "+=228px"}).removeClass("hidden");
-        $(".content").animate({"padding-right": "130px"});
-    } 
-    else {
-        $(".content").animate({"padding-right": "0"});
-        $("#menu").animate({"right": "-=228px"}).addClass("hidden");
-    }
-}
+	// fix problem with the title that was displayed as table when smaller
+	$('.project-wrapper-row').css('display', 'block');
 
-function colorActive(section){
-    if (section!=previous) {
-        $("."+section).addClass("active");
-        $("."+previous).removeClass("active");
-        previous = section; 
-    }
-}
+	// show the info from the current project
+	$('.detail-project').find('.project-info').removeClass('hidden');
 
-function hoverProjects(element){
-    $(element+" .project-text").css("z-index", '0'); 
-    $(element+" .project-text").stop(true, false).animate({left: '30px'});  
-    $(element+" .project-hover").stop(true, false).animate({width: 'toggle'}); 
-}
+	// hide the project viewer
+	$('.projects-bar-wrapper').addClass('hidden');
 
-function outHoverProjects(element){     
-    $(element+" .project-text").stop(true, false).animate({left: '0px'});
-    $(element+" .project-text").css("z-index", '-1'); 
-    $(element+" .project-hover").stop(true, false).animate({width: 'toggle'}); 
-}
+	setTimeout(function(){
+		$('.detail-project').find('.close-btn').removeClass('hidden');
+	}, 500);
+};
 
-function theDinoIsAlive(){
-    interval2 = setInterval(function(){
-        if (open){
-            $(".projects.dinokiki-proj img").attr("src", "images/dinokiki-p2.png");
-            open = false;
-        }
-        else{
-            open = true;
-            $(".projects.dinokiki-proj img").attr("src", "images/dinokiki-p1.png");
-        }
-    }, 5000);
-}
+var hideProject = function hideProject() {
+	var size = checkSize(1);
 
-function defineMenuColor(){
-    var color;
-    switch (location.pathname.substring(location.pathname.lastIndexOf("/") + 1)){
-        case "dinokiki.html": {color= "#5A7BD1"; break;}
-        case "whysp.html": {color= "#BA1A1E"; break;}
-        case "marina.html": {color= "#852A4A"; break;}
-        case "giulia.html": {color= "#602a6d"; break;}
-        case "dinokikipt.html": {color= "#5A7BD1"; break;}
-        case "whysppt.html": {color= "#BA1A1E"; break;}
-        case "marinapt.html": {color= "#852A4A"; break;}
-        case "giuliapt.html": {color= "#602a6d"; break;}
-    }
-    return color;
-}
+	// animations to hide the project content and show the others
+	$('.work-content').animate({
+		'width': size,
+	}, 500);
 
-function macAnimation(element, path, num_imgs, time){
-    interval = setInterval(function(){
-            ele++;
-            $(element).attr("src", "images/"+path+ele+".png");
-            if (ele == num_imgs)
-                ele = 0;
-        }, time);
-}
+	setTimeout(function(){
+		$('.work-content').removeClass('col-6').addClass('col-4');
 
-$(function(){
-    
-    if (location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == 'index.html' || location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == 'indexpt.html' || location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == ''){
-        
-        macAnimation("#mac", "", 12, 500);
-        
-        // the height of the portfolio changes when the menu opens and the about section gets more height. 
-        // currently this is a bug with a not 100% fixed solution.
-        scrollPortfolio = $("#portfolio").offset().top;
-        
-        // actions when scroll happens
-        $(window).scroll(function(){
-            if (($("#about").offset().top <= $(window).scrollTop()) && ($("#portfolio").offset().top) > $(window).scrollTop()){
-                colorActive("about");
-                if (unfill == true)
-                    percentageFill();
-                menuColor("#602a6d");
-            }
-            else if (($("#portfolio").offset().top <= $(window).scrollTop())){
-                if (($("#contact").offset().top-500 <= $(window).scrollTop()))
-                    colorActive("contact");
-                else
-                    colorActive("portfolio");
-                percentageUnfill();
-                menuColor("#fff");
-            }
-            else if (($("#home").offset().top <= $(window).scrollTop()) && ($("#about").offset().top) > $(window).scrollTop()){
-                colorActive("home");
-                percentageUnfill();
-                menuColor("#fff");
-            }
-            else 
-                menuColor("#fff");
-        });
+		// show the project viewer
+		$('.projects-bar-wrapper').removeClass('hidden');
+	}, 500);
 
-        if ($(window).width() > 1024){
-            $(".dinokiki").hover(function(){hoverProjects(".dinokiki");},function(){outHoverProjects(".dinokiki");});
-            $(".whysp").hover(function(){hoverProjects(".whysp");},function(){outHoverProjects(".whysp");});
-            $(".marina").hover(function(){hoverProjects(".marina");},function(){outHoverProjects(".marina");});
-            $(".giulia").hover(function(){hoverProjects(".giulia");},function(){outHoverProjects(".giulia");});
-        }
-        
-    }
-    else {
-        $(window).scroll(function(){
-            var color;
-            if (($("#project-welcome").offset().top <= $(window).scrollTop()) && ($("#project-details").offset().top) > $(window).scrollTop())
-                menuColor("#fff");
-            else if (($("#project-details").offset().top <= $(window).scrollTop()) && ($("#project-history").offset().top) > $(window).scrollTop()){
-                color = defineMenuColor();
-                menuColor(color);
-            }
-            else if (($("#project-history").offset().top <= $(window).scrollTop()) && ($("#project-images").offset().top) > $(window).scrollTop())                                      menuColor("#fff");
-            else if (($("#project-images").offset().top <= $(window).scrollTop()) && ($("#project-extra").offset().top) > $(window).scrollTop()){
-                color = defineMenuColor();
-                menuColor(color);
-            }
-            else if (($("#project-images").offset().top <= $(window).scrollTop()) && ($("#contact").offset().top) > $(window).scrollTop())
-                menuColor("#fff");
-        });
-        if (location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == 'dinokiki.html' || location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == 'dinokikipt.html')
-            theDinoIsAlive();
-        else if (location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == 'giulia.html' || location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == 'giuliapt.html')
-            macAnimation(".mac-proj", "giulia-bg", 3, 1500);
-    }
-    
-    // menu action with swipe
-    $(window).swipeleft(function() {
-        if ($("#menu").hasClass("hidden"))
-            showMenu();
+	if ($(window).width() > 1023)
+		$('.work').animate({
+			'width': '50%'
+		}, 500).removeClass('col-2').addClass('col-4');
+
+	$('.project-wrapper-row').css('display', 'table');
+
+	// hide the info from the current project
+	$('.detail-project').find('.project-info').addClass('hidden');
+	
+	$('.close-btn').addClass('hidden');
+
+	$('.project-wrapper').removeClass('detail-project');
+
+	$('.project-wrapper').removeClass('hidden');
+
+	$('.project-btn').removeClass('hidden');
+};
+
+var goNext = function goNext() {
+	var num = listOfProjects.indexOf(currentProject) + 1;
+	currentProject = listOfProjects[num];
+};
+
+var goPrev = function goPrev() {
+	var num = listOfProjects.indexOf(currentProject) - 1;
+	currentProject = listOfProjects[num];
+};
+
+var hideProjectNext = function showProjectNext() {
+	// hide the info from the current project
+	$('.detail-project').find('.project-info').addClass('hidden');
+	$('.close-btn').addClass('hidden');
+	$('.project-wrapper').removeClass('detail-project');
+	$('.project-wrapper').removeClass('hidden');
+	$('.project-btn').removeClass('hidden');
+};
+
+$(function() {  
+	if (lang === 'en-us')  
+		$('.pt-br').addClass('hidden');
+	
+	// making the project pages when a project is clicked
+	$('.project-btn').on('click', function() {
+
+		// puts the work div on the top of the screen
+		slowScroll('.work-content');
+
+		currentProject = ($(this).attr('class')).split(' ')[1];
+
+		// add the detail-project class to the clicked project to indicate it is the active one
+		$('.project-wrapper').addClass('hidden');
+		$(this).parents('.project-wrapper').addClass('detail-project').removeClass('hidden');
+		$(this).addClass('hidden').parents('.detail-project').removeClass('hidden');
+		showProject();
     });
-    $(window).swiperight(function() {
-        if (!$("#menu").hasClass("hidden"))
-            showMenu();
+
+    $('.view-btn').on('click', function() {
+    	slowScroll('.about-content');
+    	$('.basic-about-wrapper').addClass('hidden');
+    	$('.resume-wrapper').removeClass('hidden');
+    	showResume();
+    });
+
+    $('.next-btn').on('click', function(){
+    	hideProjectNext();
+    	goNext();
+		$('.project-wrapper').addClass('hidden');
+    	$('.project.' + currentProject).parent().parent().addClass('detail-project');
+    	$('.detail-project').removeClass('hidden');
+    	$('.project-btn.' + currentProject).addClass('hidden');
+    	slowScroll('.work-content');
+    	showProject();
+    });
+
+    $('.prev-btn').on('click', function(){
+    	hideProjectNext();
+    	goPrev();
+		$('.project-wrapper').addClass('hidden');
+    	$('.project.' + currentProject).parent().parent().addClass('detail-project');
+    	$('.detail-project').removeClass('hidden');
+    	$('.project-btn.' + currentProject).addClass('hidden');
+    	slowScroll('.work-content');
+    	showProject();
+    });
+
+    $('.close-btn').on('click', function(){
+    	hideProject();
+    });
+
+    $('.about-close-btn').on('click', function(){
+    	slowScroll('.about-content');
+    	$('.basic-about-wrapper').removeClass('hidden');
+    	$('.resume-wrapper').addClass('hidden');
+    	hideResume();
+    });
+
+	// showing the menu
+    $('.menu-btn').on('click', function() { 
+        menu();
+    });
+
+    // if any element but the menu is clicked it is hidden
+    $('.main-content').on('click', function() {
+        if ($('.menu-btn').hasClass('menu-showing')) 
+            hideMenu();
+    });
+
+    // the menu is hidden when the user clicks over it
+    $('nav ul li a').on('click', function(){
+    	hideMenu();
+    });
+
+    // adding the slowScroll when the arrow is clicked
+    $('.arrow-wrapper').click(function(){
+        slowScroll('#about');
+    });
+
+    // using the slowScroll and adding the active color when an item is clicked on the menu
+    $('nav ul li a').on('click', function() {
+    	var ele = $(this).attr('href');
+    	slowScroll(ele);
+    	colorActive(ele);
+    });
+
+    $('.menu-img-wrapper').on('click', function() {
+    	if (lang === 'en-us')
+    		lang = 'pt-br';
+    	else
+    		lang = 'en-us';
+    	$('.en-us').toggleClass('hidden');
+    	$('.pt-br').toggleClass('hidden');
+    });
+
+	// actions when scroll happens
+    $(window).scroll(function(){
+	    if (($('#about').offset().top <= $(window).scrollTop()) && ($('#work').offset().top) > $(window).scrollTop()) {
+	        colorActive('#about');
+    		$('.menu-btn').addClass('secondary-color');
+    	} else if (($('#work').offset().top <= $(window).scrollTop())) {
+	        colorActive('#work');
+    		$('.menu-btn').removeClass('secondary-color');
+    	} else if (($('#home').offset().top <= $(window).scrollTop()) && ($('#about').offset().top) > $(window).scrollTop()) {
+	        colorActive('#home');
+    		$('.menu-btn').removeClass('secondary-color');
+    	}
+    });
+
+	// action for projects when scroll happens
+    $('.work-content').scroll(function(){
+	    if (($('.project.keepmeposted').offset().top >= 1592) && ($('.project.keepmeposted').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.keepmeposted').addClass('active-proj');
+    	} else if (($('.project.dinokiki').offset().top >= 1592) && ($('.project.dinokiki').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.dinokiki').addClass('active-proj');
+    	} else if (($('.project.reed').offset().top >= 1592) && ($('.project.reed').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.reed').addClass('active-proj');
+    	} else if (($('.project.whysp').offset().top >= 1592) && ($('.project.whysp').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.whysp').addClass('active-proj');
+    	} else if (($('.project.marina').offset().top >= 1592) && ($('.project.marina').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.marina').addClass('active-proj');
+    	} else if (($('.project.qualprofessor').offset().top >= 1592) && ($('.project.qualprofessor').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.qualprofessor').addClass('active-proj');
+    	} else if (($('.project.pao').offset().top >= 1592) && ($('.project.pao').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.pao').addClass('active-proj');
+    	} else if (($('.project.sanduiche').offset().top >= 1592) && ($('.project.sanduiche').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.sanduiche').addClass('active-proj');
+    	} else if (($('.project.bauru').offset().top >= 1592) && ($('.project.bauru').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.bauru').addClass('active-proj');
+    	} else if (($('.project.dinovr').offset().top >= 1592) && ($('.project.dinovr').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.dinovr').addClass('active-proj');
+    	} else if (($('.project.codepen').offset().top >= 1592) && ($('.project.codepen').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.codepen').addClass('active-proj');
+    	} 
     });
     
-    // arrow down on the home section
-    $(".arrow").click(function(){
-        slowScroll("#about");
-    });
-    
-    $(".dinokiki-link").click(function(){
-        window.location.href="dinokiki.html";
-    });
-    
-    $(".whysp-link").click(function(){
-        window.location.href="whysp.html";
-    });
-    
-    $(".marina-link").click(function(){
-        window.location.href="marina.html";
-    });
-    
-    $(".giulia-link").click(function(){
-        window.location.href="giulia.html";
-    });
-    
-    $(".dinokiki-link-pt").click(function(){
-        window.location.href="dinokikipt.html";
-    });
-    
-    $(".whysp-link-pt").click(function(){
-        window.location.href="whysppt.html";
-    });
-    
-    $(".marina-link-pt").click(function(){
-        window.location.href="marinapt.html";
-    });
-    
-    $(".giulia-link-pt").click(function(){
-        window.location.href="giuliapt.html";
-    });
-    
-    // showing or hiding the menu
-    $("#menu").click(function(){ 
-        showMenu();
-    });
-    
-    // changing the active item on menu on click
-    $(".menu ul li a").click(function(){ 
-        var sectionClass = $(this).attr("class");
-        var onlyClass = sectionClass.split(" ");
-        colorActive(onlyClass[0]);
-        showMenu();
-        if (onlyClass[0] != "language")
-            slowScroll("#"+onlyClass[0]);
-    });
-    
+
+    if ($(window).width() < 1024) {
+		$('.work').insertBefore($('.work-content'));
+	    // show/hide menu using swipe on mobile devices
+	    $(window).on('swipeleft', function() {
+	        menu();
+	    });
+	    $(window).on('swiperight', function() {
+	        menu();
+	    });
+	}
 });
-

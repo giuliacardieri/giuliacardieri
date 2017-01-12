@@ -1,177 +1,1597 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="http://giuliacardieri.com" />
+    <meta property="og:title" content="Giulia Cardieri" />
+    <meta property="og:description" content="Hey! I'm Giulia Cardieri, a web developer located in Sorocaba, Brazil. And this is my portfolio :D" />
+    <meta property="og:image" content="http://giuliacardieri.com/facebook-meta.png" />
     <title>Giulia Cardieri</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="shortcut icon" href="favicon.ico">
-<script src="js/jquery.js"></script>
-<script src="js/jquery.mobile.custom.min.js"></script>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script src="js/functions.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-49632572-1', 'giuliacardieri.com');
-  ga('send', 'pageview');
+      ga('create', 'UA-49632572-1', 'giuliacardieri.com');
+      ga('send', 'pageview');
 
-</script>
+    </script>
 </head>
+
 <body>
-    <nav class="menu">
-        <ul>
-            <li><a class="home active" href="#">Home</a>
-            </li>
-            <li><a class="about" href="#about">About</a>
-            </li>
-            <li><a class="portfolio" href="#portfolio">Portfolio</a>
-            </li>
-            <li><a class="contact" href="#contact">Contact</a>
-            </li>
-            <li><a class="language" href="indexpt.html">Portuguese Version</a>
-            </li>
+  <div class="grid-container">
+    <button class="menu-btn menu-hidden">MENU</button>
+    <div class="row menu-row hidden">
+      <nav class="col-1">
+        <ul class="menu">
+          <li class="language">
+            <div class="menu-img-wrapper en-us">
+              <img src="images/br.png" alt="flag from the language's country image" />
+              <p>Portuguese</p>
+            </div>
+            <div class="menu-img-wrapper pt-br">
+              <img src="images/gb.png" alt="flag from the language's country image" />
+              <p>Inglês</p>
+            </div>
+          </li>
+          <li>
+            <a class="active" href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">
+              <span class="en-us">About</span>
+              <span class="pt-br">Sobre</span>
+            </a>
+          </li>
+          <li>
+            <a href="#work">
+              <span class="en-us">Work</span>
+              <span class="pt-br">Trabalho</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <span class="en-us">Contact</span>
+              <span class="pt-br">Contato</span>
+            </a>
+          </li>
         </ul>
-    </nav>
-    <div class="content">
-        <div class="hidden" id="menu">MENU</div>
-        <div id="home">
-            <div id="welcome">
-                <h1>HELLO, I'M GIULIA CARDIERI</h1>
-                <img id="mac" src="images/0.png" alt="macbook air illustration by giulia cardieri" />
-            </div>
-            <img class="arrow" src="images/arrow.png" alt="arrow down" />
-        </div>
-
-        <div class="sections" id="about">
-            <h2>ABOUT ME</h2>
-            <section>
-                <img src="images/giulia.jpg" alt="Giulia de Andrade Cardieri"/>
-                <div class="about-text">
-                    <p>Hi!</p>
-                    <p>My name is Giulia Cardieri, and I'm a third year computer science student at UNESP in Bauru-SP Brazil. I was an exchange at Rochester Institute of Technology in Rochester,NY during the 2013-2014 school year. It was an amazing experience! I learned a lot at RIT, not only from the classes I took but also from the people that I met there.</p>
-                    <p>I'm passionate about front-end development. I'm always interested in learn new technologies or features that I'm not familiar with. I love to create projects based on fun ideas on my free time.</p>
-                    <p>I'm a postcard collector! <a href="https://www.flickr.com/photos/giulia93/collections/72157606335485620/" target="_blank">check out my collection!</a></p>
-                    <div class="button-wrapper"><a target="_blank" class="btn resume" href="assets/resumegiulia.pdf">DOWNLOAD MY RESUME</a></div>
-                </div>
-            </section>
-
-            <h3>SKILLS</h3>
-            <div class="skills">
-                <div class="left-skills">
-                    <div class="skill-wrapper">
-                        <div class="fill html"></div>
-                        <img class="percentage" src=images/90.png alt="90% of html"/>
-                        <img class="square-wrapper" src=images/circle.png alt="circle excluded"/>
-                        <p>HTML</p>
-                    </div>
-                    <div class="skill-wrapper">
-                        <div class="fill css"></div>
-                        <img class="percentage" src=images/90.png alt="90% of css"/>
-                        <img class="square-wrapper" src=images/circle.png alt="circle excluded"/>
-                        <p>CSS</p>
-                    </div>
-                    <div class="skill-wrapper">
-                        <div class="fill js"></div>
-                        <img class="percentage" src=images/75.png alt="75% of javascript"/>
-                        <img class="square-wrapper" src=images/circle.png alt="circle excluded"/>
-                        <p>JS</p>
-                    </div>
-                    <div class="skill-wrapper">
-                        <div class="fill java"></div>
-                        <img class="percentage" src=images/55.png alt="55% of java"/>
-                        <img class="square-wrapper" src=images/circle.png alt="circle excluded"/>
-                        <p>JAVA</p>
-                    </div>
-                </div>
-                <div class="right-skills">
-                    <div class="skill-wrapper">
-                        <div class="fill sql"></div>
-                        <img class="percentage" src=images/55.png alt="55% of sql"/>
-                        <img class="square-wrapper" src=images/circle.png alt="circle excluded"/>
-                        <p>SQL</p>
-                    </div>
-                    <div class="skill-wrapper">
-                        <div class="fill photoshop"></div>
-                        <img class="percentage" src=images/45.png alt="45% of photoshop"/>
-                        <img class="square-wrapper" src=images/circle.png alt="circle excluded"/>
-                        <p class="small">PHOTOSHOP</p>
-                    </div>
-                    <div class="skill-wrapper">
-                        <div class="fill python"></div>
-                        <img class="percentage" src=images/30.png alt="30% of python"/>
-                        <img class="square-wrapper" src=images/circle.png alt="circle excluded"/>
-                        <p class="medium">PYTHON</p>
-                    </div>
-                    <div class="skill-wrapper">
-                        <div class="fill php"></div>
-                        <img class="percentage" src=images/30.png alt="30% of python"/>
-                        <img class="square-wrapper" src=images/circle.png alt="circle excluded"/>
-                        <p>PHP</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sections" id="portfolio">
-            <h2>PORTFOLIO</h2>
-            <section>
-                <div class="project-wrapper dinokiki">
-                    <img class="blur-img" src="images/dinokiki.png" alt="dinokiki"/>
-                    <div class="project-hover"></div>
-                    <div class="project-text">
-                        <p class="project-title">DINOKIKI</p>
-                        <p class="project-tech">HTML5, CSS3, Sass, jQuery</p>
-                        <button class="dinokiki-link">MORE INFO</button>
-                    </div>
-                </div>
-                <div class="project-wrapper whysp">
-                    <img class="blur-img" src="images/whysp.png" alt="why sp"/> 
-                    <div class="project-hover"></div>
-                    <div class="project-text">
-                        <p class="project-title">WHY SÃO PAULO?</p>
-                        <p class="project-tech">HTML5, CSS3, JavaScript, PHP, MySQL</p>
-                        <button class="whysp-link">MORE INFO</button>
-                    </div>
-                </div>
-                <div class="project-wrapper marina">
-                    <img class="blur-img" src="images/marina.png" alt="marina and the lost stuff"/>         
-                    <div class="project-hover"></div>
-                    <div class="project-text">
-                        <p class="project-title">MARINA AND THE LOST STUFF</p>
-                        <p class="project-tech">HTML5, CSS3, jQuery</p>
-                        <button class="marina-link">MORE INFO</button>
-                    </div>
-                </div>   
-                <div class="project-wrapper giulia">
-                    <img class="blur-img" src="images/giulia.png" alt="giulia cardieri website"/>          
-                    <div class="project-hover"></div>
-                    <div class="project-text">
-                        <p class="project-title">GIULIA CARDIERI</p>
-                        <p class="project-tech">HTML5, CSS3, jQuery</p>
-                        <button class="giulia-link">MORE INFO</button>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div id="contact">
-            <p>Let's get in touch!</p>
-            <ul class="icons">
-                <li><a href="malito:giulia.cardieri@gmail.com" target="_blank"><img src="images/email.png" alt="email icon" /></a></li>
-                <li><a href="http://codepen.io/giuliacardieri/" target="_blank"><img src="images/codepen.png" alt="codepen icon"/></a></li>
-                <li><a href="http://github.com/giuliacardieri" target="_blank"><img src="images/github.png" alt="github icon" /></a></li>
-                <li><a href="https://www.linkedin.com/pub/giulia-de-andrade-cardieri/85/a78/66a" target="_blank"><img src="images/linkedin.png" alt="linkedin icon" /></a></li>
-                <li><a href="http://twitter.com/ggiulia" target="_blank"><img src="images/twitter.png" alt="twitter icon"/></a></li>
-            </ul>
-        </div>
-
-        <footer>
-            <p>&copy;2015 Giulia Cardieri // Designed and Developed by Giulia Cardieri</p>
-        </footer>
+      </nav>
     </div>
+    <div class="main-content">
+      <div id="home" class="row">
+        <div class="main-animation-wrapper">
+          <div class="main-animation-content">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.3 841.9">
+              <switch>
+                <g>
+                  <linearGradient id="brown" gradientUnits="userSpaceOnUse" x1="278.0757" y1="428.0203" x2="278.0757" y2="462.8098">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.1651" style="stop-color:#332C28"/>
+                    <stop  offset="0.5064" style="stop-color:#332C28"/>
+                    <stop  offset="0.8061" style="stop-color:#332C28"/>
+                  </linearGradient>
+                  <linearGradient id="purple-2" gradientUnits="userSpaceOnUse" x1="247.7866" y1="420.4072" x2="247.7866" y2="464.8219">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.1317" style="stop-color:#3E3336;stop-opacity:0.9837"/>
+                    <stop  offset="0.406" style="stop-color:#5A435B;stop-opacity:0.9496"/>
+                    <stop  offset="0.7973" style="stop-color:#86559F;stop-opacity:0.9011"/>
+                    <stop  offset="0.8061" style="stop-color:#8756A3;stop-opacity:0.9"/>
+                  </linearGradient>
+                  <linearGradient id="purple" gradientUnits="userSpaceOnUse" x1="278.0757" y1="428.0203" x2="278.0757" y2="462.8098">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.1651" style="stop-color:#382F34"/>
+                    <stop  offset="0.5064" style="stop-color:#403051"/>
+                    <stop  offset="0.8061" style="stop-color:#43286D"/>
+                  </linearGradient>
+                  <linearGradient id="pink" gradientUnits="userSpaceOnUse" x1="321.2714" y1="426.1645" x2="321.2714" y2="461.656">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.1538" style="stop-color:#433131;stop-opacity:0.9809"/>
+                    <stop  offset="0.4741" style="stop-color:#6E3748;stop-opacity:0.9412"/>
+                    <stop  offset="0.8061" style="stop-color:#A72C5F;stop-opacity:0.9"/>
+                  </linearGradient>
+                  <linearGradient id="blonde" gradientUnits="userSpaceOnUse" x1="278.0757" y1="428.0203" x2="278.0757" y2="462.8098">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.135" style="stop-color:#453B32;stop-opacity:0.9833"/>
+                    <stop  offset="0.4163" style="stop-color:#79674C;stop-opacity:0.9484"/>
+                    <stop  offset="0.8061" style="stop-color:#EDCA79;stop-opacity:0.9"/>
+                  </linearGradient>
+                  <linearGradient id="blue-1" gradientUnits="userSpaceOnUse" x1="321.2714" y1="426.1645" x2="321.2714" y2="461.656">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.1317" style="stop-color:#373236;stop-opacity:0.9837"/>
+                    <stop  offset="0.406" style="stop-color:#3D3D5A;stop-opacity:0.9496"/>
+                    <stop  offset="0.7973" style="stop-color:#2D489B;stop-opacity:0.9011"/>
+                    <stop  offset="0.8061" style="stop-color:#2C489E;stop-opacity:0.9"/>
+                  </linearGradient>
+                  <linearGradient id="pink-2" gradientUnits="userSpaceOnUse" x1="251.4498" y1="425.5301" x2="251.4498" y2="462.0292">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.135" style="stop-color:#453535;stop-opacity:0.9833"/>
+                    <stop  offset="0.4163" style="stop-color:#774B58;stop-opacity:0.9484"/>
+                    <stop  offset="0.8061" style="stop-color:#DB6B98;stop-opacity:0.9"/>
+                  </linearGradient>
+                  <linearGradient id="green" gradientUnits="userSpaceOnUse" x1="343.42" y1="428.1654" x2="343.42" y2="465.0155">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.1462" style="stop-color:#383933;stop-opacity:0.9819"/>
+                    <stop  offset="0.451" style="stop-color:#3F5C50;stop-opacity:0.9441"/>
+                    <stop  offset="0.8061" style="stop-color:#288C7A;stop-opacity:0.9"/>
+                  </linearGradient>
+                  <linearGradient id="blue-2" gradientUnits="userSpaceOnUse" x1="278.0757" y1="428.0203" x2="278.0757" y2="462.8098">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.1333" style="stop-color:#383437;stop-opacity:0.9835"/>
+                    <stop  offset="0.4111" style="stop-color:#3F4960;stop-opacity:0.949"/>
+                    <stop  offset="0.8061" style="stop-color:#2768B0;stop-opacity:0.9"/>
+                  </linearGradient>
+                  <linearGradient id="turquose" gradientUnits="userSpaceOnUse" x1="251.4498" y1="425.5301" x2="251.4498" y2="462.0292">
+                    <stop  offset="0" style="stop-color:#332C28"/>
+                    <stop  offset="0.135" style="stop-color:#393937;stop-opacity:0.9833"/>
+                    <stop  offset="0.4164" style="stop-color:#455C62;stop-opacity:0.9483"/>
+                    <stop  offset="0.8061" style="stop-color:#329ABD;stop-opacity:0.9"/>
+                  </linearGradient>
+                  <path class="back-left" fill="url(#brown)" d="M261.6,460c-0.5,3.3,0.1,7,0.6,7.6c0.7,0.7,12.6,0.4,14.5,0c1.6-0.3,16.7-0.1,17.9,0.6
+                    c1.5,0.8,2.2-16.9,1.6-19.2s-0.3-24-0.9-24.2c-3-1.5-34.8-2.6-35.1-0.3C258.5,436.3,262.1,456.8,261.6,460z"/>
+                  <path class="back-right" fill="url(#brown)" d="M305.7,458c-0.4,3.3,0,7,0.4,7.6c0.5,0.7,9.1,0.4,10.5,0c1.1-0.3,10.4,0.8,11.3,1.5
+                    c1.1,0.8,3.3-17.8,2.9-20.1c-0.4-2.3,7.8-23.8,7.4-24.1c-2.2-1.5-33.2-2.7-33.5-0.4C303.5,434.3,306.1,454.8,305.7,458z"/>
+                  <rect x="283.7" y="437.7" fill="#EEE1D2" width="29" height="41.3"/>
+                  <path opacity="0.4" fill="#D5C9BD" d="M312.7,456.8c0,0-10.1-2.6-13.6-2.9c-4.1-0.4-15.4-2.7-15.4-2.7l0.1-4.9l28.9-2V456.8z"/>
+                  <path fill="#EEE1D2" stroke="#ECDDCB" stroke-miterlimit="10" d="M342.8,392.5c0,16.1-3.7,30.8-14.1,40.8
+                    c-9.1,8.7-18,15.7-31.2,15.7c-13.4,0-21.4-4.7-30.5-13.7c-10.1-10-16.5-22.5-16.5-38.3c0-10.2,0.2-18.2,1-29.3
+                    c0.6-9.1,7.4-14.1,16.5-19.9c8.5-5.4,20.4-6.3,29.7-6.3c12,0,26.9,0.8,35.1,8c5.7,5,9.8,9.2,9.8,16.5
+                    C342.7,376,342.8,383.5,342.8,392.5z"/>
+                  <path fill="#332C28" d="M256.2,414.2c-1.8-4.9-2.8-9.9-2.5-11.8c1.7-11.3,0.3-2.9,1.7-11.3c0.9-5.4,64.8-39.5,64.8-39.5L295.9,332
+                    c0,0-48,1.1-57.9,24.3c-1.9,4.4-2.9,8.8-3.8,12.7c-2.4,11.4-5.5,16.3-6,23.5c-0.6,8.5,4.3,16.2,5.1,24.8
+                    c0.2,1.7-3.3,11.5-1.1,11.6c4,0.1,30.3,5.4,30.1,0.9C262.1,424.5,256.3,414.4,256.2,414.2"/>
+                  <path fill="#332C28" d="M336,412.5c1.1-4.9,3.8-8.5,4-11.5c0.5-9-2-21.6-3-28.3c-1.1-7.8-7.2-17.6-10-19
+                    c-4.6-2.4-31.3-5.6-31.3-5.6V332c0,0,49-2.3,57.6,21.5c7.9,21.8,7.6,25.6,8.2,34.8c0.6,8.5,2.7,7.8,2.3,19.6
+                    c-0.2,5.6-3.9,13.1-3.7,18.4c0.2,4.7-26.9,1-26.2,0.3"/>
+                  <path class="left" fill="url(#brown)" d="M231.9,445.1c0.7,1.9,3.5,6.4,2.6,8.8c-1.4,3.6-1.9,2.9-2.9,6.2c-1,3.3-0.4,5.9,0.7,6.4c1.5,0.7,6,0.9,11.8-0.1c8.2-1.4,15.7,1.6,19.7,1.2c3.4-0.3,7.3,0.6,8.4-2c1.2-2.8,0.1-6.6-1.1-8.9s-5.3-6.1-6.3-8.2c-2-4.2-1.3-5.2-2.4-17.8c0-0.3-0.9-5.9-1.7-7c-3.6-5.5-27.9-2.8-28.6-0.5C228.5,435,230.8,442,231.9,445.1z"/>
+                  <path class="right" fill="url(#brown)" d="M323.5,452c-0.5,2.5,1,5.1-0.1,8.4c-1,3.3,1.1,5.3,2.3,5.9c0.9,0.4,6.2,1.4,8.6,2
+                    c9,2.1,13.5,2.8,17.6,2.5c3.4-0.3,4.8-1.8,7-3.7c2.4-2,0.9-5.9-0.2-8.1c-1.2-2.5,5.2-9,4.8-13.1c-0.3-3.2-3.2-9.6-3.7-14.9
+                    c0-0.3-0.2-2-0.1-4.2c0.3-6.6-25.3-2.8-26-0.5c-1.4,4.6-6,12.7-7.4,15.8C324.2,447,323.9,450,323.5,452z"/>
+                  <path fill="#EFE2D3" d="M340.3,508.7c-4,0-62.2-0.2-72.8-0.2c-8.7,0-12.2-0.6-10-6.5c4-11.1-5.3-28.7-0.6-31.8
+                    c3.8-2.5,42.4-0.6,48.1-0.6c5.8,0,20.9,0.2,28.6,1.1c2,0.2,3.9,0.1,4.6,0.2C345.3,471.5,344.3,508.7,340.3,508.7z"/>
+                  <path fill="#1B1B1C" d="M235.4,508.7c-9.1,0.2-5.9,0-14.9,0c-0.6,0-0.5,0,0.5-1.9c1.2-2.4,3.5-7.4,4.8-11.2
+                    c4-11.1,7.7-23.9,13.2-24.9c3.2-0.6,7.4-0.9,12.3-1.2c5.1-0.3,3.8,0,6.6,0c3.3,0,5.2,6.6,1.7,14.1c-3.9,8.4-7,17.7-8.1,23.8
+                    c-0.1,0.4-0.2,1.3-0.5,1.3C247.5,508.9,243.3,508.6,235.4,508.7z"/>
+                  <path fill="#1B1B1C" d="M299.9,508.7c-20.4-0.3-27.4,0-46.8,0c-1.7,0-0.2-4.5,0.1-6.2c1.3-8.4,4.8-33,4.8-33s26.7,14.5,39.8,14.5
+                    c15.5,0,40.1-13.2,40.1-13.2s5,22.5,6.4,30c0.3,1.6,1.4,7.8-0.3,7.8C333.1,508.7,319.6,509,299.9,508.7z"/>
+                  <path fill="#1B1B1C" d="M360.1,508.7c9.1,0.1,6.3-0.1,15.1,0c1.9,0-0.8-5.3-3.1-11.6c-4.1-11.1-9.2-23.4-14.7-24.5
+                    c-2.2-0.5-5.5-0.5-10-1c-4.5-0.4-6.4-0.6-8.7-0.7c-0.5,0-1.5-0.3-1.4,0.3c0.3,5.6-2.9,11.1,0,17.7c4.1,9.2,9.1,13.3,10.6,19.2
+                    c0.1,0.4,0.1,0.7,0.4,0.7C349.9,508.7,353.4,508.7,360.1,508.7z"/>
+                  <polyline fill="none" stroke="#4F4F4F" stroke-width="0.25" stroke-miterlimit="10" points="283,469 297.6,475.3 312.7,469.7     
+                    "/>
+                  <polygon fill="#4F4F4F" points="298.7,474.6 297.6,476.5 296.5,474.6"/>
+                </g>
+              </switch>
+            </svg>
+            <div class="content-home-wrapper">
+              <div class="text-wrapper en-us">
+                <h1>Hi! I'm Giulia.</h1>
+                <h2>A web developer.</h2>
+              </div>
+              <div class="text-wrapper pt-br">
+                <h1>Oi! Eu sou a Giulia.</h1>
+                <h2>Uma desenvolvedora web.</h2>
+              </div>
+              <div class="arrow-wrapper">
+                <div class="arrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="about" class="row">
+        <div class="about col-4">
+          <h3 class="pt-br">Sobre</h3>
+          <h3 class="en-us">About</h3>
+        </div>
+        <div class="about-content col-4">
+          <div class="basic-about-wrapper">
+            <div class="img-wrapper">
+              <img src="images/giulia.jpg" alt="giulia's photo" />
+            </div>
+            <p class="larger en-us">Hi!</p>
+            <p class="larger pt-br">Oi!</p>
+            <p class="en-us">My name is Giulia Cardieri. I'm a web developer located in Sorocaba-SP Brazil. I have a bachelor degree in computer science from Universidade Estadual Paulista (UNESP) in Bauru-SP Brazil. I was an exchange at Rochester Institute of Technology in Rochester-NY on United States during the 2013-2014 school year and at OTH Regensburg in Regensburg, Germany for one semester in 2016. Living and studying in those places were amazing experiences! I'm currently a computer science masters student at Universidade Federal de São Carlos (Ufscar) in Sorocaba-SP Brazil.</p>
+            <p class="en-us">I'm passionate about web development, focusing on front-end. I'm interested in learn new technologies or features that I'm not familiar with. I love to create projects based on fun ideas on my free time, from pure css illustrations to fun websites from things that I like.</p>
+            <p class="pt-br">Meu nome é Giulia Cardieri. Sou desenvolvedora web e moro em Sorocaba-SP. Sou formada em Ciência da Computação pela Universidade Estadual Paulista (UNESP) em Bauru-SP. Eu fui intercâmbista no Rochester Institute of Technology, em Rochester-NY nos Estados Unidos pelo programa Ciência Sem Fronteiras por um ano durante 2013-2014 e na OTH Regensburg em Regensburg na Alemanha durante um semestre de 2016. Viver e estudar nesses lugares foram experiências incríveis! Atualmente sou aluna de mestrado em Ciência da Computação na Universidade Federal de São Carlos (Ufscar) campus Sorocaba.</p>
+            <p class="pt-br">Gosto muito de desenvolvimento web, especialmente front-end. Gosto de aprender novas tecnologias que ainda não conheço. Uma coisa que me interessa muito é criar projetos baseados em ideias (normalmente divertidas) que eu tenho no meu tempo livre. Desde ilustrações e animações usando somente CSS até sites divertidos com coisas que eu acho legais.</p>
+            <div class="btn-wrapper">
+              <button class="view-btn">
+                <span class="en-us">View</span>
+                <span class="pt-br">Ver</span> 
+                Resume</button>
+              <a target="_blank" class="download-btn en-us" href="assets/resume-giulia-en.pdf">Download Resume</a>
+              <a target="_blank" class="download-btn pt-br" href="assets/resume-giulia-pt.pdf">Baixar Resume</a>
+            </div>
+          </div>
+          <div class="resume-wrapper hidden">
+              <button class="hidden about-close-btn">X</button>
+              <div class="header">
+                <h3>Giulia de Andrade Cardieri</h3>
+              </div>
+              <div class="body">
+                <section>
+                  <div class="resume-title">
+                    <h4 class="en-us"><span class="resume-icon education"><img src="images/education.png" alt="education icon"/></span>Education</h4>
+                    <h4 class="pt-br"><span class="resume-icon education"><img src="images/education.png" alt="education icon"/></span>Educação</h4>
+                  </div>
+                  <div class="resume-section-content">
+                    <ul class="months en-us">
+                      <li>March 2016</li>
+                      <li class="end-section-2l">August 2016</li>
+                      <li>February 2012</li>
+                      <li class="end-section-1l">February 2016</li>
+                      <li>August 2013</li>
+                      <li>June 2014</li>
+                    </ul>
+                    <ul class="months pt-br">
+                      <li>Março 2016</li>
+                      <li class="end-section-2l">Agosto 2016</li>
+                      <li>Fevereiro 2012</li>
+                      <li class="end-section-1l">Fevereiro 2016</li>
+                      <li>Agosto 2013</li>
+                      <li>Junho 2014</li>
+                    </ul>
+                    <div class="timeline-icon-wrapper">
+                      <div class="timeline-icon ti-1">
+                        <div class="little-icon"></div>
+                      </div>
+                    </div>
+                    <ul class="content education en-us">
+                      <li class="not-hidden-xs">March 2016 - August 2016</li>
+                      <li class="special">OTH Regensburg - Regensburg, Germany</li>
+                      <li>Bachelor of Science in Computer Science</li>
+                      <li class="end-section">Exchange Student in full time internship (no courses taken)</li>
+                      <li class="not-hidden-xs">February 2012 - February 2016</li>
+                      <li class="special">Universidade Estadual Paulista - Bauru-SP, Brazil</li>
+                      <li class="end-section">Bachelor of Science in Computer Science - GPA: 7.7/10</li>
+                      <li class="not-hidden-xs">August 2013 - June 2014</li>
+                      <li class="special">Rochester Institute of Technology - Rochester-NY, USA</li>
+                      <li>Bachelor of Science in Computer Science - GPA: 3.5/4</li>
+                      <li>Non-degree International Student</li>
+                      <li>Brazil Scientific Mobility Program, fully funded scholarship recipient</li>
+                    </ul>
+                    <ul class="content education pt-br">
+                      <li class="not-hidden-xs">Março 2016 - Agosto 2016</li>
+                      <li class="special">OTH Regensburg - Regensburg, Alemanha</li>
+                      <li>Bacharelado em Ciência da Computação</li>
+                      <li class="end-section">Estudante de intercâmbio fazendo estágio</li>
+                      <li class="not-hidden-xs">Fevereiro 2012 - Fevereiro 2016</li>
+                      <li class="special">Universidade Estadual Paulista - Bauru-SP</li>
+                      <li class="end-section">Bacharelado em Ciência da Computação - CR: 7.7/10</li>
+                      <li class="not-hidden-xs">Agosto 2013 - Junho 2014</li>
+                      <li class="special">Rochester Institute of Technology - Rochester-NY, EUA</li>
+                      <li>Bacharelado em Ciência da Computação - GPA: 3.5/4</li>
+                      <li>Estudante de intercâmbio</li>
+                      <li>Bolsista do Programa federal Ciência Sem Fronteiras</li>
+                    </ul>
+                  </div>
+                </section>
+                <section>
+                  <div class="resume-title">
+                    <span class="resume-icon"></span>
+                    <h4 class="en-us"><span class="resume-icon"><img src="images/skills.png" alt="skills icon"/></span>Skills</h4>
+                    <h4 class="pt-br"><span class="resume-icon"><img src="images/skills.png" alt="skills icon"/></span>Habilidades</h4>
+                    <div class="resume-section-content">
+                      <p><span class="kind-of-title">Design: </span>Photoshop, Illustrator</p>
+                      <p><span class="kind-of-title">Web: </span>HTML, CSS/Sass, JavaScript/jQuery, PHP/Codeigniter, SQL/MySQL</p>
+                      <p class="en-us last-p"><span class="kind-of-title">Languages: </span>Native Portuguese, Fluent English</p>
+                      <p class="pt-br last-p"><span class="kind-of-title">Idiomas: </span>Português, Inglês Fluente</p>
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <div class="resume-title">
+                    <span class="resume-icon"></span>
+                    <h4 class="en-us"><span class="resume-icon"><img src="images/experience.png" alt="experience icon"/></span>Experience</h4>
+                    <h4 class="pt-br"><span class="resume-icon"><img src="images/experience.png" alt="experience icon"/></span>Experiência</h4>
+                  </div>
+                  <div class="resume-section-content">
+                    <ul class="months en-us">
+                      <li>March 2016</li>
+                      <li class="end-section-2l">July 2016</li>
+                      <li>August 2015</li>
+                      <li class="end-section-2l">October 2015</li>
+                      <li>August 2014</li>
+                      <li>November 2014</li>
+                    </ul>
+                    <ul class="months pt-br">
+                      <li>Março 2016</li>
+                      <li class="end-section-2l">Julho 2016</li>
+                      <li>Agosto 2015</li>
+                      <li class="end-section-2l">Outubro 2015</li>
+                      <li>Agosto 2014</li>
+                      <li>Novembro 2014</li>
+                    </ul>
+                    <div class="timeline-icon-wrapper">
+                      <div class="timeline-icon ti-2">
+                        <div class="little-icon"></div>
+                      </div>
+                    </div>
+                    <ul class="content en-us">
+                      <li class="not-hidden-xs">March 2016 - July 2016</li>
+                      <li class="special">Infineon Technologies</li>
+                      <li>Information Technology Internship.</li>
+                      <li class="end-section"> Company located in Regensburg, Germany.</li>
+                      <li class="not-hidden-xs">August 2015 - October 2015</li>
+                      <li class="special">Lecom</li>
+                      <li>Front-End Web Development Internship.</li>
+                      <li class="end-section">Technologies: HTML, CSS, Javascript/jQuery and Bootstrap.</li>
+                      <li class="not-hidden-xs">August 2014 - November 2014</li>
+                      <li class="special">Tegra</li>
+                      <li>Web Development Internship.</li>
+                      <li>Technologies: HTML, CSS/Sass, Javascript/jQuery, Bootstrap and Python/Django.</li>
+                    </ul>
+                    <ul class="content pt-br">
+                      <li class="not-hidden-xs">Março 2016 - Julho 2016</li>
+                      <li class="special">Infineon Technologies</li>
+                      <li>Estágio em Tecnologia da Informação.</li>
+                      <li class="end-section">Empresa localizada em Regensburg, Alemanha.</li>
+                      <li class="not-hidden-xs">Agosto 2015 - Outubro 2015</li>
+                      <li class="special">Lecom</li>
+                      <li>Estágio em Desenvolvimento Web Front-End.</li>
+                      <li class="end-section">Tecnologias: HTML, CSS, JavaScript/jQuery e Bootstrap.</li>
+                      <li class="not-hidden-xs">Agosto 2014 - Novembro 2014</li>
+                      <li class="special">Tegra</li>
+                      <li>Estágio em Desenvolvimento Web.</li>
+                      <li>Tecnologias: HTML, CSS/Sass, Javascript/jQuery, Bootstrap e Python/Django.</li>
+                    </ul>
+                  </div>
+                </section>
+                <section>
+                  <div class="resume-title">
+                    <span class="resume-icon"></span>
+                    <h4 class="en-us"><span class="resume-icon"><img src="images/projects.png" alt="projects icon"/></span>Best Projects</h4>
+                    <h4 class="pt-br"><span class="resume-icon"><img src="images/projects.png" alt="projects icon"/></span>Projetos</h4>
+                  </div>
+                  <div class="resume-section-content">
+                    <ul class="months en-us">
+                      <li>May 2016</li>
+                      <li class="end-section-2l">Today</li>
+                      <li>May 2015</li>
+                      <li class="end-section-3l">February 2016</li>
+                      <li>February 2014</li>
+                      <li>Today</li>
+                    </ul>
+                    <ul class="months pt-br">
+                      <li>Maio 2016</li>
+                      <li class="end-section-2l">Hoje</li>
+                      <li>Maio 2015</li>
+                      <li class="end-section-3l">Fevereiro 2016</li>
+                      <li>Fevereiro 2014</li>
+                      <li>Hoje</li>
+                    </ul>
+                    <div class="timeline-icon-wrapper">
+                      <div class="timeline-icon ti-3">
+                        <div class="little-icon"></div>
+                      </div>
+                    </div>
+                    <ul class="content en-us">
+                      <li class="not-hidden-xs">May 2016 - Today</li>
+                      <li class="special">CSS/Sass Illustrations and Animations</li>
+                      <li class="end-section">A series of pure CSS/Sass illustrations and animations. All available at my Codepen profile.</li>
+                      <li class="not-hidden-xs">May 2015 - February 2016</li>
+                      <li class="special">Keep Me Posted</li>
+                      <li class="end-section">A social network for postcard collectors. It was developed as a responsive web application with a recommender system. Developed with HTML5, CSS/Sass, jQuery and PHP/CodeIgniter.</li>
+                      <li class="not-hidden-xs">February 2014 - Today</li>
+                      <li class="special">Dinokiki</li>
+                      <li>A fun and interactive website developed using HTML5, Sass, jQuery and PHP/CodeIgniter.</li>
+                    </ul>
+                    <ul class="content pt-br">
+                      <li class="not-hidden-xs">Maio 2016 - Hoje</li>
+                      <li class="special">Ilustrações e Animações em CSS/Sass</li>
+                      <li class="end-section">Uma série de ilustrações e animações em CSS/Sass. Disponíveis em meu perfil do Codepen.</li>
+                      <li class="not-hidden-xs">Maio 2015 - Feveriro 2016</li>
+                      <li class="special">Keep Me Posted</li>
+                      <li class="end-section">Uma rede social para colecionadores de cartões postais. Desenvolvida como uma aplicação web com sistema de recomendação. Desenvolvido com HTML5, CSS/Sass, jQuery e PHP/CodeIgniter.</li>
+                      <li class="not-hidden-xs">Fevereiro 2014 - Hoje</li>
+                      <li class="special">Dinokiki</li>
+                      <li>Um website interativo e divertido. Desenvolvido com HTML5, Sass, jQuery e PHP/CodeIgniter.</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="work" class="row">
+          <div class="projects-bar-wrapper">
+            <div class="projects-bar">
+              <div class="project-circle p1 keepmeposted active-proj"></div>
+              <div class="project-circle p2 codepen"></div>
+              <div class="project-circle p3 dinokiki"></div>
+              <div class="project-circle p4 reed"></div>
+              <div class="project-circle p5 whysp"></div>
+              <div class="project-circle p6 marina"></div>
+              <div class="project-circle p7 qualprofessor"></div>
+              <div class="project-circle p8 pao"></div>
+              <div class="project-circle p9 sanduiche"></div>
+              <div class="project-circle p10 bauru"></div>
+              <div class="project-circle p11 dinovr"></div>
+            </div>
+          </div>
+        <div class="work-content col-4">
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project keepmeposted" data-href="keepmeposted">
+                <button class="hidden close-btn keepmeposted">X</button>
+                <div class="img-wrapper keepmeposted"></div>
+                <div class="project-text">
+                  <h4>KEEP ME POSTED</h4>
+                  <p class="en-us">A social network for postcard collectors</p>
+                  <p class="pt-br">Uma rede social para colecionadores de cartões postais</p>
+                  <button class="project-btn keepmeposted">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+              <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">Keep Me Posted is a social network for postcard collectors with a recommender system. The idea came from a great project called <a href="http://postcrossing.com" target="_blank">Postcrossing</a>, this project allows strangers to exchange postcards (the real ones, made by paper and send by regular mail). I'm a Postcrosser (the name given to Postcrossing users) since 2006 and ever since I started my computer science studies I wanted to make a software that could help me and other Postcrossers to organize and show their collections.</p>
+                        <p class="en-us">This application goal is to help all postcard collectors to organize their collection, find other collectors to exchange postcards with, and find postcards they might like using the search engine or by checking out the postcards recommended on by the recommender system. This project is not online yet. It's possible to check out the showcase version, which is always logged in on my profile so visitors can check all the features.</p>
+                        <p class="pt-br">Keep Me Posted é uma rede social para colecionadores de cartões postais com um sistema de recomendação. Essa ideia veio de um ótimo projeto chamado <a href="http://postcrossing.com" target="_blank">Postcrossing</a>, esse projeto permite que pessoas desconhecidas pelo mundo troquem cartões postais (os reais, feitos de papel e enviados pelo correio). Eu sou uma Postcrosser (o nome dado a usuários do Postcrossing) desde 2006 e logo ao iniciar minha graduação em ciência da computação tive vontade de criar um software para auxiliar usuários do Postcrossing (e consequentemente eu) a organizar e mostrar digitalmente suas coleções.</p>
+                        <p class="pt-br">O objetivo dessa aplicação é ajudar todos os colecionadores de cartões postais a organizar sua coleção, encontrar outros colecionadores para trocar postais e encontrar postais de seus interesses usando o sistema de busca ou através das recomendações do sistema de recomendação. Esse projeto não está funcionando ainda. É possível acessar uma versão de exibição, sempre logada em meu perfil, que exibe todos os dados do sistema mas não permite o cadastro ou login de usuários. Dessa forma visitantes podem acessar quase todos os recursos do sistema.</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn keepmeposted" href="http://giuliacardieri.com/keepmeposted" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Keep Me Posted</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color keepmeposted ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions keepmeposted en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions keepmeposted pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers keepmeposted en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>A social network for postcard collectors</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>May 2015 - February 2016</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>Sass, CodeIgniter, Recommender Systems</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>My final thesis project for my undergraduate degree</li>
+                          </ul>
+                          <ul class="answers keepmeposted pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Uma rede social para colecionadores de cartões postais</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Maio 2015 - Fevereiro 2016</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>Sass, CodeIgniter, Sistemas de Recomendação</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Trabalho de conclusão de curso da graduação</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/keepmeposted-0.png" alt="keep me posted screenshot" />
+                        <img src="images/keepmeposted-1.png" alt="keep me posted screenshot" />
+                        <img src="images/keepmeposted-2.png" alt="keep me posted screenshot" />
+                        <img src="images/keepmeposted-3.png" alt="keep me posted screenshot" />
+                        <img src="images/keepmeposted-4.png" alt="keep me posted screenshot" />
+                        <img src="images/keepmeposted-5.png" alt="keep me posted screenshot" />
+                        <img src="images/keepmeposted-6.png" alt="keep me posted screenshot" />
+                        <img src="images/keepmeposted-7.png" alt="keep me posted screenshot" />
+                        <img src="images/keepmeposted-8.png" alt="keep me posted screenshot" />
+                        <img class="vertical-img" src="images/keepmeposted-9.png" alt="keep me posted screenshot" />
+                        <img class="vertical-img" src="images/keepmeposted-10.png" alt="keep me posted screenshot" />
+                        <img class="vertical-img" src="images/keepmeposted-11.png" alt="keep me posted screenshot" />
+                        <img class="vertical-img" src="images/keepmeposted-12.png" alt="keep me posted screenshot" />
+                        <img class="vertical-img" src="images/keepmeposted-13.png" alt="keep me posted screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn keepmeposted" href="http://giuliacardieri.com/keepmeposted" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Keep Me Posted</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="next-btn keepmeposted">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project codepen" data-href="codepen1">
+                <button class="hidden close-btn codepen">X</button>
+                <div class="img-wrapper codepen"></div>
+                <div class="project-text">
+                  <h4 class="en-us">ILLUSTRATIONS AND ANIMATIONS WITH CSS/SCSS</h4>
+                  <h4 class="pt-br">ILLUSTRAÇÕES E ANIMAÇÕES COM CSS/SCSS</h4>
+                  <p class="en-us">A collection of CSS/Scss illustrations and animations</p>
+                  <p class="pt-br">Uma coleção de animações e ilustrações feitas com CSS/SCSS</p>
+                  <button class="project-btn codepen">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">On June 2016 I started to search more about illustrations made with pure CSS. I thought the idea of creating something that looked good using only code was very interesting, not only for fun but also to learn more about CSS and its attributes. After a few tries I realized I could also animate those illustrations and improve a lot my code using Sass and its structures such as mixins, if, for and variables.</p>
+                        <p class="en-us"><a href="http://codepen.io">Codepen</a> is my favorite place to develop those illustrations since it's an easy way to visualize your code and result at the same time, share with your friends and colleagues. This nice website picks some "pens" to share on it's main page, other social medias and newsletter, and some of my pens were picked by Codepen staff (I admit I'm always very happy when that happens!).</p>
+                        <p class="pt-br">Em Junho de 2016 eu comecei a pesquisar mais sobre ilustrações feitas utilizando somente CSS. Achei a ideia de criar alguma coisa que é bonita usando somente código muito interessante, não somente por diversão mas também para aprender mais sobre css e seus atributos. Após algumas tentativas percebi que poderia não só criar ilustrações, como também animá-las, e melhorar meu código utilizando Sass e as estruturas suportadas por esse pré-processador, como mixins, if, for e variáveis.</p>
+                        <p class="pt-br"><a href="http://codepen.io">Codepen</a> é meu lugar favorito para desenvolver essas ilustrações pois possui uma forma fácil e prática de visualizar o código e seu resultado ao mesmo tempo, além da facilidade de compartilhar com seus amigos e colegas. Esse site escolhe algum de seus "pens" para compartilhar em sua página principal, mídias sociais e newsletter, e alguns de meus pens foram selecionados por funcionários do Codepen (admito que sempre fico muito feliz quando isso acontece!).</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn codepen" href="http://codepen.io/collection/XyJVEV/" target="_blank">
+                            <span class="en-us">Check out <span class="hidden-xs">Illustrations and Animations with CSS/Scss</span></span>
+                            <span class="pt-br">Confira <span class="hidden-xs">Ilustrações e Animações com CSS/Scss</span></span>
+                         </a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color codepen ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions codepen en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions codepen pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers codepen en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>A collection of CSS/Scss illustrations and animations</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>June 2016 - Today</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, Sass</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>To learn more CSS and illustrations</li>
+                          </ul>
+                          <ul class="answers codepen pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Uma coleção de animações e ilustrações feitas com CSS/SCSS</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Junho 2016 - Hoje</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, Sass</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Para aprender mais sobre CSS e ilustrações</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/codepen-0.png" alt="Codepen screenshot" />
+                        <img src="images/codepen-1.png" alt="Codepen screenshot" />
+                        <img src="images/codepen-2.png" alt="Codepen screenshot" />
+                        <img src="images/codepen-3.png" alt="Codepen screenshot" />
+                        <img src="images/codepen-4.png" alt="Codepen screenshot" />
+                        <img src="images/codepen-5.png" alt="Codepen screenshot" />
+                        <img src="images/codepen-6.png" alt="Codepen screenshot" />
+                        <img src="images/codepen-7.png" alt="Codepen screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn codepen" href="http://codepen.io/collection/XyJVEV/" target="_blank">
+                            <span class="en-us">Check out <span class="hidden-xs">Illustrations and Animations with CSS/Scss</span></span>
+                            <span class="pt-br">Confira <span class="hidden-xs">Ilustrações e Animações com CSS/Scss</span></span>
+                          </a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn codepen">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn codepen">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project dinokiki" data-href="dinokiki">
+                <button class="hidden close-btn dinokiki">X</button>
+                <div class="img-wrapper dinokiki"></div>
+                <div class="project-text">
+                  <h4>DINOKIKI</h4>
+                  <p class="en-us">A fun website about a dinosaur that says 'kiki'</p>
+                  <p class="pt-br">Um website divertido sobre um dinosauro que fala 'kiki'</p>
+                  <button class="project-btn dinokiki">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">Dinokiki is an idea inspired by the website <a href="http://plspetdoge.com/" target="_blank">pls pet doge</a> and <a href="https://vine.co/v/h1i5WBUFW0K" target="_blank">Jerome Jarre's and Nicholas Megalis' Vine "Mama Dinosaur Finds Its Baby"</a>. I really wanted to learn JavaScript and I thought using a fun project would be nice! (and I was right!) My friends supported me recording kikis while I tried to design a character and program in JavaScript for the first time.</p>
+                        <p class="en-us">Today Dinokiki has interactive features such as form that allows users to send audio files (kikis) and test on the same time, a game to identify each different kiki (the audio file sent by a user) and illustrations for each different kiki.</p>
+                        <p class="pt-br">Dinokiki é uma ideia inspirada pelo website <a href="http://plspetdoge.com/" target="_blank">pls pet doge</a> e o <a href="https://vine.co/v/h1i5WBUFW0K" target="_blank">Vine do Jerome Jarre e Nicholas Megalis "Mama Dinosaur Finds Its Baby"</a>. Eu queria aprender JavaScript e achei que usar um projeto divertido para isso seria legal! (e eu estava certa!) Meus amigos me ajudaram gravando "kikis" enquanto eu criava um personagem e programava em JavaScript pela primeira vez.</p>
+                        <p class="pt-br">Atualmente o site tem funcionalidades interativas, como um formulário que permite o envio de arquivos de áudio (os "kikis") e testá-los com o dinokiki ao mesmo tempo, um jogo para identificar cada "kiki" (um arquivo de áudio enviado por um usuário) e ilustrações diferentes para cada kiki.</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn dinokiki" href="http://dinokiki.com/" target="_blank" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Dinokiki</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color dinokiki ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions dinokiki en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions dinokiki pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers dinokiki en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>An interactive website</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>February 2014 - Today</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, Sass, jQuery, CodeIgniter, MySQL</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>Initially to learn JavaScript and then to have fun :D</li>
+                          </ul>
+                          <ul class="answers dinokiki pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um website interativo</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Fevereiro 2014 - Hoje</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, Sass, jQuery, CodeIgniter, MySQL</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Inicialmente para aprender JavaScript e também para me divertir :D</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/dinokiki-0.png" alt="dinokiki screenshot" />
+                        <img src="images/dinokiki-1.png" alt="dinokiki screenshot" />
+                        <img src="images/dinokiki-2.png" alt="dinokiki screenshot" />
+                        <img src="images/dinokiki-4.png" alt="dinokiki screenshot" />
+                        <img src="images/dinokiki-5.png" alt="dinokiki screenshot" />
+                        <img src="images/dinokiki-6.png" alt="dinokiki screenshot" />
+                        <img src="images/dinokiki-7.png" alt="dinokiki screenshot" />
+                        <img class="vertical-img" src="images/dinokiki-13.png" alt="dinokiki screenshot" />
+                        <img class="vertical-img" src="images/dinokiki-9.png" alt="dinokiki screenshot" />
+                        <img class="vertical-img" src="images/dinokiki-10.png" alt="dinokiki screenshot" />
+                        <img class="vertical-img" src="images/dinokiki-11.png" alt="dinokiki screenshot" />
+                        <img class="vertical-img" src="images/dinokiki-8.png" alt="dinokiki screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn dinokiki" href="http://dinokiki.com/" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Dinokiki</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn dinokiki">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn dinokiki">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project reed" data-href="reed">
+                <button class="hidden close-btn reed">X</button>
+                <div class="img-wrapper reed"></div>
+                <div class="project-text">
+                  <h4>REED</h4>
+                  <p class="en-us">A RSS/feed reader</p>
+                  <p class="pt-br">Um leitor de feed RSS</p>
+                  <button class="project-btn reed">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">Reed is a RSS feed reader. It was created to be simple, easy to use and responsive. It was developed as a group project (Elisa Castro and I) for a Web Semantics course. It allows users to add new feed websites, check the feeds in different ways, filter by one specific feed website and also order according to the newest or oldest item.</p>
+                        <p class="pt-br">Reed é um leitor de feed RSS. Foi criado para ser simples, fácil de usar e responsivo. Esse projeto foi desenvolvido em grupo (Elisa Castro e eu) para a disciplina de Web Semântica. Ele permite que usuários adicionem novos canais de feed, visualizem os feeds de diferentes formas, filtrem por um feed específico e também ordenem os feeds de acordo com sua data de publicação.</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn reed" href="http://giuliacardieri.com/reed" target="_blank" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Reed</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color reed ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions reed en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions reed pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers reed en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>A RSS feed reader</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>December 2015 - January 2016</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, CSS, jQuery, PHP</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>As the final project for the Web Semantics course</li>
+                          </ul>
+                          <ul class="answers reed pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um leitor de feed RSS</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Dezembro 2015 - Janeiro 2016</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, CSS, jQuery, PHP</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Como o projeto final da disciplina de Web Semântica</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/reed-0.png" alt="reed screenshot" />
+                        <img src="images/reed-1.png" alt="reed screenshot" />
+                        <img src="images/reed-2.png" alt="reed screenshot" />
+                        <img class="vertical-img" src="images/reed-3.png" alt="reed screenshot" />
+                        <img class="vertical-img" src="images/reed-4.png" alt="reed screenshot" />
+                        <img class="vertical-img" src="images/reed-5.png" alt="reed screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn reed" href="http://giuliacardieri.com/reed" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Reed</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn reed">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn reed">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project whysp" data-href="whysp">
+                <button class="hidden close-btn whysp">X</button>
+                <div class="img-wrapper whysp"></div>
+                <div class="project-text">
+                  <h4>WHY SÃO PAULO?</h4>
+                  <p class="en-us">A touristic website about São Paulo</p>
+                  <p class="pt-br">Um website turístico sobre São Paulo</p>
+                  <button class="project-btn whysp">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">Why São Paulo? was a project created for my Web II course at Rochester Institute of Technology. It was developed in two steps. The first was only the static pages with HTML and CSS. The second one included JavaScript (with no libraries!), PHP and MySQL. My main focus was on good usability, well-structured and clean code.</p>
+                        <p class="en-us">I had to chose a place in the world to create a website about. I chose São Paulo first because it's a city very close to my hometown, Sorocaba, and second because most of my classmates had never been to Brazil. It was a great choice because it has a lot of attractions and was a great opportunity to show a little bit of Brazil to everyone else.</p>
+                        <p class="pt-br">Why São Paulo? foi um projeto criado para a disciplina de Web II no Rochester Institute of Technology. Foi desenvolvido em dois passos. O primeiro foi a criação de páginas estáticas com HTML e CSS. O segundo passo foi incluir JavaScript (sem bibliotecas!), PHP e MySQL. O foco nesse projeto foi boa usabilidade, código limpo e bem estruturado.</p>
+                        <p class="pt-br">Eu tive que escolher um lugar no mundo para criar um site. Escolhi São Paulo primeiro por que é uma cidade próxima a minha cidade natal, Sorocaba, e também por que a maioria dos meus colegas de classe nunca foram ao Brasil. Foi uma ótima escolha pois a cidade tem muitas atrações e foi uma ótima oportunidade de mostrar um pouco do Brasil para todo mundo.</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn whysp" href="http://giuliacardieri.com/whysp" target="_blank" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Why São Paulo</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color whysp ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions whysp en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions whysp pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers whysp en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>A website about São Paulo</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>February 2014 - May 2014</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, CSS3, JavaScript, PHP, MySQL</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>A project for my Web II course</li>
+                          </ul>
+                          <ul class="answers whysp pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um site sobre São Paulo</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Fevereiro 2014 - Maio 2014</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, CSS3, JavaScript, PHP, MySQL</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Um projeto para a disciplina de Web II</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/whysp-0.png" alt="Why São Paulo screenshot" />
+                        <img src="images/whysp-1.png" alt="Why São Paulo screenshot" />
+                        <img src="images/whysp-2.png" alt="Why São Paulo screenshot" />
+                        <img src="images/whysp-3.png" alt="Why São Paulo screenshot" />
+                        <img src="images/whysp-4.png" alt="Why São Paulo screenshot" />
+                        <img src="images/whysp-5.png" alt="Why São Paulo screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn whysp" href="http://giuliacardieri.com/whysp" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Why São Paulo</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn whysp">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn whysp">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project marina" data-href="marina">
+                <button class="hidden close-btn marina">X</button>
+                <div class="img-wrapper marina"></div>
+                <div class="project-text">
+                  <h4>MARINA AND THE LOST STUFF</h4>
+                  <p class="en-us">A simple game developed as a gift for a friend</p>
+                  <p class="pt-br">Um jogo simples desenvolvido como um presente para uma amiga</p>
+                  <button class="project-btn marina">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">In 2013/2014 I had a great opportunity to be an exchange student at Rochester Institute Of Technology with other Brazilian students. We became friends but Brazil is a huge country and most of us don't live near each other. On December 2014 we decided to make a secret santa sending virtual gifts. Some of my friends sang, other made funny videos but I decided to make a game with references to almost everyone who shared this nice experience.</p>
+                        <p class="pt-br">Em 2013/2014 tive uma oportunidade muito legal de ser uma intercambista no Rochester Institute Of Technology com outros estudantes brasileiros. Todos ficamos amigos mas o Brasil é um país muito grande e a maioria de nós não mora próximo. Em Dezembro de 2014 decidimos fazer um amigo secreto enviando presentes digitais. Alguns dos participantes cantaram, outros fizeram vídeos engraçados mas eu decidi fazer um jogo com referência a quase todos que participaram dessa experiência de intercâmbio.</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn marina" href="http://giuliacardieri.com/marinaandtheloststuff" target="_blank" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Marina and The Lost Stuff</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color marina ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions marina en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions marina pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers marina en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>A simple game</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>December 2014</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, CSS3, jQuery</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>A secret santa gift to my friend Marina</li>
+                          </ul>
+                          <ul class="answers marina pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um jogo simples</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Dezembro 2014</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, CSS3, jQuery</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Um presente de amigo secreto para minha amiga Marina</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/marina-0.png" alt="Marina and The Lost Stuff screenshot" />
+                        <img src="images/marina-1.png" alt="Marina and The Lost Stuff screenshot" />
+                        <img src="images/marina-2.png" alt="Marina and The Lost Stuff screenshot" />
+                        <img src="images/marina-3.png" alt="Marina and The Lost Stuff screenshot" />
+                        <img src="images/marina-4.png" alt="Marina and The Lost Stuff screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn marina" href="http://giuliacardieri.com/marinaandtheloststuff" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Marina and The Lost Stuff</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn marina">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn marina">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project qualprofessor" data-href="qualprofessor">
+                <button class="hidden close-btn qualprofessor">X</button>
+                <div class="img-wrapper qualprofessor"></div>
+                <div class="project-text">
+                  <h4>QUAL PROFESSOR?</h4>
+                  <p class="en-us">A game based on specialist systems</p>
+                  <p class="pt-br">Um jogo baseado em sistemas especialistas</p>
+                  <button class="project-btn qualprofessor">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">I'm a fan of <a href="http://akinator.com/" target="_blank">Akinator</a> and when I found out it was based on a specialist system I decided I wanted to do something similar. This project was developed by me and Elisa Castro as a project for our artificial intelligence class. We decided to make a small scale Akinator with the professors from the computer science major.</p>
+                        <p class="en-us">Qual Professor means Which Professor. The user will choose a professor on the main page clicking on his/hers photo and them answer questions (only Yes/No answers), and the system will guess the correct professor. It's not magic, it's artificial intelligence!</p>
+                        <p class="pt-br">Sou fã do <a href="http://akinator.com/" target="_blank">Akinator</a> e ao descorbir que era baseado em um sistema especialista decidi tentar criar ao similar. Esse projeto foi desenvolvido pela Elisa Castro e eu como um projeto para a disciplina de inteligência artificial. Decidimos criar um Akinator numa escala menor com os professores do curso de ciência da computação.</p>
+                        <p class="pt-br">O usuário escolhe um professor na página inicial clicando na foto e depois responde perguntas (somente sim/não) e o sistema irá acertar o professor que o usuário escolheu. Não é mágica, é inteligência artificial!</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn qualprofessor" href="http://giuliacardieri.com/qualprofessor" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Qual Professor</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color qualprofessor ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions qualprofessor en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions qualprofessor pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers qualprofessor en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>A game based on specialist systems</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>March 2015</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, CSS3, jQuery, Specialist Systems</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>As a project for an Artificial Intelligence course</li>
+                          </ul>
+                          <ul class="answers qualprofessor pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um jogo baseado em sistemas especialistas</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Março 2015</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, CSS3, jQuery, Sistemas Especialistas</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Como um projeto para a disciplina de Inteligência Artificial</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/qualprofessor-0.png" alt="Qual Professor screenshot" />
+                        <img src="images/qualprofessor-1.png" alt="Qual Professor screenshot" />
+                        <img src="images/qualprofessor-2.png" alt="Qual Professor screenshot" />
+                        <img src="images/qualprofessor-3.png" alt="Qual Professor screenshot" />
+                        <img class="vertical-img" src="images/qualprofessor-4.png" alt="Qual Professor screenshot" />
+                        <img class="vertical-img" src="images/qualprofessor-5.png" alt="Qual Professor screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn qualprofessor" href="http://giuliacardieri.com/qualprofessor" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Qual Professor</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn qualprofessor">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn qualprofessor">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project pao" data-href="pao">
+                <button class="hidden close-btn pao">X</button>
+                <div class="img-wrapper pao"></div>
+                <div class="project-text">
+                  <h4>NO CÉU TEM PÃO?</h4>
+                  <p class="en-us">A game based on specialist systems</p>
+                  <p class="pt-br">Um jogo baseado em sistemas especialistas</p>
+                  <button class="project-btn pao">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">No céu tem pão? is the question "Is there bread in the sky?" in portuguese. It was created based on a <a href="https://www.youtube.com/watch?v=rlSW5HTmGhg" target="_blank">famous viral video</a> in Brazil. The website purpose is just to have fun, you need to look at the clouds and answer the question according to what you see.</p>
+                        <p class="en-us">The animated clouds and breads were created using CSS3 animations, the score is kept using HTML5 local storage. There is 30% of chances the visitor will see bread in the sky. It has responsive design since most of the visitors access it using a mobile device.</p>
+                        <p class="en-us">Everytime the user clicks on the "SIM"(yes) or "NÃO"(no) buttons the scores changes. I chose HTML5 local storage to store the results because it is a simple and easy way to retain information without using a database (which would be too complex for this simple single page game).</p>
+                        <p class="pt-br">Esse projeto foi criado baseado no <a href="https://www.youtube.com/watch?v=rlSW5HTmGhg" target="_blank">famoso vídeo viral "No Céu Tem Pão?"</a>. O objetivo desse site é se divertir, é necessário olhar para as nuvens e responder a questão de acordo com o que você vê.</p>
+                        <p class="pt-br">As nuvens animadas foram criadas usando animações de CSS3, o placar é mantido usando o local storage do HTML5. Há uma chance de 30% do visitante ver pão no céu. Esse projeto tem design responsivo pois a maioria de seus visitantes acessa o site através de um dispositivo móvel.</p>
+                        <p class="pt-br">Toda vez que o usuário clica nos botões "SIM" ou "NÃO" o placar muda. Escolhi utilizar o local storage do HTML5 para armazenar os resultados porque é uma forma simples e fácil de manter informações sem utilizar um banco de dados (o qual seria muito complexo para criar esse jogo de uma única página).</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn pao" href="http://giuliacardieri.com/noceutempao" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          No Céu Tem Pão</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color pao ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions pao en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions pao pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers pao en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>A funny and easy game</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>February 2015</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, CSS3, jQuery</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>I wanted to use CSS3 animations to make something funny</li>
+                          </ul>
+                          <ul class="answers pao pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um jogo fácil e divertido</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Fevereiro 2015</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, CSS3, jQuery</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Usar animações em CSS3 para fazer algo divertido</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/pao-0.png" alt="No Céu Tem Pão? screenshot" />
+                        <img src="images/pao-1.png" alt="No Céu Tem Pão? screenshot" />
+                        <img src="images/pao-2.png" alt="No Céu Tem Pão? screenshot" />
+                        <img class="vertical-img" src="images/pao-3.png" alt="No Céu Tem Pão? screenshot" />
+                        <img class="vertical-img" src="images/pao-4.png" alt="No Céu Tem Pão? screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn pao" href="http://giuliacardieri.com/noceutempao" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          No Céu Tem Pão?</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn pao">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn pao">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project sanduiche" data-href="sanduiche">
+                <button class="hidden close-btn sanduiche">X</button>
+                <div class="img-wrapper sanduiche"></div>
+                <div class="project-text">
+                  <h4>DEVO ESQUENTAR MEU SANDUÍCHE?</h4>
+                  <p class="en-us">A real time weather website for Bauru</p>
+                  <p class="pt-br">Um site com o clima em tempo real para Bauru</p>
+                  <button class="project-btn sanduiche">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">Devo esquentar meu sanduíche? is the question "Should I heat up my sandwich?" in portuguese. I created this website because the city of <a href="https://en.wikipedia.org/wiki/Bauru" target="_blank">Bauru</a> is really warm and also because there's a famous sandwich in Brazil with this city name. Its purpose is to check the current weather (temperature, rain/sun, day/night) and also to have fun looking at the animations or clicking on the clouds.</p>
+                        <p class="en-us">All scenery and animations were created using CSS only. There are no images. The scenery changes according to the time of the day and also if it's raining.</p>
+                        <p class="en-us">The weather information is obtained using the JavaScript library <a href="http://simpleweatherjs.com/" target="_blank">simpleWeather.js</a>.</p>
+                        <p class="pt-br">Criei esse site porque a cidade de <a href="https://en.wikipedia.org/wiki/Bauru" target="_blank">Bauru</a> é muito quente e também pela cidade compartilhar seu nome com o famoso sanduíche Bauru. O objetivo desse site é checar o clima atual (temperatura, sol/chuva, dia/noite) e também para ser divertido ao olhar as animações ou clicando nas nuvens.</p>
+                        <p class="pt-br">Todo cenário e animações foram criados usando somente CSS. Imagens não foram utilizadas. O cenário muda de acordo com o horário do dia e também se estiver chovendo.</p>
+                        <p class="pt-br">A informação sobre o clima é obtida usando a biblioteca JavaScript chamada <a href="http://simpleweatherjs.com/" target="_blank">simpleWeather.js</a>.</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn sanduiche" href="http://giuliacardieri.com/devoesquentarmeusanduiche" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                            <span class="hidden-xs">Devo Esquentar Meu Sanduíche</span>
+                          </a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color sanduiche ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions sanduiche en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions sanduiche pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers sanduiche en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>A real time weather website for Bauru-SP</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>July 2016</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, Sass, jQuery, simpleWeather.js</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>To create an interactive and pretty weather website</li>
+                          </ul>
+                          <ul class="answers sanduiche pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um site com o clima em tempo real para Bauru-SP</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Julho 2016</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, Sass, jQuery, simpleWeather.js</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Para criar um site interativo e bonito sobre o clima  </li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/sanduiche-0.png" alt="Devo Esquentar Meu Sanduíche? screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn sanduiche" href="http://giuliacardieri.com/devoesquentarmeusanduiche" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                            <span class="hidden-xs">Devo Esquentar Meu Sanduíche</span>
+                        </a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn sanduiche">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn sanduiche">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project bauru" data-href="bauru">
+                <button class="hidden close-btn bauru">X</button>
+                <div class="img-wrapper bauru"></div>
+                <div class="project-text">
+                  <h4>BAURU</h4>
+                  <p class="en-us">A interactive website made with css</p>
+                  <p class="pt-br">Um site interativo feito com css</p>
+                  <button class="project-btn bauru">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us">This website is based on a city called <a href="https://en.wikipedia.org/wiki/Bauru" target="_blank">Bauru</a>, in Brazil, it shows an illustration from <a href="https://www.tripadvisor.com.br/Attraction_Review-g303601-d7213003-Reviews-Parque_Vitoria_Regia-Bauru_State_of_Sao_Paulo.html" target="_blank">Vitória Regia Park</a> It works as a weather simulator. By changing the selected sliders the user is able to change from day to night and also from sun ro rain.</p>
+                        <p class="en-us">All scenery and animations were created using css only. There are no images. It's nice to simulate the real world using only css :D</p>
+                        <p class="pt-br"> Esse site é baseado na cidade de <a href="https://en.wikipedia.org/wiki/Bauru" target="_blank">Bauru</a>. Ele mostra uma ilustração do <a href="https://www.tripadvisor.com.br/Attraction_Review-g303601-d7213003-Reviews-Parque_Vitoria_Regia-Bauru_State_of_Sao_Paulo.html" target="_blank">Parque Vitória Regia</a>. Esse projeto funciona como um simulador do clima. Ao mudar os sliders o usuário consegue alterar o cenário de dia para noite e também de sol para chuva.</p>
+                        <p class="pt-br">Todo cenário e animações foram criados usando somente css. Imagens não foram utilizadas. É legal simular coisas do mundo real usando somente css :D</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn bauru" href="http://codepen.io/giuliacardieri/full/RGKvyj/" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Bauru</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color bauru ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions bauru en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions bauru pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers bauru en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>An interactive website made with CSS</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>September 2016</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, Sass, jQuery</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>To show that is possible to create nice animations with CSS</li>
+                          </ul>
+                          <ul class="answers bauru pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um site interativo feito com CSS</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Setembro 2016</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, Sass, jQuery</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Para mostrar que é possível criar animações legais com css</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/bauru-0.png" alt="Bauru screenshot" />
+                        <img src="images/bauru-1.png" alt="Bauru screenshot" />
+                        <img src="images/bauru-2.png" alt="Bauru screenshot" />
+                        <img src="images/bauru-3.png" alt="Bauru screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn bauru" href="http://codepen.io/giuliacardieri/full/RGKvyj/" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Bauru</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn bauru">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                        <button class="next-btn bauru">
+                          <span class="en-us">NEXT ></span>
+                          <span class="pt-br">PRÓXIMO ></span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="row project-wrapper-row">
+              <div class="col-8 project dinovr" data-href="dinovr">
+                <button class="hidden close-btn dinovr">X</button>
+                <div class="img-wrapper dinovr"></div>
+                <div class="project-text">
+                  <h4>TALK WITH DINOKIKI</h4>
+                  <p class="en-us">An interactive website using speech recognition</p>
+                  <p class="pt-br">Um site interativo usando reconhecimento de voz</p>
+                  <button class="project-btn dinovr">
+                    <span class="en-us">More</span>
+                    <span class="pt-br">Mais</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+                <div class="row">
+                  <div class="col-8 project-info hidden">
+                    <div class="row">
+                      <section class="col-8">
+                        <p class="en-us"><a href="http://dinokiki.com" target="_blank">Dinokiki</a> is a project I have since February 2014. I always wanted to make a page where the user could say something and Dinokiki could "answer". On this pen I used HTML5 Speech Recognition so the user can say the name of a person or a word, from a previously defined list available on the help link, and Dinokiki will answer according to that.</p>
+                        <p class="en-us">'Kikis' are audios recorded by people and sent to the website. Each kiki has a name such as "The Singer Kiki" or "The Caveman Kiki". The language is set to portuguese, since most of the names are brazilian. IMPORTANT: it's supported only on desktop Google Chrome.</p>
+                        <p class="pt-br"><a href="http://dinokiki.com" target="_blank">Dinokiki</a> é um projeto que eu desenvolvo desde Fevereiro de 2014. Eu sempre tive vontade de criar uma página que o usuário poderia falar alguma coisa e o Dinokiki poderia "responder". Nesse pen eu usei o reconhecimento de voz do HTML5, dessa forma o usuário pode falar o nome de uma pessoa ou uma palavra, de uma lista pré-definida disponível no link "help", e o Dinokiki irá responder de acordo com o que foi falado.</p>
+                        <p class="pt-br">"Kikis" são os áudios gravados por pessoas e enviados ao site. Cada kiki tem um nome como "The Singer Kiki" ou "The Caveman Kiki". O idioma está definido como português, pois a maioria dos nomes é brasileiro. IMPORTANTE: só é suportado pelo Google Chrome de desktop.</p>
+                        <div class="btn-wrapper">
+                          <a class="link-btn dinovr" href="http://codepen.io/giuliacardieri/full/VKgQaW/" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Talk With Dinokiki</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 color dinovr ques-ans-section">
+                        <div class="questions-answers-wrapper">
+                          <ul class="questions dinovr en-us"> 
+                            <li>WHAT?</li>
+                            <li>WHEN?</li>
+                            <li>HOW?</li>
+                            <li>WHY?</li>
+                          </ul>
+                          <ul class="questions dinovr pt-br"> 
+                            <li>O QUE?</li>
+                            <li>QUANDO?</li>
+                            <li>COMO?</li>
+                            <li>PORQUE?</li>
+                          </ul>
+                          <ul class="answers dinovr en-us">
+                            <li class="q-li hidden-xs">WHAT?</li>
+                            <li>An interactive website using speech recognition</li>
+                            <li class="q-li hidden-xs">WHEN?</li>
+                            <li>October 2016</li>
+                            <li class="q-li hidden-xs">HOW?</li>
+                            <li>HTML5, Sass, JavaScript, HTML5 Speech Recognition</li>
+                            <li class="q-li hidden-xs">WHY?</li>
+                            <li>To create something interactive using speech recognition</li>
+                          </ul>
+                          <ul class="answers dinovr pt-br">
+                            <li class="q-li hidden-xs">O QUE?</li>
+                            <li>Um site interativo usando reconhecimento de voz</li>
+                            <li class="q-li hidden-xs">QUANDO?</li>
+                            <li>Outubro 2016</li>
+                            <li class="q-li hidden-xs">COMO?</li>
+                            <li>HTML5, Sass, JavaScript, HTML5 Speech Recognition</li>
+                            <li class="q-li hidden-xs">PORQUE?</li>
+                            <li>Para criar algo interativo com reconhecimento de voz</li>
+                          </ul>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 img-wrapper">
+                        <img src="images/dinovr-0.png" alt="Dinokiki VR screenshot" />
+                        <img src="images/dinovr-1.png" alt="Dinokiki VR screenshot" />
+                        <img src="images/dinovr-2.png" alt="Dinokiki VR screenshot" />
+                        <div class="btn-wrapper">
+                          <a class="link-btn dinovr" href="http://codepen.io/giuliacardieri/full/VKgQaW/" target="_blank">
+                            <span class="en-us">Visit</span>
+                            <span class="pt-br">Visite</span>
+                          Talk With Dinokiki</a>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-8 button-wrapper">
+                        <button class="prev-btn dinovr">
+                          <span class="en-us">< PREVIOUS</span>
+                          <span class="pt-br">< ANTERIOR</span>
+                        </button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="work col-4">
+          <h3 class="en-us">Work</h3>
+          <h3 class="pt-br">Trabalho</h3>
+        </div>
+      </div>
+      <div id="contact" class="row">
+        <div class="col-8 contact">
+          <p class="en-us">Let's get in touch! I'm available for freelance work.</p>
+          <p class="pt-br">Entre em contato! Estou disponível para trabalho freelance.</p>
+          <ul class="icons">
+            <li>
+              <a href="http://codepen.com/giuliacardieri" target="_blank">
+                <img src="images/codepen-icon.png" alt="codepen icon" />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:giulia.cardieri@gmail.com" target="_blank">
+                <img src="images/email.png" alt="email icon" />
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/giuliacardieri" target="_blank">
+                <img src="images/github.png" alt="github icon" />
+              </a>
+            </li>
+            <li>
+              <a href="https://br.linkedin.com/in/giulia-de-andrade-cardieri-66aa7885" target="_blank">
+                <img src="images/linkedin.png" alt="linkedin icon" />
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/ggiulia" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon" />
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">©2017 Giulia Cardieri</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.custom.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
 </html>

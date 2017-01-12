@@ -1,0 +1,66 @@
+nav.col-1 {
+	background-color: $cool - 15;
+	height: 100vh;
+	padding: 0;
+	position: fixed;
+	right: -150vw;
+	top: 0;
+	z-index: 5;
+	@include bp-sm {
+		width: 50vw;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li{
+			list-style: none;
+			a {
+				border-bottom: 1px solid $cool;
+				color: $white - 30;
+				font-size: 11pt;
+				display: block;
+				padding: 10px 20px;
+				text-decoration: none;
+				@include min-bp-md {
+					&:hover {
+						background-color: $cool;
+					}
+				};
+			 	&.active {
+					background-color: $cool;
+				}
+			}
+		}
+	}
+}
+
+.menu-img-wrapper {
+	border-bottom: 1px solid $cool;
+	cursor: pointer;
+	padding: 15px 20px;
+	img {
+		border-radius: 100%;
+		display: inline-block;
+		max-width: 25px;
+		vertical-align: middle;
+	}
+	p {
+		display: inline-block;
+		font-size: 11pt;
+		margin: 0;
+	}
+}
+
+.menu-btn {
+	background-color: transparent;
+	color: $cool;
+	font-size: 12pt;
+	padding: 5px;
+	position: fixed;
+	right: 20px;
+	top: 5px;
+	z-index: 3;
+	&.secondary-color {
+		color: $bg-color;
+	}
+}

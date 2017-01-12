@@ -1,0 +1,286 @@
+$project-number-screen: 2;
+$project-names: (keepmeposted, #424242), (dinokiki, #6378ca - 25), (reed, #3A4052), (whysp, #AA3C3C - 20), (marina, #852a4a), (qualprofessor, #c24c44), (pao, #608dc6 - 10), (sanduiche, #50662e), (bauru, #4b4b4b), (dinovr, #6378ca - 10), (codepen, #684580);
+$flag: #8C2222;
+$mailbox: #ddd;
+
+#work {
+	position: relative;
+}
+
+.work {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	&.smaller-work {
+		width: 100vh/6;
+	}
+}
+
+.work-content {
+	background-color: $white;
+	color: $black;
+	height: 100vh;
+	overflow: auto;
+	padding: 0;
+	@include bp-sm {
+		height: auto;
+		overflow: hidden;
+	}
+}
+ .row.project-wrapper-row {
+ 	display: table;
+ 	height: 100vh/$project-number-screen;
+ 	position: relative;
+ }
+
+ .project {
+ 	cursor: pointer;
+ 	display: table;
+	height: 100%;
+	left: 1px;
+	padding: 0;
+	position: relative;
+	@include projects($project-names);
+}
+
+.project-text {
+	color: $white;
+	display: table-cell;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	p {
+		font-size: 10pt;
+		margin: 0;
+		@include bp-xs {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+h4 {
+	font-size: 18pt;
+	margin: 0;
+	@include bp-xs {
+		font-size: 14pt;
+	}
+}
+
+.project-info {
+	padding: 0;
+}
+
+.close-btn {
+	@include bg-color-project($project-names);
+    font-size: 12pt;
+    left: 25px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.link-btn {
+	@include bg-color-project($project-names);
+	@extend button;	
+	&:hover {
+		@include min-bp-md {
+			font-size: 10.5pt;
+			padding: 8.4px 12.6px;
+		}
+	}
+}
+
+.btn-wrapper {
+	text-align: center;
+	@include bp-xs {
+		margin-top: 20px;
+	}
+}
+
+section.col-8 {
+	padding: 50px 100px;
+	&.color {
+		color: $white;
+		@include bg-color-project($project-names);
+	}
+	&.img-wrapper {
+		text-align: center;
+	}
+	p {
+		font-size: 12pt;
+		text-align: justify;
+	}
+	img {
+		width: 75%;
+		&.vertical-img {
+			width: 25%;
+			@include bp-xs {
+				width: 75%;
+			}
+		}
+		@include bp-sm {
+			width: 100%;
+		}
+	}
+	@include bp-xs {
+		padding: 50px;
+	}
+}
+
+ul.questions {
+	display: inline-block;
+	margin: 0 15px 0 0;
+	padding: 0;
+	width: 30%;
+	@include bp-md {
+		width: 18%;
+	}
+	@include bp-xs {
+		display: none;
+	}
+	li {
+		font-size: 16pt;
+		font-weight: bold;
+		list-style: none;
+		margin: 10px 0 0 0;
+		text-align: right;
+		@include bp-md {
+			font-size: 14pt;
+			margin-top: 15px;
+		}
+	}
+}
+
+ul.answers {
+	display: inline-block;
+	margin: 0 0 0 15px;
+	padding: 0;
+	width: 65%;
+	@include bp-md {
+		margin-top: 20px;
+	}
+	@include bp-xs {
+		margin: 0;
+	}
+	li {
+		font-size: 12pt;
+		line-height: 25.6pt;
+		list-style: none;
+		margin: 10px 0 0 0;
+		&.q-li {
+			font-size: 12pt;
+			margin-top: 25px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		@include bp-sm {
+			font-size: 11pt;
+		}
+		@include bp-xs {
+			line-height: 1.6;
+			margin-top: 0;
+			text-align: center;
+			width: 70vw;
+		}
+	}
+}
+
+.button-wrapper {
+	position: relative;
+}
+
+.next-btn {
+	@include bg-color-project($project-names);
+	position: absolute;
+	right: 100px;
+	top: 0;
+	@include bp-xs {
+		font-size: 10pt;
+		right: 50px;
+	}
+}
+
+.prev-btn {
+	@include bg-color-project($project-names);
+	left: 100px;
+	position: absolute;
+	top: 0;
+	@include bp-xs {
+		font-size: 10pt;
+		left: 50px;
+	}
+}
+
+.hidden-xs {
+	display: none;
+	@include bp-xs {
+		display: block;
+	}
+}
+
+.projects-bar-wrapper {
+	bottom: 0;
+	left: calc(50vw + 1px);
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	z-index: 1;
+	@include bp-sm {
+		display: none;
+	}
+	.projects-bar {
+		background-color: $white;
+		bottom: 0;
+		height: 50vh;
+		margin: auto;
+		opacity: 0.5;
+		position: absolute;
+		top: 0;
+		width: 1px;
+		.project-circle {
+			background-color: $white;
+			border-radius: 100%;
+			cursor: pointer;
+			height: 10px;
+			position: absolute;
+			left: -5px;
+			width: 10px;
+			&.active-proj {
+				&:before {
+					background-color: $white;
+					border-radius: 100%;
+					content: '';
+					height: 20px;
+					left: -5px;
+					opacity: 0.4;
+					position: absolute;
+					top: -5px;
+					width: 20px;
+					z-index: -1;
+				}
+			}
+			@for $i from 1 through 11 {
+				&.p#{$i} {
+					top: $i * 4 + 0vh;
+				}
+			}
+		}
+	}
+}
+
+.ques-ans-section {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	.questions-answers-wrapper {
+		width: 80%;
+	}
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+
