@@ -107,7 +107,7 @@
 		}
 	}
 	section {
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 		h4 {
 			color: $bg-color - 25;
 			margin: 10px 0;
@@ -212,14 +212,19 @@ section ul {
 			}
 		}
 		&.ti-2 {
-			height: 285px;
-			.little-icon.only-three {
-				top: 18px;
-				&:before {
-					top: 85px;
+			height: 375px;
+			.little-icon {
+				&.i1 {
+					top: 18px;
 				}
-				&:after {
-					top: 170px;
+				&.i2 {
+					top: 102px;
+				}
+				&.i3 {
+					top: 188px;
+				}
+				&.i4 {
+					top: 272px;
 				}
 			}
 		}

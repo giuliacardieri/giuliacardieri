@@ -773,7 +773,7 @@ nav.col-1 {
       margin: 0;
       padding: 0px 25px; }
   .body section {
-    margin-bottom: 25px; }
+    margin-bottom: 15px; }
     .body section h4 {
       color: #5b505e;
       margin: 10px 0; }
@@ -851,13 +851,15 @@ section ul {
       .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon.i4, .timeline-icon-wrapper .timeline-icon.ti-1 .i4.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-1 .i4.little-icon.only-three:after {
         top: 272px; }
     .timeline-icon-wrapper .timeline-icon.ti-2 {
-      height: 285px; }
-      .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon.only-three, .timeline-icon-wrapper .timeline-icon.ti-2 .only-three.little-icon:before, .timeline-icon-wrapper .timeline-icon.ti-2 .only-three.little-icon:after {
+      height: 375px; }
+      .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon.i1, .timeline-icon-wrapper .timeline-icon.ti-2 .i1.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-2 .i1.little-icon.only-three:after {
         top: 18px; }
-        .timeline-icon-wrapper .timeline-icon.ti-2 .only-three.little-icon:before {
-          top: 85px; }
-        .timeline-icon-wrapper .timeline-icon.ti-2 .only-three.little-icon:after {
-          top: 170px; }
+      .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon.i2, .timeline-icon-wrapper .timeline-icon.ti-2 .i2.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-2 .i2.little-icon.only-three:after {
+        top: 102px; }
+      .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon.i3, .timeline-icon-wrapper .timeline-icon.ti-2 .i3.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-2 .i3.little-icon.only-three:after {
+        top: 188px; }
+      .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon.i4, .timeline-icon-wrapper .timeline-icon.ti-2 .i4.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-2 .i4.little-icon.only-three:after {
+        top: 272px; }
     .timeline-icon-wrapper .timeline-icon.ti-3 {
       height: 285px; }
       .timeline-icon-wrapper .timeline-icon.ti-3 .little-icon.only-three, .timeline-icon-wrapper .timeline-icon.ti-3 .only-three.little-icon:before, .timeline-icon-wrapper .timeline-icon.ti-3 .only-three.little-icon:after {
