@@ -830,39 +830,41 @@ section ul {
     background-color: #746977;
     position: relative;
     width: 2px; }
-    .timeline-icon-wrapper .timeline-icon .little-icon, .timeline-icon-wrapper .timeline-icon .little-icon:before, .timeline-icon-wrapper .timeline-icon .little-icon:after {
+    .timeline-icon-wrapper .timeline-icon .little-icon, .timeline-icon-wrapper .timeline-icon .little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon .little-icon.only-three:after {
       background-color: #746977;
       border-radius: 100%;
       height: 10px;
       left: -4px;
       position: absolute;
       width: 10px; }
-      .timeline-icon-wrapper .timeline-icon .little-icon:before, .timeline-icon-wrapper .timeline-icon .little-icon:after {
+      .timeline-icon-wrapper .timeline-icon .only-three.little-icon:before, .timeline-icon-wrapper .timeline-icon .only-three.little-icon:after {
         content: '';
         left: 0; }
     .timeline-icon-wrapper .timeline-icon.ti-1 {
-      height: 255px; }
-      .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon, .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon:before, .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon:after {
+      height: 370px; }
+      .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon.i1, .timeline-icon-wrapper .timeline-icon.ti-1 .i1.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-1 .i1.little-icon.only-three:after {
         top: 18px; }
-        .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon:before {
-          top: 85px; }
-        .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon:after {
-          top: 145px; }
+      .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon.i2, .timeline-icon-wrapper .timeline-icon.ti-1 .i2.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-1 .i2.little-icon.only-three:after {
+        top: 127px; }
+      .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon.i3, .timeline-icon-wrapper .timeline-icon.ti-1 .i3.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-1 .i3.little-icon.only-three:after {
+        top: 212px; }
+      .timeline-icon-wrapper .timeline-icon.ti-1 .little-icon.i4, .timeline-icon-wrapper .timeline-icon.ti-1 .i4.little-icon.only-three:before, .timeline-icon-wrapper .timeline-icon.ti-1 .i4.little-icon.only-three:after {
+        top: 272px; }
     .timeline-icon-wrapper .timeline-icon.ti-2 {
       height: 285px; }
-      .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon, .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon:before, .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon:after {
+      .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon.only-three, .timeline-icon-wrapper .timeline-icon.ti-2 .only-three.little-icon:before, .timeline-icon-wrapper .timeline-icon.ti-2 .only-three.little-icon:after {
         top: 18px; }
-        .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon:before {
+        .timeline-icon-wrapper .timeline-icon.ti-2 .only-three.little-icon:before {
           top: 85px; }
-        .timeline-icon-wrapper .timeline-icon.ti-2 .little-icon:after {
+        .timeline-icon-wrapper .timeline-icon.ti-2 .only-three.little-icon:after {
           top: 170px; }
     .timeline-icon-wrapper .timeline-icon.ti-3 {
       height: 285px; }
-      .timeline-icon-wrapper .timeline-icon.ti-3 .little-icon, .timeline-icon-wrapper .timeline-icon.ti-3 .little-icon:before, .timeline-icon-wrapper .timeline-icon.ti-3 .little-icon:after {
+      .timeline-icon-wrapper .timeline-icon.ti-3 .little-icon.only-three, .timeline-icon-wrapper .timeline-icon.ti-3 .only-three.little-icon:before, .timeline-icon-wrapper .timeline-icon.ti-3 .only-three.little-icon:after {
         top: 18px; }
-        .timeline-icon-wrapper .timeline-icon.ti-3 .little-icon:before {
+        .timeline-icon-wrapper .timeline-icon.ti-3 .only-three.little-icon:before {
           top: 85px; }
-        .timeline-icon-wrapper .timeline-icon.ti-3 .little-icon:after {
+        .timeline-icon-wrapper .timeline-icon.ti-3 .only-three.little-icon:after {
           top: 195px; }
 
 #work {
@@ -880,7 +882,8 @@ section ul {
   color: #333;
   height: 100vh;
   overflow: auto;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
   @media only screen and (max-width: 1024px) {
     .work-content {
       height: auto;
@@ -888,8 +891,7 @@ section ul {
 
 .row.project-wrapper-row {
   display: table;
-  height: 50vh;
-  position: relative; }
+  height: 50vh; }
 
 .project {
   cursor: pointer;
@@ -1015,36 +1017,6 @@ section ul {
     @media only screen and (max-width: 1200px) {
       .project.whysp .project-btn:hover {
         background-color: #780a0a; } }
-  .project.marina .img-wrapper {
-    background-image: url("../images/marina.png");
-    background-position: center center;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    filter: blur(2.5px);
-    -webkit-filter: blur(2.5px);
-    -moz-filter: blur(2.5px);
-    -ms-filter: blur(2.5px);
-    -o-filter: blur(2.5px);
-    transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01); }
-    .project.marina .img-wrapper:before {
-      background-color: #852a4a;
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.7;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1; }
-  .project.marina .project-btn {
-    background-color: #761b3b; }
-    @media only screen and (max-width: 1200px) {
-      .project.marina .project-btn:hover {
-        background-color: #670c2c; } }
   .project.qualprofessor .img-wrapper {
     background-image: url("../images/qualprofessor.png");
     background-position: center center;
@@ -1224,6 +1196,64 @@ section ul {
     @media only screen and (max-width: 1200px) {
       .project.codepen .project-btn:hover {
         background-color: #4a2762; } }
+  .project.floresciencia .img-wrapper {
+    background-image: url("../images/floresciencia.png");
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    -moz-filter: blur(2.5px);
+    -ms-filter: blur(2.5px);
+    -o-filter: blur(2.5px);
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01); }
+    .project.floresciencia .img-wrapper:before {
+      background-color: #1A6665;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.7;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1; }
+  .project.floresciencia .project-btn {
+    background-color: #0b5756; }
+    @media only screen and (max-width: 1200px) {
+      .project.floresciencia .project-btn:hover {
+        background-color: #004847; } }
+  .project.dinoapp .img-wrapper {
+    background-image: url("../images/dinoapp.png");
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    -moz-filter: blur(2.5px);
+    -ms-filter: blur(2.5px);
+    -o-filter: blur(2.5px);
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01); }
+    .project.dinoapp .img-wrapper:before {
+      background-color: #4a5fb1;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.7;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1; }
+  .project.dinoapp .project-btn {
+    background-color: #3b50a2; }
+    @media only screen and (max-width: 1200px) {
+      .project.dinoapp .project-btn:hover {
+        background-color: #2c4193; } }
 
 .project-text {
   color: #eee;
@@ -1262,8 +1292,6 @@ h4 {
     background-color: #3A4052; }
   .close-btn.whysp {
     background-color: #962828; }
-  .close-btn.marina {
-    background-color: #852a4a; }
   .close-btn.qualprofessor {
     background-color: #c24c44; }
   .close-btn.pao {
@@ -1276,6 +1304,10 @@ h4 {
     background-color: #596ec0; }
   .close-btn.codepen {
     background-color: #684580; }
+  .close-btn.floresciencia {
+    background-color: #1A6665; }
+  .close-btn.dinoapp {
+    background-color: #4a5fb1; }
 
 .link-btn.keepmeposted {
   background-color: #424242; }
@@ -1285,8 +1317,6 @@ h4 {
   background-color: #3A4052; }
 .link-btn.whysp {
   background-color: #962828; }
-.link-btn.marina {
-  background-color: #852a4a; }
 .link-btn.qualprofessor {
   background-color: #c24c44; }
 .link-btn.pao {
@@ -1299,6 +1329,10 @@ h4 {
   background-color: #596ec0; }
 .link-btn.codepen {
   background-color: #684580; }
+.link-btn.floresciencia {
+  background-color: #1A6665; }
+.link-btn.dinoapp {
+  background-color: #4a5fb1; }
 @media (min-width: 1200px) {
   .link-btn:hover {
     font-size: 10.5pt;
@@ -1322,8 +1356,6 @@ section.col-8 {
       background-color: #3A4052; }
     section.col-8.color.whysp {
       background-color: #962828; }
-    section.col-8.color.marina {
-      background-color: #852a4a; }
     section.col-8.color.qualprofessor {
       background-color: #c24c44; }
     section.col-8.color.pao {
@@ -1336,6 +1368,10 @@ section.col-8 {
       background-color: #596ec0; }
     section.col-8.color.codepen {
       background-color: #684580; }
+    section.col-8.color.floresciencia {
+      background-color: #1A6665; }
+    section.col-8.color.dinoapp {
+      background-color: #4a5fb1; }
   section.col-8.img-wrapper {
     text-align: center; }
   section.col-8 p {
@@ -1423,8 +1459,6 @@ ul.answers {
     background-color: #3A4052; }
   .next-btn.whysp {
     background-color: #962828; }
-  .next-btn.marina {
-    background-color: #852a4a; }
   .next-btn.qualprofessor {
     background-color: #c24c44; }
   .next-btn.pao {
@@ -1437,6 +1471,10 @@ ul.answers {
     background-color: #596ec0; }
   .next-btn.codepen {
     background-color: #684580; }
+  .next-btn.floresciencia {
+    background-color: #1A6665; }
+  .next-btn.dinoapp {
+    background-color: #4a5fb1; }
   @media only screen and (max-width: 768px) {
     .next-btn {
       font-size: 10pt;
@@ -1454,8 +1492,6 @@ ul.answers {
     background-color: #3A4052; }
   .prev-btn.whysp {
     background-color: #962828; }
-  .prev-btn.marina {
-    background-color: #852a4a; }
   .prev-btn.qualprofessor {
     background-color: #c24c44; }
   .prev-btn.pao {
@@ -1468,6 +1504,10 @@ ul.answers {
     background-color: #596ec0; }
   .prev-btn.codepen {
     background-color: #684580; }
+  .prev-btn.floresciencia {
+    background-color: #1A6665; }
+  .prev-btn.dinoapp {
+    background-color: #4a5fb1; }
   @media only screen and (max-width: 768px) {
     .prev-btn {
       font-size: 10pt;
@@ -1492,7 +1532,7 @@ ul.answers {
   .projects-bar-wrapper .projects-bar {
     background-color: #eee;
     bottom: 0;
-    height: 50vh;
+    height: 60vh;
     margin: auto;
     opacity: 0.5;
     position: absolute;
@@ -1539,6 +1579,8 @@ ul.answers {
         top: 40vh; }
       .projects-bar-wrapper .projects-bar .project-circle.p11 {
         top: 44vh; }
+      .projects-bar-wrapper .projects-bar .project-circle.p12 {
+        top: 48vh; }
 
 .ques-ans-section {
   align-items: center;

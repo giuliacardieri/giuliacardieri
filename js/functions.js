@@ -1,5 +1,5 @@
 var currentProject = null
-	, listOfProjects = ['keepmeposted', 'codepen', 'dinokiki', 'reed', 'whysp', 'marina', 'qualprofessor', 'pao', 'sanduiche', 'bauru', 'dinovr']
+	, listOfProjects = ['keepmeposted', 'codepen', 'dinokiki', 'floresciencia', 'reed', 'whysp', 'qualprofessor', 'pao', 'sanduiche', 'bauru', 'dinovr', 'dinoapp']
 	, lang = 'en-us';
 
 
@@ -34,6 +34,14 @@ var slowScroll = function slowScroll(element) {
         scrollTop: $(element).offset().top
     }, 1000);
     window.location.hash = element;
+};
+
+// makes the slow scroll effect when a project circle is clicked - NEEDS TO FIX
+var slowScrollProject = function slowScrollProject(element) {
+	$('.work-content').scrollTop(0);
+    $('.work-content').animate({
+        scrollTop: $(element).offset().top - $('.work-content').offset().top
+    }, 500);
 };
 
 // change the active color on the menu to the current element
@@ -287,6 +295,16 @@ $(function() {
     	}
     });
 
+    // when project-circle is clicked it should go to the project
+    $('.project-circle').on('click', function(){
+    	$('.project-circle').removeClass('active-proj');
+    	$(this).addClass('active-proj');
+    	var projname = ($(this).attr('class').split(' '))[2];
+    	currentProject = projname;
+    	slowScrollProject('.project.' + projname);
+
+   	});
+
 	// action for projects when scroll happens
     $('.work-content').scroll(function(){
 	    if (($('.project.keepmeposted').offset().top >= 1592) && ($('.project.keepmeposted').offset().top) < 1700) {
@@ -301,9 +319,6 @@ $(function() {
     	} else if (($('.project.whysp').offset().top >= 1592) && ($('.project.whysp').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
 	        $('.project-circle.whysp').addClass('active-proj');
-    	} else if (($('.project.marina').offset().top >= 1592) && ($('.project.marina').offset().top) < 1700) {
-	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.marina').addClass('active-proj');
     	} else if (($('.project.qualprofessor').offset().top >= 1592) && ($('.project.qualprofessor').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
 	        $('.project-circle.qualprofessor').addClass('active-proj');
@@ -322,7 +337,13 @@ $(function() {
     	} else if (($('.project.codepen').offset().top >= 1592) && ($('.project.codepen').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
 	        $('.project-circle.codepen').addClass('active-proj');
-    	} 
+    	} else if (($('.project.floresciencia').offset().top >= 1592) && ($('.project.floresciencia').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.floresciencia').addClass('active-proj');
+    	} else if (($('.project.dinoapp').offset().top >= 1592) && ($('.project.dinoapp').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.dinoapp').addClass('active-proj');
+    	}  
     });
     
 

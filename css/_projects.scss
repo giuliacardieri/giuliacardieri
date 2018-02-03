@@ -1,5 +1,5 @@
 $project-number-screen: 2;
-$project-names: (keepmeposted, #424242), (dinokiki, #6378ca - 25), (reed, #3A4052), (whysp, #AA3C3C - 20), (marina, #852a4a), (qualprofessor, #c24c44), (pao, #608dc6 - 10), (sanduiche, #50662e), (bauru, #4b4b4b), (dinovr, #6378ca - 10), (codepen, #684580);
+$project-names: (keepmeposted, #424242), (dinokiki, #6378ca - 25), (reed, #3A4052), (whysp, #AA3C3C - 20), (qualprofessor, #c24c44), (pao, #608dc6 - 10), (sanduiche, #50662e), (bauru, #4b4b4b), (dinovr, #6378ca - 10), (codepen, #684580), (floresciencia, #1A6665), (dinoapp, #6378ca - 25);
 $flag: #8C2222;
 $mailbox: #ddd;
 
@@ -22,15 +22,16 @@ $mailbox: #ddd;
 	height: 100vh;
 	overflow: auto;
 	padding: 0;
+	position: relative;
 	@include bp-sm {
 		height: auto;
 		overflow: hidden;
 	}
 }
+
  .row.project-wrapper-row {
  	display: table;
  	height: 100vh/$project-number-screen;
- 	position: relative;
  }
 
  .project {
@@ -232,7 +233,7 @@ ul.answers {
 	.projects-bar {
 		background-color: $white;
 		bottom: 0;
-		height: 50vh;
+		height: 60vh;
 		margin: auto;
 		opacity: 0.5;
 		position: absolute;
@@ -260,7 +261,7 @@ ul.answers {
 					z-index: -1;
 				}
 			}
-			@for $i from 1 through 11 {
+			@for $i from 1 through 12 {
 				&.p#{$i} {
 					top: $i * 4 + 0vh;
 				}
