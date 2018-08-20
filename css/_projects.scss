@@ -1,5 +1,5 @@
 $project-number-screen: 2;
-$project-names: (keepmeposted, #424242), (dinokiki, #6378ca - 25), (reed, #3A4052), (whysp, #AA3C3C - 20), (qualprofessor, #c24c44), (pao, #608dc6 - 10), (sanduiche, #50662e), (bauru, #4b4b4b), (dinovr, #6378ca - 10), (codepen, #684580), (floresciencia, #1A6665), (dinoapp, #6378ca - 25);
+$project-names: (keepmeposted, #424242), (dinokiki, #6378ca - 25), (minhaagenda, #5c6bc0), (pao, #608dc6 - 10), (bauru, #4b4b4b), (dinovr, #6378ca - 10), (codepen, #684580), (floresciencia, #1A6665), (construtora, #2a4057), (jogo, #363640), (infografico, #4150BB);
 $flag: #8C2222;
 $mailbox: #ddd;
 
@@ -118,6 +118,9 @@ section.col-8 {
 			@include bp-xs {
 				width: 75%;
 			}
+		}
+		&.vertical-img.vertical-img--nomargin {
+			margin: 15px;
 		}
 		@include bp-sm {
 			width: 100%;

@@ -961,8 +961,8 @@ section ul {
     @media only screen and (max-width: 1200px) {
       .project.dinokiki .project-btn:hover {
         background-color: #2c4193; } }
-  .project.reed .img-wrapper {
-    background-image: url("../images/reed.png");
+  .project.minhaagenda .img-wrapper {
+    background-image: url("../images/minhaagenda.png");
     height: 100%;
     position: absolute;
     width: 100%;
@@ -975,8 +975,8 @@ section ul {
     -webkit-transform: scale(1.01);
     -moz-transform: scale(1.01);
     -ms-transform: scale(1.01); }
-    .project.reed .img-wrapper:before {
-      background-color: #3A4052;
+    .project.minhaagenda .img-wrapper:before {
+      background-color: #5c6bc0;
       content: '';
       height: 100%;
       left: 0;
@@ -985,70 +985,11 @@ section ul {
       top: 0;
       width: 100%;
       z-index: -1; }
-  .project.reed .project-btn {
-    background-color: #2b3143; }
+  .project.minhaagenda .project-btn {
+    background-color: #4d5cb1; }
     @media only screen and (max-width: 1200px) {
-      .project.reed .project-btn:hover {
-        background-color: #1c2234; } }
-  .project.whysp .img-wrapper {
-    background-image: url("../images/whysp.png");
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    filter: blur(2.5px);
-    -webkit-filter: blur(2.5px);
-    -moz-filter: blur(2.5px);
-    -ms-filter: blur(2.5px);
-    -o-filter: blur(2.5px);
-    transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01); }
-    .project.whysp .img-wrapper:before {
-      background-color: #962828;
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.7;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1; }
-  .project.whysp .project-btn {
-    background-color: #871919; }
-    @media only screen and (max-width: 1200px) {
-      .project.whysp .project-btn:hover {
-        background-color: #780a0a; } }
-  .project.qualprofessor .img-wrapper {
-    background-image: url("../images/qualprofessor.png");
-    background-position: center center;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    filter: blur(2.5px);
-    -webkit-filter: blur(2.5px);
-    -moz-filter: blur(2.5px);
-    -ms-filter: blur(2.5px);
-    -o-filter: blur(2.5px);
-    transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01); }
-    .project.qualprofessor .img-wrapper:before {
-      background-color: #c24c44;
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.7;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1; }
-  .project.qualprofessor .project-btn {
-    background-color: #b33d35; }
-    @media only screen and (max-width: 1200px) {
-      .project.qualprofessor .project-btn:hover {
-        background-color: #a42e26; } }
+      .project.minhaagenda .project-btn:hover {
+        background-color: #3e4da2; } }
   .project.pao .img-wrapper {
     background-image: url("../images/pao.png");
     background-position: center center;
@@ -1079,36 +1020,6 @@ section ul {
     @media only screen and (max-width: 1200px) {
       .project.pao .project-btn:hover {
         background-color: #38659e; } }
-  .project.sanduiche .img-wrapper {
-    background-image: url("../images/sanduiche.png");
-    background-position: center center;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    filter: blur(2.5px);
-    -webkit-filter: blur(2.5px);
-    -moz-filter: blur(2.5px);
-    -ms-filter: blur(2.5px);
-    -o-filter: blur(2.5px);
-    transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01); }
-    .project.sanduiche .img-wrapper:before {
-      background-color: #50662e;
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.7;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1; }
-  .project.sanduiche .project-btn {
-    background-color: #41571f; }
-    @media only screen and (max-width: 1200px) {
-      .project.sanduiche .project-btn:hover {
-        background-color: #324810; } }
   .project.bauru .img-wrapper {
     background-image: url("../images/bauru.png");
     background-position: center center;
@@ -1227,8 +1138,8 @@ section ul {
     @media only screen and (max-width: 1200px) {
       .project.floresciencia .project-btn:hover {
         background-color: #004847; } }
-  .project.dinoapp .img-wrapper {
-    background-image: url("../images/dinoapp.png");
+  .project.construtora .img-wrapper {
+    background-image: url("../images/construtora.png");
     height: 100%;
     position: absolute;
     width: 100%;
@@ -1241,8 +1152,8 @@ section ul {
     -webkit-transform: scale(1.01);
     -moz-transform: scale(1.01);
     -ms-transform: scale(1.01); }
-    .project.dinoapp .img-wrapper:before {
-      background-color: #4a5fb1;
+    .project.construtora .img-wrapper:before {
+      background-color: #2a4057;
       content: '';
       height: 100%;
       left: 0;
@@ -1251,11 +1162,69 @@ section ul {
       top: 0;
       width: 100%;
       z-index: -1; }
-  .project.dinoapp .project-btn {
-    background-color: #3b50a2; }
+  .project.construtora .project-btn {
+    background-color: #1b3148; }
     @media only screen and (max-width: 1200px) {
-      .project.dinoapp .project-btn:hover {
-        background-color: #2c4193; } }
+      .project.construtora .project-btn:hover {
+        background-color: #0c2239; } }
+  .project.jogo .img-wrapper {
+    background-image: url("../images/jogo.png");
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    -moz-filter: blur(2.5px);
+    -ms-filter: blur(2.5px);
+    -o-filter: blur(2.5px);
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01); }
+    .project.jogo .img-wrapper:before {
+      background-color: #363640;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.7;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1; }
+  .project.jogo .project-btn {
+    background-color: #272731; }
+    @media only screen and (max-width: 1200px) {
+      .project.jogo .project-btn:hover {
+        background-color: #181822; } }
+  .project.infografico .img-wrapper {
+    background-image: url("../images/infografico.png");
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    -moz-filter: blur(2.5px);
+    -ms-filter: blur(2.5px);
+    -o-filter: blur(2.5px);
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01); }
+    .project.infografico .img-wrapper:before {
+      background-color: #4150BB;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.7;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1; }
+  .project.infografico .project-btn {
+    background-color: #3241ac; }
+    @media only screen and (max-width: 1200px) {
+      .project.infografico .project-btn:hover {
+        background-color: #23329d; } }
 
 .project-text {
   color: #eee;
@@ -1290,16 +1259,10 @@ h4 {
     background-color: #424242; }
   .close-btn.dinokiki {
     background-color: #4a5fb1; }
-  .close-btn.reed {
-    background-color: #3A4052; }
-  .close-btn.whysp {
-    background-color: #962828; }
-  .close-btn.qualprofessor {
-    background-color: #c24c44; }
+  .close-btn.minhaagenda {
+    background-color: #5c6bc0; }
   .close-btn.pao {
     background-color: #5683bc; }
-  .close-btn.sanduiche {
-    background-color: #50662e; }
   .close-btn.bauru {
     background-color: #4b4b4b; }
   .close-btn.dinovr {
@@ -1308,23 +1271,21 @@ h4 {
     background-color: #684580; }
   .close-btn.floresciencia {
     background-color: #1A6665; }
-  .close-btn.dinoapp {
-    background-color: #4a5fb1; }
+  .close-btn.construtora {
+    background-color: #2a4057; }
+  .close-btn.jogo {
+    background-color: #363640; }
+  .close-btn.infografico {
+    background-color: #4150BB; }
 
 .link-btn.keepmeposted {
   background-color: #424242; }
 .link-btn.dinokiki {
   background-color: #4a5fb1; }
-.link-btn.reed {
-  background-color: #3A4052; }
-.link-btn.whysp {
-  background-color: #962828; }
-.link-btn.qualprofessor {
-  background-color: #c24c44; }
+.link-btn.minhaagenda {
+  background-color: #5c6bc0; }
 .link-btn.pao {
   background-color: #5683bc; }
-.link-btn.sanduiche {
-  background-color: #50662e; }
 .link-btn.bauru {
   background-color: #4b4b4b; }
 .link-btn.dinovr {
@@ -1333,8 +1294,12 @@ h4 {
   background-color: #684580; }
 .link-btn.floresciencia {
   background-color: #1A6665; }
-.link-btn.dinoapp {
-  background-color: #4a5fb1; }
+.link-btn.construtora {
+  background-color: #2a4057; }
+.link-btn.jogo {
+  background-color: #363640; }
+.link-btn.infografico {
+  background-color: #4150BB; }
 @media (min-width: 1200px) {
   .link-btn:hover {
     font-size: 10.5pt;
@@ -1354,16 +1319,10 @@ section.col-8 {
       background-color: #424242; }
     section.col-8.color.dinokiki {
       background-color: #4a5fb1; }
-    section.col-8.color.reed {
-      background-color: #3A4052; }
-    section.col-8.color.whysp {
-      background-color: #962828; }
-    section.col-8.color.qualprofessor {
-      background-color: #c24c44; }
+    section.col-8.color.minhaagenda {
+      background-color: #5c6bc0; }
     section.col-8.color.pao {
       background-color: #5683bc; }
-    section.col-8.color.sanduiche {
-      background-color: #50662e; }
     section.col-8.color.bauru {
       background-color: #4b4b4b; }
     section.col-8.color.dinovr {
@@ -1372,8 +1331,12 @@ section.col-8 {
       background-color: #684580; }
     section.col-8.color.floresciencia {
       background-color: #1A6665; }
-    section.col-8.color.dinoapp {
-      background-color: #4a5fb1; }
+    section.col-8.color.construtora {
+      background-color: #2a4057; }
+    section.col-8.color.jogo {
+      background-color: #363640; }
+    section.col-8.color.infografico {
+      background-color: #4150BB; }
   section.col-8.img-wrapper {
     text-align: center; }
   section.col-8 p {
@@ -1386,6 +1349,8 @@ section.col-8 {
       @media only screen and (max-width: 768px) {
         section.col-8 img.vertical-img {
           width: 75%; } }
+    section.col-8 img.vertical-img.vertical-img--nomargin {
+      margin: 15px; }
     @media only screen and (max-width: 1024px) {
       section.col-8 img {
         width: 100%; } }
@@ -1457,16 +1422,10 @@ ul.answers {
     background-color: #424242; }
   .next-btn.dinokiki {
     background-color: #4a5fb1; }
-  .next-btn.reed {
-    background-color: #3A4052; }
-  .next-btn.whysp {
-    background-color: #962828; }
-  .next-btn.qualprofessor {
-    background-color: #c24c44; }
+  .next-btn.minhaagenda {
+    background-color: #5c6bc0; }
   .next-btn.pao {
     background-color: #5683bc; }
-  .next-btn.sanduiche {
-    background-color: #50662e; }
   .next-btn.bauru {
     background-color: #4b4b4b; }
   .next-btn.dinovr {
@@ -1475,8 +1434,12 @@ ul.answers {
     background-color: #684580; }
   .next-btn.floresciencia {
     background-color: #1A6665; }
-  .next-btn.dinoapp {
-    background-color: #4a5fb1; }
+  .next-btn.construtora {
+    background-color: #2a4057; }
+  .next-btn.jogo {
+    background-color: #363640; }
+  .next-btn.infografico {
+    background-color: #4150BB; }
   @media only screen and (max-width: 768px) {
     .next-btn {
       font-size: 10pt;
@@ -1490,16 +1453,10 @@ ul.answers {
     background-color: #424242; }
   .prev-btn.dinokiki {
     background-color: #4a5fb1; }
-  .prev-btn.reed {
-    background-color: #3A4052; }
-  .prev-btn.whysp {
-    background-color: #962828; }
-  .prev-btn.qualprofessor {
-    background-color: #c24c44; }
+  .prev-btn.minhaagenda {
+    background-color: #5c6bc0; }
   .prev-btn.pao {
     background-color: #5683bc; }
-  .prev-btn.sanduiche {
-    background-color: #50662e; }
   .prev-btn.bauru {
     background-color: #4b4b4b; }
   .prev-btn.dinovr {
@@ -1508,8 +1465,12 @@ ul.answers {
     background-color: #684580; }
   .prev-btn.floresciencia {
     background-color: #1A6665; }
-  .prev-btn.dinoapp {
-    background-color: #4a5fb1; }
+  .prev-btn.construtora {
+    background-color: #2a4057; }
+  .prev-btn.jogo {
+    background-color: #363640; }
+  .prev-btn.infografico {
+    background-color: #4150BB; }
   @media only screen and (max-width: 768px) {
     .prev-btn {
       font-size: 10pt;

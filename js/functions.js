@@ -1,5 +1,5 @@
 var currentProject = null
-	, listOfProjects = ['keepmeposted', 'codepen', 'dinokiki', 'floresciencia', 'reed', 'whysp', 'qualprofessor', 'pao', 'sanduiche', 'bauru', 'dinovr', 'dinoapp']
+	, listOfProjects = ['minhaagenda', 'construtora', 'infografico', 'dinokiki', 'jogo', 'codepen', 'floresciencia', 'dinovr', 'keepmeposted', 'pao', 'bauru']
 	, lang = 'en-us';
 
 
@@ -307,42 +307,39 @@ $(function() {
 
 	// action for projects when scroll happens
     $('.work-content').scroll(function(){
-	    if (($('.project.keepmeposted').offset().top >= 1592) && ($('.project.keepmeposted').offset().top) < 1700) {
+	    if (($('.project.minhaagenda').offset().top >= 1592) && ($('.project.minhaagenda').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.keepmeposted').addClass('active-proj');
+	        $('.project-circle.minhaagenda').addClass('active-proj');
+    	} else if (($('.project.construtora').offset().top >= 1592) && ($('.project.construtora').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.construtora').addClass('active-proj');
+    	} else if (($('.project.infografico').offset().top >= 1592) && ($('.project.infografico').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.infografico').addClass('active-proj');
     	} else if (($('.project.dinokiki').offset().top >= 1592) && ($('.project.dinokiki').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
 	        $('.project-circle.dinokiki').addClass('active-proj');
-    	} else if (($('.project.reed').offset().top >= 1592) && ($('.project.reed').offset().top) < 1700) {
+    	} else if (($('.project.jogo').offset().top >= 1592) && ($('.project.jogo').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.reed').addClass('active-proj');
-    	} else if (($('.project.whysp').offset().top >= 1592) && ($('.project.whysp').offset().top) < 1700) {
-	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.whysp').addClass('active-proj');
-    	} else if (($('.project.qualprofessor').offset().top >= 1592) && ($('.project.qualprofessor').offset().top) < 1700) {
-	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.qualprofessor').addClass('active-proj');
-    	} else if (($('.project.pao').offset().top >= 1592) && ($('.project.pao').offset().top) < 1700) {
-	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.pao').addClass('active-proj');
-    	} else if (($('.project.sanduiche').offset().top >= 1592) && ($('.project.sanduiche').offset().top) < 1700) {
-	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.sanduiche').addClass('active-proj');
-    	} else if (($('.project.bauru').offset().top >= 1592) && ($('.project.bauru').offset().top) < 1700) {
-	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.bauru').addClass('active-proj');
-    	} else if (($('.project.dinovr').offset().top >= 1592) && ($('.project.dinovr').offset().top) < 1700) {
-	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.dinovr').addClass('active-proj');
+	        $('.project-circle.jogo').addClass('active-proj');
     	} else if (($('.project.codepen').offset().top >= 1592) && ($('.project.codepen').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
 	        $('.project-circle.codepen').addClass('active-proj');
     	} else if (($('.project.floresciencia').offset().top >= 1592) && ($('.project.floresciencia').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
 	        $('.project-circle.floresciencia').addClass('active-proj');
-    	} else if (($('.project.dinoapp').offset().top >= 1592) && ($('.project.dinoapp').offset().top) < 1700) {
+    	} else if (($('.project.dinovr').offset().top >= 1592) && ($('.project.dinovr').offset().top) < 1700) {
 	        $('.project-circle').removeClass('active-proj');
-	        $('.project-circle.dinoapp').addClass('active-proj');
+	        $('.project-circle.dinovr').addClass('active-proj');
+    	} else if (($('.project.keepmeposted').offset().top >= 1592) && ($('.project.keepmeposted').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.keepmeposted').addClass('active-proj');
+    	} else if (($('.project.pao').offset().top >= 1592) && ($('.project.pao').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.pao').addClass('active-proj');
+    	} else if (($('.project.bauru').offset().top >= 1592) && ($('.project.bauru').offset().top) < 1700) {
+	        $('.project-circle').removeClass('active-proj');
+	        $('.project-circle.bauru').addClass('active-proj');
     	}  
     });
     
