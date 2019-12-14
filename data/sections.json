@@ -1,0 +1,14 @@
+{
+	"sections": {
+		"hero": {
+			"h1": {
+				"pt": "Oi! Eu sou a Giulia Cardieri",
+				"en": "Hey! I'm Giulia Cardieri"
+			},
+			"h2": {
+				"pt": "Uma desenvolvedora UI",
+				"en": "An UI developer based in Brazil"
+			}
+		}
+	}
+}
