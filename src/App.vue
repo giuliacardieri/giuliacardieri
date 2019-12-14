@@ -61,10 +61,11 @@
       <section-title name="Experience"></section-title>
       <main class="section__content section__content--pink">
         <h2 class="h2">Experience</h2>
-        <div v-for="job in experience.en" :key="experience.en.company">
+        <div class="experience__content" v-for="job in experience.en" :key="experience.en.company">
           <h3 class="h3">{{ job.company }} - {{ job.position }}</h3>
-          <p class="p" v-html="job.date"></p>
-          <p class="p" v-html="job.technologies"></p>
+          <p class="p p--small" v-html="job.date"></p>
+          <p class="p p--small" v-html="job.technologies"></p>
+          <p class="p" v-html="job.description"></p>
         </div>
         experience
           toptal
@@ -246,6 +247,11 @@ body {
   width: 25vw;
 }
 
+/* experience */
+.experience__content {
+  margin-bottom: 1.5rem;
+}
+
 /* elements */
 .image {
   max-width: 20vw;
@@ -264,16 +270,26 @@ body {
   margin: 0.75rem 0;
 }
 
+.h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+
 .h2--white {
   color: var(--white); 
 }
 
-.h2--pink {
+.h2--pink,
+.h3 {
   color: var(--color-main-2); 
 }
 
 .p {
   line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.p--small {
+  font-size: 0.9rem;
 }
 
 .a {
