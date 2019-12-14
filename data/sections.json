@@ -1,14 +1,68 @@
 {
-	"sections": {
-		"hero": {
-			"h1": {
-				"pt": "Oi! Eu sou a Giulia Cardieri",
-				"en": "Hey! I'm Giulia Cardieri"
-			},
-			"h2": {
-				"pt": "Uma desenvolvedora UI",
-				"en": "An UI developer based in Brazil"
-			}
-		}
-	}
+  "hero": {
+    "h1": {
+      "pt": "Oi! Eu sou a Giulia Cardieri",
+      "en": "Hey! I'm Giulia Cardieri"
+    },
+    "h2": {
+      "pt": "Uma desenvolvedora UI",
+      "en": "An UI developer based in Brazil"
+    }
+  },
+  "about": {
+    "en": [
+      { 
+        "text": "I'm <strong>Giulia Cardieri</strong>, an <strong>UI developer and Human-Computer Interaction (HCI) Researcher</strong> located in Sorocaba, Brazil. I enjoy creating visually pleasing and accessible web applications, besides researching about how web technologies affect end-users."
+      },
+      {
+        "text": "In 2019 I got my master's degree in Computer Science (on the HCI field) from <a href='' class='a' target='_blank'>Universidade Federal de São Carlos (UFSCar Sorocaba)</a>. I developed <strong>an approach called <a href='' class='a' target='_blank'>PWA-EU</a> that assists developers to create PWAs that empowers end-users</strong>."
+      },
+      {
+        "text": "Since 2018, I work as a UI developer freelancer at <a class='a' href='https://www.toptal.com/' target='_blank'>Toptal</a>."
+      },
+      {
+        "text": "I'm a <strong>CSS and Women in Tech enthusiast</strong>. I co-organize/speak/attend events in those fields, such as <a href='http://railsgirls.com/sorocaba' target='_blank' class='a'>Rails Girls Sorocaba</a>. I believe the people who are already working with technology (yeah, that includes me and maybe you) <strong>should share their experiences and knowledge in order to create a more welcoming place to those who are starting</strong>, as the technology field has its challenges."
+      }
+    ]
+  },
+  "experience": {
+    "en": [
+      {
+        "company": "Toptal",
+        "date": "September 2018 - Today",
+        "position": "UI Developer",
+        "technologies": "HTML5, CSS3, Sass, jQuery, JavaScript, Vue.js, Hugo, Middleman"
+      },
+      {
+        "company": "Capes",
+        "date": "July 2017 - February 2019",
+        "position": "HCI Graduate Researcher",
+        "technologies": "Researcher on HCI and Software Engineering fields. Developed PWAs, conducted experiments and wrote scientific articles related to HCI on Mobile Applications"
+      },
+      {
+        "company": "LTIA",
+        "date": "September 2016 - June 2017",
+        "position": "Web Developer",
+        "technologies": "HTML5, CSS3, Sass, jQuery, JavaScript, CodeIgniter, PHP"
+      },
+      {
+        "company": "Infineon",
+        "date": "March 2016 - July 2016",
+        "position": "Information Technology Intern",
+        "technologies": "Part of the Factory Integration team, created reports with information from their projects"
+      },
+      {
+        "company": "Lecom",
+        "date": "August 2015 - October 2015",
+        "position": "Front-End Development Intern",
+        "technologies": "HTML5, CSS3, Sass, jQuery, JavaScript"
+      },
+      {
+        "company": "Tegra",
+        "date": "August 2014 - November 2014",
+        "position": "Web Development Intern",
+        "technologies": "HTML5, CSS3, Sass, jQuery, Cordova.js, Django, Gulp"
+      }
+    ]
+  }
 }

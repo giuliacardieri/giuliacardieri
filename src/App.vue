@@ -1,6 +1,6 @@
 <template>
   <div id="giuliacardieri" class="container">
-    <section class="section">
+    <section class="section section--column section--hero">
       <section class="section__image">
         <figure class="section__svg">  
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 176.9">
@@ -43,24 +43,72 @@
       <section class="section__heading">
         <h1 v-if="portuguese" class="h1">{{ hero.h1.pt }}</h1>
         <h1 v-else class="h1">{{ hero.h1.en }}</h1>
-        <h2 v-if="portuguese" class="h2">{{ hero.h2.en }}</h2>
-        <h2 v-else class="h2">{{ hero.h2.en }}</h2>
+        <h2 v-if="portuguese" class="h2 h2--pink">{{ hero.h2.en }}</h2>
+        <h2 v-else class="h2 h2--pink">{{ hero.h2.en }}</h2>
       </section>
     </section>
     <section class="section"> 
       <section-title name="About"></section-title>
       <main class="section__content">
-        <p class="p">My name is Giulia Cardieri. I'm a UX Designer and UI developer located in Sorocaba-SP Brazil. I'm currently a computer science graduate student at Universidade Federal de São Carlos (UFSCar Sorocaba). My research in related to Human-Computer Interaction field.</p>
-        <p class="p">For me, trying to understand what users feel during an interaction is fascinating. I'm also passionate about CSS and UI, creating amazing things is always a nice challenge!</p>
-        <p class="p">Download my resume to learn more about my experience</p>
+        <img class="image" src="./assets/images/giuliaa.jpg" alt="Giulia Cardieri">
+        <h3 class="h3">Hey!</h3>
+        <div v-for="paragraph in about.en" :key="about.en.text">
+          <p class="p" v-html="paragraph.text"></p>
+        </div>
       </main>
     </section>
     <section class="section section--reversed"> 
+      <section-title name="Experience"></section-title>
+      <main class="section__content section__content--pink">
+        <h2 class="h2">Experience</h2>
+        <div v-for="job in experience.en" :key="experience.en.company">
+          <h3 class="h3">{{ job.company }} - {{ job.position }}</h3>
+          <p class="p" v-html="job.date"></p>
+          <p class="p" v-html="job.technologies"></p>
+        </div>
+        experience
+          toptal
+            -> citar nomes das empresas e linkar com o resume toptal
+          mestrado
+          ltia
+          infinion
+          lecom
+          tegra
+      </main>
+    </section>
+    <section class="section"> 
       <section-title name="Projects"></section-title>
       <main class="section__content">
         my projects
+          -> menos prints
+          -> focar nas w-fragen
+          -> tecnologias e desafios
+          -> a inspiração
+          dinokiki
+          pwa-eu
+          desenhos em CSS
+          jogos em css - dinokiki origins
+          jogos em css - memory space game
       </main>
     </section>
+    <section class="section section--reversed"> 
+      <section-title name="Other Cool Stuff"></section-title>
+      <main class="section__content">
+        quando tiver blog?!?
+        speaking
+          front in floripa, wds -> video
+          imasters -> video
+          falar da CSSConf
+        artigos
+          pwa-eu da espanha
+          IHC
+      </main>
+    </section>
+    <footer class="footer">
+      meu footer amigo
+      redes sociais
+      mensagem de fala comigo se quiser, uma foto da mila?
+    </footer>
   </div>
 </template>
 
@@ -70,7 +118,9 @@ export default {
   name: 'giuliacardieri',
   data () {
     return {
-      hero: sections.sections.hero,
+      hero: sections.hero,
+      about: sections.about,
+      experience: sections.experience,
       portuguese: false
     }
   }
@@ -91,7 +141,6 @@ body {
   font-family: 'Solway', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -102,9 +151,12 @@ body {
   --color4: #FF9E01;
   --color-light: #FADCE4;
   --color-darker: #7F2044;
+  --color-darkest: #591630;
   --white: #eee;
   --black: #282828;
   --grey: #555;
+  --color-trans: rgba(225, 66, 130, 0.5);
+  --color-trans-hover: rgb(225, 66, 130);
 
   --pwaeu: #600d84;
   --estudomobile: #bf5c11;
@@ -126,15 +178,22 @@ body {
 
 /* section */
 .section {
-  align-items: center;
-  animation: colorfy 3s ease-in-out 1;
+  align-items: stretch;
   background-color: var(--bgColor);
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  height: 100vh;
   justify-content: center;
   width: 100vw;
+}
+
+.section--hero {
+  animation: colorfy 3s ease-in-out 1;
+  height: 100vh;
+}
+
+.section--column {
+  align-items: center;
+  flex-direction: column;
 }
 
 .section--reversed {
@@ -147,15 +206,21 @@ body {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  width: 50vw;
+  min-height: 100%;
+  width: 30vw;
 }
 
 .section__content {
   background-color: var(--white);
   box-sizing: border-box;
+  height: 100%;
   padding: var(--space-md);
-  text-align: justify;
-  width: 50vw;
+  overflow-y: scroll;
+  width: 70vw;
+}
+
+.section__content--pink {
+  background-color: var(--color-light);
 }
 
 .section__heading {
@@ -181,6 +246,12 @@ body {
   width: 25vw;
 }
 
+/* elements */
+.image {
+  max-width: 20vw;
+  width: 100%;
+}
+
 /* typography */
 
 .h1 {
@@ -189,9 +260,36 @@ body {
 }
 
 .h2 {
-  color: var(--color-main-2);
   font-size: 1.5rem;
   margin: 0.75rem 0;
+}
+
+.h2--white {
+  color: var(--white); 
+}
+
+.h2--pink {
+  color: var(--color-main-2); 
+}
+
+.p {
+  line-height: 1.6;
+}
+
+.a {
+  background-image: linear-gradient(var(--color-trans), var(--color-trans));
+  background-position: left 0 bottom -60%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.65em;
+  color: var(--color-darkest);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.a:hover, 
+.a:focus,
+.a:active {
+  background-image: linear-gradient(var(--color-trans-hover), var(--color-trans-hover));
 }
 
 /* svg drawing */

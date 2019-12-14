@@ -1,6 +1,6 @@
 <template>
   <aside class="section__title">
-      <h2 class="h2">{{ name }}</h2>
+      <h2 class="h2 h2--white">{{ name }}</h2>
   </aside>
 </template>
 
