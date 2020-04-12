@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+
+@import 'variables';
+@import 'cards';
+@import 'footer';
+@import 'image';
+@import 'section';
+@import 'typography';
+@import 'visual';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: $color-light;
+  color: $color-darker;
+  font-family: 'Solway', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

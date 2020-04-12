@@ -1,0 +1,472 @@
+/* svg drawing */
+.st4{display:none}.st4,.st8{fill:#332c28}.st14{fill:#1b1b1c}
+
+/* animation */
+@keyframes colorfy {
+  0% {
+    filter: grayscale(100%);
+  }
+  25% {
+    filter: grayscale(100%);
+  }
+  100% {
+    filter: grayscale(0);
+  }
+}
+
+/* css css */
+.css__container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover .c,
+.card:focus .c,
+.card:active .c {
+  border-left: 20px solid rgba($color-main-2, 0.6);
+  box-shadow: -10px 0px 0 5px $color-main-2, -20px 0px 0 6px $color-darker, -30px 0px 0 7px $color-darkest;
+}
+
+.c {
+  border-left: 20px solid $color-darkest;
+  box-shadow: -10px 0px 0 5px $color-darker, -20px 0px 0 6px $color-main-2, -30px 0px 0 7px rgba($color-main-2, 0.6);
+  border-radius: 100% 50% 50% 100% / 100%;
+  height: 100px;
+  width: 90px; 
+}
+
+.s {
+  display: flex;
+  flex-direction: column;
+}
+
+.s:not(:last-of-type) {
+    margin: 0 75px 0 25px;
+}
+
+.s > .c {
+  height: 50px;
+  width: 50px;
+}
+
+.s > .c:last-of-type {
+  transform: rotate(185deg) translateX(5px) translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .css__container {
+    transform: scale(0.8);
+  }
+}
+
+/* dinokiki css */
+$dino: #638937;
+$dino-yellow: #dbbf20;
+$teeth: #f9f7e5;
+$dino-black: #333;
+$dino-red: #b21313;
+
+.card:hover .dinokiki .eye {
+  background-color: transparent;
+  border-bottom: 3px solid $dino-black;
+  border-width: 0 0 3px 0;
+  width: 20px;
+}
+
+.dinokiki {
+  height: 180px;
+  width: 150px;
+}
+
+.body {
+  background-color: $dino;
+  border-radius: 100% 90% 80% 8%;
+  height: 100px;
+  position: absolute;
+  width: 150px;
+  &:after {
+    background-color: $dino;
+    bottom: -75px;
+    content: '';
+    height: 90px;
+    left: 0;
+    position: absolute;
+    width: 65px;
+  }
+}
+
+.eye {
+  background-color: $dino-black;
+  border: 7px solid $white;
+  border-radius: 100%;
+  height: 14px;
+  left: 42px;
+  position: absolute;
+  top: 17px;
+  width: 14px;
+}
+
+.nose {
+  background-color: $dino-black;
+  border-radius: 40%;
+  height: 12px;
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  width: 4px;
+  &:after {
+    @extend .nose;
+    content: '';
+    left: -10px;
+    top: 0;
+  }
+}
+
+.mouth {
+  border: 2px solid $dino-black;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-radius: 100% 100% 50% 100%;
+  height: 50px;
+  position: absolute;
+  right: 1px;
+  stroke-linecap: round;
+  top: 25px;
+  width: 105px;
+  transform: rotate(10deg);
+}
+
+.teeth {
+  background-color: $teeth;
+  border-radius: 0 0 90% 40%;
+  height: 12px;
+  left: 25px;
+  position: absolute;
+  top: 50px;
+  width: 10px;
+  transform: rotate(10deg);
+  &:after {
+    @extend .teeth;
+    border-radius: 0 0 50% 80%;
+    content: '';
+    left: -13px;
+    top: -1px;
+    width: 11px;
+    transform: rotate(7deg);
+  }
+  &:before {
+    @extend .teeth;
+    border-radius: 0 0 60% 70%;
+    content: '';
+    left: 12px;
+    top: -1px;
+    width: 12px;
+    transform: rotate(-7deg);
+  }
+}
+
+.altinhos {
+  height: 100px;
+  position: absolute;
+  width: 150px
+}
+
+.alt {
+  background-color: $dino-yellow;
+  position: absolute;
+  &.a1 {
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    bottom: -65px;
+    height: 16px;
+    left: -25px;
+    width: 36px;
+    transform: rotate(-90deg);
+  }
+  &.a2 {
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    bottom: -29px;
+    height: 15px;
+    left: -25px;
+    width: 36px;
+    transform: rotate(-90deg);
+  }
+  &.a3 {
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    bottom: 8px;
+    height: 14px;
+    left: -25px;
+    width: 36px;
+    transform: rotate(-90deg);
+  }
+  &.a4 {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    bottom: 44px;
+    height: 19px;
+    left: -20px;
+    width: 35px;
+    transform: rotate(-65deg);
+  }
+  &.a5 {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    bottom: 76px;
+    height: 16px;
+    left: -3px;
+    width: 35px;
+    transform: rotate(-40deg);
+  }
+  &.a6 {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    bottom: 95px;
+    height: 13px;
+    left: 30px;
+    width: 35px;
+    transform: rotate(-15deg);
+  }
+  &.a7 {
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    bottom: 98px;
+    height: 13px;
+    left: 67px;
+    width: 32px;
+    transform: rotate(0deg);
+  }
+  &.a8 {
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    bottom: 90px;
+    height: 13px;
+    left: 100px;
+    width: 32px;
+    transform: rotate(23deg);
+  }
+}
+
+/* css technical article */
+.article__container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: - $space-md;
+  transform: scale(0.6);
+}
+
+.paper {
+  background-color: $color-light;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0px $color-darker, 10px 10px 0px $color-main-1;
+  display: flex;
+  flex-direction: column;
+  padding: $space-sm;
+  position: relative;
+}
+
+.card:hover .paper__reaction {  
+  opacity: 1;
+}
+
+.paper__reaction {
+  background-color: $color-darkest;
+  opacity: 0;
+  position: absolute;
+}
+
+.paper__reaction.r1 {
+  height: 5px; 
+  left: -40px;
+  top: 10px;
+  width: 25px;
+  transition: 1s ease-in-out opacity;
+}
+
+.paper__reaction.r2 {
+  height: 25px;
+  left: -20px;
+  top: -30px;
+  transform: rotate(-45deg);
+  width: 5px;
+  transition: 1s 0.25s ease-in-out opacity;
+}
+
+.paper__reaction.r3 {
+  height: 25px;
+  left: 15px;
+  top: -40px;
+  transform: rotate(15deg);
+  width: 5px;
+  transition: 1s 0.5s ease-in-out opacity;
+}
+
+.paper__reaction.r4 {
+  bottom: 0px;
+  height: 5px; 
+  right: -50px;
+  transform: rotate(-15deg);
+  width: 25px;
+  transition: 1s ease-in-out opacity;
+}
+
+.paper__reaction.r5 {
+  bottom: -40px;
+  height: 25px;
+  right: -25px;
+  transform: rotate(-45deg);
+  width: 5px;
+  transition: 1s 0.25s ease-in-out opacity;
+}
+
+.paper__reaction.r6 {
+  bottom: -50px;
+  height: 25px;
+  right: 5px;
+  width: 5px;
+  transition: 1s 0.5s ease-in-out opacity;
+}
+
+.paper__p {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.paper__p:nth-of-type(2n) {
+  text-align: center;
+}
+
+.paper__p:last-of-type {
+  font-weight: bold;
+  margin-left: 7rem;
+  text-align: right;
+}
+
+/* game controller */
+.game__container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover .game {
+  animation: rotateController 2s ease-in-out 1;
+}
+
+.game {
+  display: flex;
+  position: relative;
+}
+
+.game:before {
+  background-color: $color-darkest;
+  border-radius: 20%;
+  content: '';
+  height: 100px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 200px;
+}
+
+.base {
+  background-color: $color-darkest;
+  height: 175px;
+  width: 100px;
+}
+
+.base--left {
+  border-radius: 80% 50% 100% 50%;
+  margin-right: 40px;
+  position: relative;
+  transform: rotate(15deg);
+}
+
+.button {
+  border-radius: 100%;
+  height: 15px;
+  position: absolute;
+  width: 15px;
+}
+
+.button--main-1 {
+  background-color: $color-main-1;
+  left: 50px;
+  top: 30px;
+}
+
+.button--main-2 {
+  background-color: $color-main-2;
+  left: 30px;
+  top: 45px;
+}
+
+.button--darker {
+  background-color: $color-darker;
+  left: 70px;
+  top: 45px;
+}
+
+.button--light {
+  background-color: $color-light;
+  left: 50px;
+  top: 60px;
+}
+
+.button--large {
+  background-color: $color-main-2;
+  height: $space-sm;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 55px;
+  width: $space-sm;
+}
+
+.button--plus {
+  background-color: $color-light;
+  border-radius: 5px;
+  height: $space-md;
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  width: $space-sm/2;
+  &:after {
+    background-color: $color-light;
+    border-radius: 5px;
+    bottom: 0;
+    content: '';
+    height: $space-sm/2;
+    left: -$space-sm + $space-sm/4;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: $space-md;
+  }
+}
+
+.base--right {
+  border-radius: 50% 80% 50% 100%;
+  margin-left: 40px;
+  transform: rotate(-15deg);
+}
+
+@keyframes rotateController {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

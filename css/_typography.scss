@@ -1,0 +1,47 @@
+.h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.h2 {
+  font-size: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.h2--white {
+  color: $white; 
+}
+
+.h2--pink,
+.h3 {
+  color: $color-main-2; 
+}
+
+.p {
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.p--small {
+  font-size: 0.9rem;
+}
+
+.a {
+  background-image: linear-gradient($color-trans, $color-trans);
+  background-position: left 0 bottom -60%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.65em;
+  color: var(--color-darkest);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.a:hover, 
+.a:focus,
+.a:active {
+  background-image: linear-gradient($color-trans-hover, $color-trans-hover);
+}

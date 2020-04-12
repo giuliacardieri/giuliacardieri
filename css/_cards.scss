@@ -1,0 +1,38 @@
+.cards {
+	align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: $space-sm;
+}
+
+.card {
+	box-sizing: border-box;
+	flex-basis: calc(50% - #{$space-sm});
+	margin-bottom: $space-sm;
+	text-decoration: none;
+	transition: box-shadow 0.5s;
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: 2px 2px 20px rgba($white, 0.4);
+	}
+}
+
+.card__inner {
+	background-color: $white;
+	box-sizing: border-box;
+	color: $color-darker;
+	height: 100%;
+	padding: $space-sm;
+}
+
+.card__drawing {
+	padding: $space-sm;
+}
+
+.card__drawing--centered {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}

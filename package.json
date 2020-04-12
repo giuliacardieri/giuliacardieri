@@ -1,0 +1,16 @@
+{
+  "name": "giuliacardieri",
+  "version": "1.0.0",
+  "description": "Giulia Cardieri portfolio",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@giuliacardieri",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
+}
