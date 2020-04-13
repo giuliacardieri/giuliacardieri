@@ -1,7 +1,40 @@
 .footer {
 	background-color: $color-light;
 	color: $white;
-	display: flex;
-	justify-content: space-between;
 	padding: 5vh 5vw;
 }
+
+.footer__content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footer__svg {
+	max-width: $space-lg;
+}
+
+@media (max-width: $sm) {
+	.footer__a {
+		align-items: center;
+		display: flex;
+		flex-basis: 20%;
+		justify-content: center;
+	}
+	
+	.footer__svg {
+		max-width: $space-md;
+	}
+}
+
+.footer__svg {
+	border-radius: 100%;
+}
+
+.footer__a:hover .footer__svg,
+.footer__a:focus .footer__svg,
+.footer__a:active .footer__svg {
+	filter: brightness(1.75);
+	transition: filter 0.5s ease-out;
+}
+

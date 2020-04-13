@@ -1,5 +1,8 @@
 .image {
 	border-radius: 100%;
-  	margin-right: $space-md;
-  	max-width: 25vw;
+	width: 100%;
+	@media (min-width: $md) {
+  		margin-right: $space-md;
+  		max-width: 25vw;
+	}
 }
