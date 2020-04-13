@@ -29,9 +29,9 @@ gulp.task('copy-icons', function() {
   	.pipe(gulp.dest('dist/images/icons'));
 })
 
-gulp.task('copy-icons', function() {
-  return gulp.src(['images/icons/*'])
-  	.pipe(gulp.dest('dist/images/icons'));
+gulp.task('copy-resume', function() {
+  return gulp.src(['assets/*'])
+  	.pipe(gulp.dest('dist/assets/'));
 })
 
 gulp.task('html', () => {
@@ -47,4 +47,4 @@ gulp.task('watch', gulp.series( function() {
 
 }))
 
-gulp.task('default', gulp.series( ['sass', 'minify-css', 'images', 'copy-icons', 'html', 'watch'] ))
+gulp.task('default', gulp.series( ['sass', 'minify-css', 'images', 'copy-icons', 'copy-resume', 'html', 'watch'] ))
