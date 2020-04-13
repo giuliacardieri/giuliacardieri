@@ -25,7 +25,7 @@ gulp.task('images', gulp.series(function() {
 }))
 
 gulp.task('copy-icons', function() {
-  return gulp.src(['images/icons/*'])
+  return gulp.src(['images/**/*'])
   	.pipe(gulp.dest('dist/images/icons'));
 })
 
