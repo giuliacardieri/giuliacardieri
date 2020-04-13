@@ -1,159 +1,24 @@
-@import "mixins";
-@import "variables";
-@import "variables-animations";
-@import "grid-legal";
-@import "animations";
-@import "fonts";
-@import "nav";
-@import "about";
-@import "projects";
-@import "contact";
+@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+
+@import 'variables';
+@import 'cards';
+@import 'footer';
+@import 'image';
+@import 'section';
+@import 'typography';
+@import 'visual';
 
 body {
-	background-color: $bg-color;
-	color: $white;
-	font-family: raleway, helvetica, arial;
-	line-height: 1.6;
-	overflow-x: hidden;
-	margin: 0;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-	color: $cool;
-	font-family: bpreplay;
-	font-size: 34pt;
-	line-height: 1.4;
-	margin: 0;
-	text-align: center;
-}
-
-h2 {
-	color: $cool;
-	font-size: 14pt;
-	font-weight: normal;
-	line-height: 1.6;
-	margin: 0;
-	text-align: center;
-}
-
-h3 {
-	font-family: bpreplay;
-	font-size: 32pt;
-	font-weight: normal;
-	line-height: 80vh;
-	text-align: center;
-}
-
-h4 {
-	font-weight: normal;
-}
-
-p {
-	margin: 15px 0;
-	&.larger {
-		font-size: 18pt;
-		line-height: 1.4;
-		margin: 0;
-	}
-}
-
-a {
-	color: $black + 75;
-	text-decoration: none;
-}
-
-button {
-	border: 0;
-	border-radius: $border-radius;
-	color: $white;
-	cursor: pointer;
-	font-family: raleway;
-	font-size: 10pt;
-	margin: 10px 0;
-	padding: 8px 12px;
-	&:focus {
-		outline: 0;
-	}
-	@include bp-xs {
-		font-size: 12pt;
-		line-height: 24pt;
-	}	
-	&:hover {
-		@include min-bp-md {
-			@include transform(scale(1.05));
-		}
-	}
-	&.download-btn, &.view-btn {	
-		@include bp-xs {
-			display: block;
-			margin: 10px auto;
-			padding: 8px 0;
-			width: 250px;
-		}
-	}
-}
-
-#home {
-	display: table;
-	height: 100%;
-	width: 100%;
-}
-
-.content-home-wrapper {
-	bottom: 50px;
-	left: 0;
-	position: absolute;
-	right: 0;
-	width: 100vw;
-	@include bp-xs {
-		margin-top: 10vh;
-	}
-}
-
-.text-wrapper {
-	margin-bottom: 25px;
-}
-
-.arrow-wrapper {
-	cursor: pointer;
-	margin: auto;
-	position: relative;
-	width: 0px;
-	@include browsers(jumpTheArrow 1.5s infinite linear);
-}
-
-.arrow {
-	background-color: $cool;
-	border-radius: 5px;
-	height: 35px;
-	width: 8px;
-	@include transform(rotate(45deg));
-	&:before {
-		background-color: $cool;
-		border-radius: 5px;
-		bottom: -14px;
-		content: '';
-		height: 35px;
-		left: -14px;
-		position: absolute;
-		width: 8px;
-		@include transform(rotate(-90deg));
-	}
-}
-
-.hidden {
-	display: none!important;
-}
-
-.hidden-xs {
-	@include bp-xs {
-		display: none;
-	}
-}
-
-.not-hidden-xs {
-	display: none;
-	@include bp-xs {
-		display: block;
-	}
+.container {
+  background-color: $color-light;
+  color: $color-darker;
+  font-family: 'Solway', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

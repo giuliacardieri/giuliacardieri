@@ -1,0 +1,8 @@
+.image {
+	border-radius: 100%;
+	width: 100%;
+	@media (min-width: $md) {
+  		margin-right: $space-md;
+  		max-width: 25vw;
+	}
+}
