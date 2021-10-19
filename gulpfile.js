@@ -47,4 +47,4 @@ gulp.task('watch', gulp.series( function() {
 
 }))
 
-gulp.task('default', gulp.series( ['sass', 'minify-css', 'images', 'copy-icons', 'copy-resume', 'html', 'watch'] ))
+gulp.task('default', gulp.series( ['sass', 'minify-css', 'images', 'copy-icons', 'copy-resume', 'html'] ))
