@@ -20,13 +20,13 @@
   }
 }
 
-/* css css */
-.css__container {
+.card__container {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
+/* css css */
 .card:hover .c,
 .card:focus .c,
 .card:active .c {
@@ -39,7 +39,7 @@
   box-shadow: -10px 0px 0 5px $color-darker, -20px 0px 0 6px $color-main-2, -30px 0px 0 7px rgba($color-main-2, 0.6);
   border-radius: 100% 50% 50% 100% / 100%;
   height: 80px;
-  width: 72px; 
+  width: 72px;
 }
 
 .s {
@@ -267,9 +267,6 @@ $dino-red: #b21313;
 
 /* css technical article */
 .article__container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   margin: - $space-md;
   transform: scale(0.6);
 }
@@ -284,7 +281,7 @@ $dino-red: #b21313;
   position: relative;
 }
 
-.card:hover .paper__reaction {  
+.card:hover .paper__reaction {
   opacity: 1;
 }
 
@@ -295,7 +292,7 @@ $dino-red: #b21313;
 }
 
 .paper__reaction.r1 {
-  height: 5px; 
+  height: 5px;
   left: -40px;
   top: 10px;
   width: 25px;
@@ -322,7 +319,7 @@ $dino-red: #b21313;
 
 .paper__reaction.r4 {
   bottom: 0px;
-  height: 5px; 
+  height: 5px;
   right: -50px;
   transform: rotate(-15deg);
   width: 25px;
@@ -362,12 +359,6 @@ $dino-red: #b21313;
 }
 
 /* game controller */
-.game__container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
 .card:hover .game {
   animation: rotateController 2s ease-in-out 1;
 }
@@ -546,4 +537,289 @@ $dino-red: #b21313;
     }
   }
 
+}
+
+/* flower */
+
+.flower {
+  display: block;
+  height: var(--flower-size, 250px);
+  position: relative;
+  width: var(--flower-size, 250px);
+
+  --inner-circle-color: #591630;
+  --petals-color: #9C2855;
+  --inner-petals-color: #FADCE4;
+  --petals-number: 5;
+  --translate-value: .75;
+  --inner-circle-size: 12px;
+}
+
+.flower:hover,
+.flower:focus {
+  animation: rotateFlower 4s linear 1;
+}
+
+.circle {
+  background-color: var(--inner-circle-color, #222);
+  border-radius: 100%;
+  bottom: 0;
+  height: var(--inner-circle-size, 5px);
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: var(--inner-circle-size, 5px);
+  z-index: 1;
+}
+
+.petal {
+  --height: calc((var(--flower-size, 250px)*2)/var(--petals-number, 9));
+  --width: 50%;
+	--rotation: calc(var(--i)*360deg/var(--petals-number, 9));
+  background-color: var(--petals-color, paleVioletRed);
+  border-radius: 50%;
+  height: var(--height);
+  left: 50%;
+  margin: calc(-.5*var(--height)) calc(-.5*var(--width));
+  position: absolute;
+  top: 50%;
+	transform: rotate(var(--rotation))
+		translate(calc(var(--translate-value, 1.25)*var(--height)));
+  width: var(--width);
+}
+
+.inner-petal {
+  --height: calc((var(--flower-size, 250px)/1.75)/var(--inner-petals-number, 6));
+  --width: 20%;
+	--rotation: calc(var(--j)*360deg/var(--inner-petals-number, 6));
+  background-color: var(--inner-petals-color, lightPink);
+  border-radius: 50%;
+  height: var(--height);
+  left: 50%;
+  margin: calc(-.5*var(--height)) calc(-.5*var(--width));
+  position: absolute;
+  top: 50%;
+	transform: rotate(var(--rotation))
+		translate(calc(var(--inner-translate-value, 1.25)*var(--height)));
+  width: var(--width);
+}
+
+@keyframes rotateFlower {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* lola */
+.lola__container {
+  position: relative;
+}
+
+.lola__container:before {
+  background-image: radial-gradient(#591630 42%, #7F2044 43%, #7F2044 53%, #9C2855 54%, #9C2855 64%, #FADCE4 65%, #FADCE4 100%);
+  border-radius: 100%;
+  content: '';
+  height: 120%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -10%;
+  width: 50%;
+}
+
+.lola__container:hover:before {
+  font-size: 10px;
+  font-weight: bold;
+  content: 'SAUDADES MINHOQUINHA';
+  text-align: center;
+}
+
+.lola {
+  padding: 5rem 0;
+  transform: scale(2);
+  transition: opacity .5s ease-in-out;
+}
+
+.lola:hover,
+.lola:focus {
+  opacity: .5;
+}
+
+/* casamento */
+.casamento__container {
+  position: relative;
+}
+
+.casamento__heading {
+  color: #7F2044;
+  font-family: 'Jenna Sue', serif;
+  font-size: 6rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 3rem 0;
+  text-transform: none;
+  transition: transform .5s ease-in-out;
+}
+
+.casamento__heading:hover,
+.casamento__heading:focus {
+  transform: scale(1.25);
+}
+
+.lights {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.lights:hover .light:nth-of-type(1n) {
+  animation: lightItUp .5s ease-in-out infinite;
+}
+
+.lights:hover .light:nth-of-type(2n) {
+  animation: lightItUp .5s .1s ease-in-out infinite;
+}
+
+.lights:hover .light:nth-of-type(3n) {
+  animation: lightItUp  .5s .2s ease-in-out infinite;
+}
+
+.lights:hover .light:nth-of-type(4n) {
+  animation: lightItUp .5s .3s ease-in-out infinite;
+}
+
+.light {
+  background-color: var(--lights);
+  border-bottom: 2px solid #222;
+  border-radius: 100% 100% 0 0;
+  height: 8px;
+  position: absolute;
+  width: 4px;
+  --lights: #c19f40;
+  --lightTransparent: rgba(193, 159, 64, 0.25);
+}
+
+.light--1 {
+  left: 16%;
+  top: 32%;
+  transform: rotate(-54deg);
+}
+
+.light--2 {
+  left: 16%;
+  top: 55%;
+  transform: rotate(81deg);
+}
+
+.light--3 {
+  left: 21%;
+  top: 41%;
+  transform: rotate(-31deg);
+}
+
+.light--4 {
+  left: 26%;
+  top: 62%;
+  transform: rotate(202deg);
+}
+
+.light--5 {
+  left: 30%;
+  top: 34%;
+  transform: rotate(-92deg);
+}
+
+.light--6 {
+  left: 30%;
+  top: 34%;
+  transform: rotate(-92deg);
+}
+
+.light--7 {
+  left: 37%;
+  top: 45%;
+  transform: rotate(-37deg);
+}
+
+.light--8 {
+  left: 46%;
+  top: 30%;
+  transform: rotate(-180deg);
+}
+
+.light--9 {
+  left: 47.7%;
+  top: 47.5%;
+  transform: rotate(58deg);
+}
+
+.light--10 {
+  left: 58%;
+  top: 35%;
+  transform: rotate(128deg);
+}
+
+.light--11 {
+  left: 54%;
+  top: 61%;
+  transform: rotate(-114deg);
+}
+
+.light--12 {
+  left: 64.6%;
+  top: 59%;
+  transform: rotate(128deg);
+}
+
+.light--13 {
+  left: 69%;
+  top: 38%;
+  transform: rotate(90deg);
+}
+
+.light--14 {
+  left: 75%;
+  top: 51%;
+  transform: rotate(-222deg);
+}
+
+.light--15 {
+  left: 79.2%;
+  top: 45%;
+  transform: rotate(-48deg);
+}
+
+.light--16 {
+  left: 85.6%;
+  top: 57%;
+  transform: rotate(77deg);
+}
+
+@keyframes lightItUp {
+  0% {
+    box-shadow: 0px;
+  }
+  50% {
+    box-shadow: 0px 0px 5px 5px var(--lightTransparent);
+  }
+  100% {
+    box-shadow: 0px;
+  }
 }
