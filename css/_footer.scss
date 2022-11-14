@@ -11,7 +11,12 @@
 }
 
 .footer__svg {
+	border-radius: 100%;
 	max-width: $space-lg;
+
+  @media (max-width: $sm) {
+    max-width: $space-md;
+  }
 }
 
 @media (max-width: $sm) {
@@ -21,14 +26,6 @@
 		flex-basis: 20%;
 		justify-content: center;
 	}
-	
-	.footer__svg {
-		max-width: $space-md;
-	}
-}
-
-.footer__svg {
-	border-radius: 100%;
 }
 
 .footer__a:hover .footer__svg,

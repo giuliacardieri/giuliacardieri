@@ -693,15 +693,12 @@ $dino-red: #b21313;
 }
 
 .lights {
+  display: none;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-
-  @media (max-width: $sm) {
-    display: none;
-  }
 }
 
 
