@@ -682,7 +682,7 @@ $dino-red: #b21313;
   text-transform: none;
   transition: transform .5s ease-in-out;
 
-  @media (min-width: $md) {
+  @media (min-width: $sm) {
     padding: 3rem 0;
   }
 }
@@ -693,14 +693,33 @@ $dino-red: #b21313;
 }
 
 .lights {
-  display: none;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-}
 
+  &:before {
+    border-bottom: 2px solid #222;
+    border-radius: 100%;
+    content: '';
+    height: 136px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -107px;
+    width: 88%;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $md) {
+    display: none;
+  }
+}
 
 .lights:hover .light:nth-of-type(1n) {
   animation: lightItUp .5s ease-in-out infinite;
@@ -722,107 +741,83 @@ $dino-red: #b21313;
   background-color: var(--lights);
   border-bottom: 2px solid #222;
   border-radius: 100% 100% 0 0;
-  height: 8px;
+  height: 9px;
   position: absolute;
-  width: 4px;
+  width: 6px;
   --lights: #c19f40;
   --lightTransparent: rgba(193, 159, 64, 0.25);
 }
 
 .light--1 {
   left: 16%;
-  top: 32%;
-  transform: rotate(-54deg);
+  top: -3%;
+  transform: rotate(24deg);
 }
 
 .light--2 {
-  left: 16%;
-  top: 55%;
-  transform: rotate(81deg);
+  left: 21%;
+  top: 7%;
+  transform: rotate(-163deg);
 }
 
 .light--3 {
-  left: 21%;
-  top: 41%;
-  transform: rotate(-31deg);
+  left: 27%;
+  top: 4.6%;
+  transform: rotate(13deg);
 }
 
 .light--4 {
-  left: 26%;
-  top: 62%;
-  transform: rotate(202deg);
+  left: 31%;
+  top: 12%;
+  transform: rotate(189deg);
 }
 
 .light--5 {
-  left: 30%;
-  top: 34%;
-  transform: rotate(-92deg);
+  left: 37%;
+  top: 8%;
+  transform: rotate(11deg);
 }
 
 .light--6 {
-  left: 30%;
-  top: 34%;
-  transform: rotate(-92deg);
+  left: 42%;
+  top: 15%;
+  transform: rotate(-182deg);
 }
 
 .light--7 {
-  left: 37%;
-  top: 45%;
-  transform: rotate(-37deg);
+  left: 48%;
+  top: 10%;
+  transform: rotate(-2deg);
 }
 
 .light--8 {
-  left: 46%;
-  top: 30%;
+  left: 55%;
+  top: 15%;
   transform: rotate(-180deg);
 }
 
 .light--9 {
-  left: 47.7%;
-  top: 47.5%;
-  transform: rotate(58deg);
+  left: 61%;
+  top: 9%;
+  transform: rotate(-9deg);
 }
 
 .light--10 {
-  left: 58%;
-  top: 35%;
-  transform: rotate(128deg);
+  left: 67%;
+  top: 12%;
+  transform: rotate(175deg);
 }
 
 .light--11 {
-  left: 54%;
-  top: 61%;
-  transform: rotate(-114deg);
+  left: 73%;
+  top: 5%;
+  transform: rotate(-14deg);
 }
 
 .light--12 {
-  left: 64.6%;
-  top: 59%;
-  transform: rotate(128deg);
-}
-
-.light--13 {
-  left: 69%;
-  top: 38%;
-  transform: rotate(90deg);
-}
-
-.light--14 {
-  left: 75%;
-  top: 51%;
-  transform: rotate(-222deg);
-}
-
-.light--15 {
-  left: 79.2%;
-  top: 45%;
-  transform: rotate(-48deg);
-}
-
-.light--16 {
-  left: 85.6%;
-  top: 57%;
-  transform: rotate(77deg);
+  left: 80%;
+  top: 5%;
+  transform: rotate(165deg);
 }
 
 @keyframes lightItUp {
