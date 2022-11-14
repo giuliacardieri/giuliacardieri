@@ -1,30 +1,18 @@
 .cards {
-	align-items: stretch;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
 	margin-top: $space-sm;
+
+  @media (min-width: $sm) {
+    gap: $space-sm;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .card {
 	box-sizing: border-box;
-	flex-basis: 100%;
 	margin-bottom: $space-sm;
 	text-decoration: none;
 	transition: box-shadow 0.5s;
-	@media (min-width: $sm) {
-		flex-basis: 50%;
-	}
-}
-
-@media (min-width: $sm) {
-	.card:nth-of-type(2n + 1) .card__inner {
-		margin-right: $space-sm/2;
-	}
-
-	.card:nth-of-type(2n) .card__inner {
-		margin-left: $space-sm/2;
-	}
 }
 
 .card__inner {

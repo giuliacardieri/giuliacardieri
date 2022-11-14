@@ -639,7 +639,11 @@ $dino-red: #b21313;
   position: absolute;
   right: 0;
   top: -10%;
-  width: 50%;
+  width: 100%;
+
+  @media (min-width: $md) {
+    width: 50%;
+  }
 }
 
 .lola__container:hover:before {
@@ -650,9 +654,13 @@ $dino-red: #b21313;
 }
 
 .lola {
-  padding: 5rem 0;
+  padding: 3rem 0;
   transform: scale(2);
   transition: opacity .5s ease-in-out;
+
+  @media (min-width: $md) {
+    padding: 5rem 0;
+  }
 }
 
 .lola:hover,
@@ -671,9 +679,12 @@ $dino-red: #b21313;
   font-size: 6rem;
   font-weight: 400;
   margin: 0;
-  padding: 3rem 0;
   text-transform: none;
   transition: transform .5s ease-in-out;
+
+  @media (min-width: $md) {
+    padding: 3rem 0;
+  }
 }
 
 .casamento__heading:hover,
@@ -687,7 +698,12 @@ $dino-red: #b21313;
   position: absolute;
   top: 0;
   width: 100%;
+
+  @media (max-width: $sm) {
+    display: none;
+  }
 }
+
 
 .lights:hover .light:nth-of-type(1n) {
   animation: lightItUp .5s ease-in-out infinite;
