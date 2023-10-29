@@ -1,5 +1,14 @@
 /* svg drawing */
-.st4{display:none}.st4,.st8{fill:#332c28}.st14{fill:#1b1b1c}
+.st4 {
+  display: none;
+}
+.st4,
+.st8 {
+  fill: #332c28;
+}
+.st14 {
+  fill: #1b1b1c;
+}
 
 /* animation */
 @keyframes colorfy {
@@ -31,12 +40,14 @@
 .card:focus .c,
 .card:active .c {
   border-left: 20px solid rgba($color-main-2, 0.6);
-  box-shadow: -10px 0px 0 5px $color-main-2, -20px 0px 0 6px $color-darker, -30px 0px 0 7px $color-darkest;
+  box-shadow: -10px 0px 0 5px $color-main-2, -20px 0px 0 6px $color-darker,
+    -30px 0px 0 7px $color-darkest;
 }
 
 .c {
   border-left: 20px solid $color-darkest;
-  box-shadow: -10px 0px 0 5px $color-darker, -20px 0px 0 6px $color-main-2, -30px 0px 0 7px rgba($color-main-2, 0.6);
+  box-shadow: -10px 0px 0 5px $color-darker, -20px 0px 0 6px $color-main-2,
+    -30px 0px 0 7px rgba($color-main-2, 0.6);
   border-radius: 100% 50% 50% 100% / 100%;
   height: 80px;
   width: 72px;
@@ -48,7 +59,7 @@
 }
 
 .s:not(:last-of-type) {
-    margin: 0 50px 0 20px;
+  margin: 0 50px 0 20px;
 }
 
 .s > .c {
@@ -63,7 +74,8 @@
 @media (max-width: $md) {
   .c {
     border-left-width: 10px;
-    box-shadow: -5px 0px 0 2.5px $color-darker, -10px 0px 0 3px $color-main-2, -15px 0px 0 3.5px rgba($color-main-2, 0.6);
+    box-shadow: -5px 0px 0 2.5px $color-darker, -10px 0px 0 3px $color-main-2,
+      -15px 0px 0 3.5px rgba($color-main-2, 0.6);
     height: 40px;
     width: 36px;
   }
@@ -72,7 +84,6 @@
     height: 20px;
     width: 20px;
   }
-
 }
 
 /* dinokiki css */
@@ -103,7 +114,7 @@ $dino-red: #b21313;
   &:after {
     background-color: $dino;
     bottom: -75px;
-    content: '';
+    content: "";
     height: 90px;
     left: 0;
     position: absolute;
@@ -132,7 +143,7 @@ $dino-red: #b21313;
   width: 4px;
   &:after {
     @extend .nose;
-    content: '';
+    content: "";
     left: -10px;
     top: 0;
   }
@@ -165,7 +176,7 @@ $dino-red: #b21313;
   &:after {
     @extend .teeth;
     border-radius: 0 0 50% 80%;
-    content: '';
+    content: "";
     left: -13px;
     top: -1px;
     width: 11px;
@@ -174,7 +185,7 @@ $dino-red: #b21313;
   &:before {
     @extend .teeth;
     border-radius: 0 0 60% 70%;
-    content: '';
+    content: "";
     left: 12px;
     top: -1px;
     width: 12px;
@@ -185,7 +196,7 @@ $dino-red: #b21313;
 .altinhos {
   height: 100px;
   position: absolute;
-  width: 150px
+  width: 150px;
 }
 
 .alt {
@@ -267,7 +278,7 @@ $dino-red: #b21313;
 
 /* css technical article */
 .article__container {
-  margin: - $space-md;
+  margin: -$space-md;
   transform: scale(0.6);
 }
 
@@ -371,7 +382,7 @@ $dino-red: #b21313;
 .game:before {
   background-color: $color-darkest;
   border-radius: 20%;
-  content: '';
+  content: "";
   height: 100px;
   left: 0;
   margin: auto;
@@ -446,7 +457,7 @@ $dino-red: #b21313;
     background-color: $color-light;
     border-radius: 5px;
     bottom: 0;
-    content: '';
+    content: "";
     height: $space-sm/2;
     left: -$space-sm + $space-sm/4;
     margin: auto;
@@ -476,7 +487,6 @@ $dino-red: #b21313;
     transform: rotate(0);
   }
 }
-
 
 @media (max-width: $md) {
   .game:before {
@@ -536,7 +546,6 @@ $dino-red: #b21313;
       width: $space-md/2;
     }
   }
-
 }
 
 /* flower */
@@ -548,10 +557,10 @@ $dino-red: #b21313;
   width: var(--flower-size, 250px);
 
   --inner-circle-color: #591630;
-  --petals-color: #9C2855;
-  --inner-petals-color: #FADCE4;
+  --petals-color: #9c2855;
+  --inner-petals-color: #fadce4;
   --petals-number: 5;
-  --translate-value: .75;
+  --translate-value: 0.75;
   --inner-circle-size: 12px;
 }
 
@@ -575,34 +584,36 @@ $dino-red: #b21313;
 }
 
 .petal {
-  --height: calc((var(--flower-size, 250px)*2)/var(--petals-number, 9));
+  --height: calc((var(--flower-size, 250px) * 2) / var(--petals-number, 9));
   --width: 50%;
-	--rotation: calc(var(--i)*360deg/var(--petals-number, 9));
+  --rotation: calc(var(--i) * 360deg / var(--petals-number, 9));
   background-color: var(--petals-color, paleVioletRed);
   border-radius: 50%;
   height: var(--height);
   left: 50%;
-  margin: calc(-.5*var(--height)) calc(-.5*var(--width));
+  margin: calc(-0.5 * var(--height)) calc(-0.5 * var(--width));
   position: absolute;
   top: 50%;
-	transform: rotate(var(--rotation))
-		translate(calc(var(--translate-value, 1.25)*var(--height)));
+  transform: rotate(var(--rotation))
+    translate(calc(var(--translate-value, 1.25) * var(--height)));
   width: var(--width);
 }
 
 .inner-petal {
-  --height: calc((var(--flower-size, 250px)/1.75)/var(--inner-petals-number, 6));
+  --height: calc(
+    (var(--flower-size, 250px) / 1.75) / var(--inner-petals-number, 6)
+  );
   --width: 20%;
-	--rotation: calc(var(--j)*360deg/var(--inner-petals-number, 6));
+  --rotation: calc(var(--j) * 360deg / var(--inner-petals-number, 6));
   background-color: var(--inner-petals-color, lightPink);
   border-radius: 50%;
   height: var(--height);
   left: 50%;
-  margin: calc(-.5*var(--height)) calc(-.5*var(--width));
+  margin: calc(-0.5 * var(--height)) calc(-0.5 * var(--width));
   position: absolute;
   top: 50%;
-	transform: rotate(var(--rotation))
-		translate(calc(var(--inner-translate-value, 1.25)*var(--height)));
+  transform: rotate(var(--rotation))
+    translate(calc(var(--inner-translate-value, 1.25) * var(--height)));
   width: var(--width);
 }
 
@@ -630,9 +641,17 @@ $dino-red: #b21313;
 }
 
 .lola__container:before {
-  background-image: radial-gradient(#591630 42%, #7F2044 43%, #7F2044 53%, #9C2855 54%, #9C2855 64%, #FADCE4 65%, #FADCE4 100%);
+  background-image: radial-gradient(
+    #591630 42%,
+    #7f2044 43%,
+    #7f2044 53%,
+    #9c2855 54%,
+    #9c2855 64%,
+    #fadce4 65%,
+    #fadce4 100%
+  );
   border-radius: 100%;
-  content: '';
+  content: "";
   height: 120%;
   left: 0;
   margin: auto;
@@ -649,14 +668,14 @@ $dino-red: #b21313;
 .lola__container:hover:before {
   font-size: 10px;
   font-weight: bold;
-  content: 'SAUDADES MINHOQUINHA';
+  content: "SAUDADES MINHOQUINHA";
   text-align: center;
 }
 
 .lola {
   padding: 3rem 0;
   transform: scale(2);
-  transition: opacity .5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 
   @media (min-width: $md) {
     padding: 5rem 0;
@@ -665,7 +684,7 @@ $dino-red: #b21313;
 
 .lola:hover,
 .lola:focus {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /* casamento */
@@ -674,13 +693,13 @@ $dino-red: #b21313;
 }
 
 .casamento__heading {
-  color: #7F2044;
-  font-family: 'Jenna Sue', serif;
+  color: #7f2044;
+  font-family: "Dancing Script", serif;
   font-size: 6rem;
   font-weight: 400;
   margin: 0;
   text-transform: none;
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 
   @media (min-width: $sm) {
     padding: 3rem 0;
@@ -702,7 +721,7 @@ $dino-red: #b21313;
   &:before {
     border-bottom: 2px solid #222;
     border-radius: 100%;
-    content: '';
+    content: "";
     height: 136px;
     left: 0;
     margin: auto;
@@ -722,19 +741,19 @@ $dino-red: #b21313;
 }
 
 .lights:hover .light:nth-of-type(1n) {
-  animation: lightItUp .5s ease-in-out infinite;
+  animation: lightItUp 0.5s ease-in-out infinite;
 }
 
 .lights:hover .light:nth-of-type(2n) {
-  animation: lightItUp .5s .1s ease-in-out infinite;
+  animation: lightItUp 0.5s 0.1s ease-in-out infinite;
 }
 
 .lights:hover .light:nth-of-type(3n) {
-  animation: lightItUp  .5s .2s ease-in-out infinite;
+  animation: lightItUp 0.5s 0.2s ease-in-out infinite;
 }
 
 .lights:hover .light:nth-of-type(4n) {
-  animation: lightItUp .5s .3s ease-in-out infinite;
+  animation: lightItUp 0.5s 0.3s ease-in-out infinite;
 }
 
 .light {
@@ -830,4 +849,208 @@ $dino-red: #b21313;
   100% {
     box-shadow: 0px;
   }
+}
+/* geofun city */
+.city {
+  height: 72px;
+  margin: 48px 0 24px 0;
+  position: relative;
+  transform: scale(2);
+  width: 96px;
+}
+
+.building {
+  background-color: $color-main-1;
+  bottom: 0;
+  height: 48px;
+  left: 8px;
+  position: absolute;
+  width: 20px;
+}
+
+.building:after {
+  background-color: $color-main-1;
+  content: "";
+  height: 8px;
+  left: 2px;
+  position: absolute;
+  top: -8px;
+  width: 16px;
+}
+
+.building:before {
+  background-color: $color-main-1;
+  content: "";
+  height: 8px;
+  left: 6px;
+  position: absolute;
+  top: -16px;
+  width: 8px;
+}
+
+.building__line1 {
+  background-color: $color-trans;
+  height: 40px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 2px;
+}
+
+.building__line2 {
+  background-color: $color-trans;
+  height: 40px;
+  left: 12px;
+  position: absolute;
+  top: 4px;
+  width: 2px;
+}
+
+.building2 {
+  background-color: $color-main-2;
+  bottom: 0;
+  height: 40px;
+  left: 28px;
+  position: absolute;
+  width: 36px;
+}
+
+.building2:after {
+  background-color: $color-main-2;
+  content: "";
+  height: 4px;
+  position: absolute;
+  top: 12px;
+  width: 100%;
+}
+
+.building2:before {
+  background-color: $color-main-2;
+  bottom: 12px;
+  content: "";
+  height: 4px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.building2__line1 {
+  background-color: $color-darkest;
+  height: 32px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 2px;
+}
+
+.building2__line2 {
+  background-color: $color-darkest;
+  height: 32px;
+  left: 12px;
+  position: absolute;
+  top: 4px;
+  width: 2px;
+}
+
+.building2__line3 {
+  background-color: $color-darkest;
+  height: 32px;
+  right: 12px;
+  position: absolute;
+  top: 4px;
+  width: 2px;
+}
+
+.building2__line4 {
+  background-color: $color-darkest;
+  height: 32px;
+  right: 4px;
+  position: absolute;
+  top: 4px;
+  width: 2px;
+}
+
+.building3 {
+  background-color: $color-darker;
+  bottom: 0;
+  height: 56px;
+  right: 8px;
+  position: absolute;
+  width: 24px;
+}
+
+.building3:after {
+  border-bottom: 4px solid $color-darker;
+  border-left: 0px solid transparent;
+  border-right: 24px solid transparent;
+  content: "";
+  position: absolute;
+  top: -4px;
+}
+
+.building3:before {
+  background-color: $color-darker;
+  content: "";
+  height: 56px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+  z-index: 1;
+}
+
+.building3__line1 {
+  background-color: $color-trans;
+  height: 4px;
+  left: 2px;
+  position: absolute;
+  top: 6px;
+  width: 20px;
+}
+
+.building3__line2 {
+  background-color: $color-trans;
+  height: 4px;
+  left: 2px;
+  position: absolute;
+  top: 14px;
+  width: 20px;
+}
+
+.building3__line3 {
+  background-color: $color-trans;
+  height: 4px;
+  left: 2px;
+  position: absolute;
+  top: 22px;
+  width: 20px;
+}
+
+.building3__line4 {
+  background-color: $color-trans;
+  height: 4px;
+  left: 2px;
+  position: absolute;
+  top: 30px;
+  width: 20px;
+}
+
+.building3__line5 {
+  background-color: $color-trans;
+  height: 4px;
+  left: 2px;
+  position: absolute;
+  top: 38px;
+  width: 20px;
+}
+
+.building3__line6 {
+  background-color: $color-trans;
+  height: 4px;
+  left: 2px;
+  position: absolute;
+  top: 46px;
+  width: 20px;
 }
